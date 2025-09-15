@@ -14,7 +14,7 @@ jest.mock('../../auth/manager.js', () => ({
 // Mock the ConfluenceClient
 jest.mock('../../client/confluence.js');
 
-describe('Auth Tool', () => {
+describe('Legacy API Token Auth Tool', () => {
   let authTool: ReturnType<typeof createAuthTool>;
   const mockedAuthManager = authManager as jest.Mocked<typeof authManager>;
   const MockedConfluenceClient = ConfluenceClient as jest.MockedClass<typeof ConfluenceClient>;
@@ -27,29 +27,17 @@ describe('Auth Tool', () => {
   describe('tool configuration', () => {
     it('should have correct tool metadata', () => {
       expect(authTool.name).toBe('confluence_authenticate');
-      expect(authTool.title).toBe('Authenticate with Confluence');
-      expect(authTool.description).toBe('Authenticate with Confluence using API token. Required before using any other tools.');
+      expect(authTool.title).toBe('Authenticate with Confluence (Legacy)');
+      expect(authTool.description).toBe('Legacy authentication with Confluence using API token. OAuth 2.0 authentication is recommended.');
     });
 
     it('should have correct input schema', () => {
-      expect(authTool.inputSchema).toEqual({
-        type: "object",
-        properties: {
-          baseUrl: {
-            type: "string",
-            description: "Confluence instance base URL (e.g., https://yourcompany.atlassian.net)"
-          },
-          email: {
-            type: "string",
-            description: "Your Atlassian account email address"
-          },
-          apiToken: {
-            type: "string",
-            description: "Confluence API token for authentication"
-          }
-        },
-        required: ["baseUrl", "email", "apiToken"]
-      });
+      expect(authTool.inputSchema).toHaveProperty('baseUrl');
+      expect(authTool.inputSchema).toHaveProperty('email');
+      expect(authTool.inputSchema).toHaveProperty('apiToken');
+      expect(authTool.inputSchema.baseUrl._def.description).toBe('Confluence instance base URL (e.g., https://yourcompany.atlassian.net)');
+      expect(authTool.inputSchema.email._def.description).toBe('Your Atlassian account email address');
+      expect(authTool.inputSchema.apiToken._def.description).toBe('Confluence API token for authentication');
     });
   });
 

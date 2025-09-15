@@ -8,7 +8,8 @@ A Model Context Protocol (MCP) server for Confluence content management using At
 
 ## Features
 
-- **Direct REST API integration** with Confluence using API tokens
+- **OAuth 2.0 authentication** with secure token management and automatic refresh
+- **Direct REST API integration** with Confluence Cloud
 - **ADF to Markdown bidirectional conversion** for easy editing
 - **File-based workflows** with local storage in `confluence-downloads/` directory
 - **Full CRUD operations** for Confluence pages and content
@@ -109,13 +110,13 @@ npm uninstall -g mcp-confluence-adf
 
 ## How It Works
 
-### 1. Authentication Setup (One Time)
+### 1. OAuth Authentication Setup (One Time)
 
-**You:** "Authenticate with Confluence"
+**You:** "Set up OAuth authentication with Confluence"
 
-**Claude Code:** Uses `authenticate` tool with your base URL and API token
+**Claude Code:** Uses `confluence_oauth_init` and `confluence_oauth_complete` tools
 
-**Result:** Secure session-based authentication for all subsequent operations
+**Result:** Secure OAuth 2.0 authentication with automatic token refresh for all subsequent operations
 
 ### 2. Download and Edit Workflow
 
@@ -155,26 +156,7 @@ npm uninstall -g mcp-confluence-adf
 
 ### Authentication
 
-#### `confluence_authenticate`
-Set up authentication with your Confluence instance using email and API token.
-
-**Input:**
-```json
-{
-  "baseUrl": "https://yourcompany.atlassian.net",
-  "email": "your.email@company.com",
-  "apiToken": "ATATT3xFfGF0T..."
-}
-```
-
-**Parameters:**
-- `baseUrl`: Your Confluence base URL
-- `email`: Your Atlassian account email address
-- `apiToken`: Your Confluence API token (create at Account Settings � Security � API tokens)
-
-**Note:** API tokens may have limited permissions. OAuth 2.0 is recommended for reliable access.
-
-#### OAuth 2.0 Authentication (Recommended)
+#### OAuth 2.0 Authentication (Primary Method)
 
 OAuth 2.0 provides secure, scoped access to Confluence with automatic token refresh.
 
@@ -230,6 +212,29 @@ Check current OAuth authentication status.
 
 ##### `confluence_oauth_clear`
 Clear OAuth authentication and tokens.
+
+#### Legacy API Token Authentication
+
+For legacy compatibility, basic authentication is still supported but not recommended.
+
+##### `confluence_authenticate`
+Set up authentication with your Confluence instance using email and API token.
+
+**Input:**
+```json
+{
+  "baseUrl": "https://yourcompany.atlassian.net", 
+  "email": "your.email@company.com",
+  "apiToken": "ATATT3xFfGF0T..."
+}
+```
+
+**Parameters:**
+- `baseUrl`: Your Confluence base URL
+- `email`: Your Atlassian account email address  
+- `apiToken`: Your Confluence API token (create at Account Settings → Security → API tokens)
+
+**⚠️ Important:** API tokens have limited permissions on Confluence Cloud and may not work for all operations. OAuth 2.0 is strongly recommended.
 
 ### File-Based Workflows
 
@@ -403,29 +408,6 @@ confluence_upload_page({
 })
 ```
 
-### Legacy API Token Workflow
-```bash
-# 1. Authenticate (once per session)
-confluence_authenticate({
-  "baseUrl": "https://company.atlassian.net",
-  "email": "your.email@company.com",
-  "apiToken": "ATATT3xFfGF0..."
-})
-
-# 2. Download page for editing
-download_page({
-  "pageId": "123456789"
-})
-# � Creates confluence-downloads/123456789-page-title.md
-
-# 3. Edit the Markdown file in your preferred editor
-
-# 4. Upload changes back to Confluence
-upload_page({
-  "filePath": "confluence-downloads/123456789-page-title.md",
-  "mode": "update"
-})
-```
 
 ### Create New Page
 ```bash
@@ -456,12 +438,21 @@ The system automatically handles:
 - **Metadata preservation** for accurate uploads
 - **Rich content** formatting preservation
 
-## API Token Setup
+## OAuth 2.0 Setup
 
+1. Go to [Atlassian Developer Console](https://developer.atlassian.com/console/)
+2. Create a new OAuth 2.0 app
+3. Configure callback URL: `http://localhost:PORT/oauth/callback`
+4. Set scopes: `read:confluence-content.all`, `write:confluence-content`, `offline_access`
+5. Copy the Client ID and Client Secret for use with OAuth tools
+
+### Legacy API Token Setup
+
+For legacy compatibility:
 1. Go to your Atlassian Account Settings
-2. Navigate to Security � API tokens
+2. Navigate to Security → API tokens
 3. Create a new API token
-4. Copy the token for use with the `authenticate` tool
+4. **Note:** API tokens have limited permissions on Confluence Cloud and may not work for all operations
 
 ## License
 
