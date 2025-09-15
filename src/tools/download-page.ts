@@ -16,10 +16,12 @@ export function createDownloadPageTool(): ToolHandler<z.infer<typeof downloadSch
     name: "confluence_download_page",
     title: "Download Confluence Page",
     description: "Download a Confluence page as Markdown with metadata, converting from ADF format.",
-    inputSchema: downloadSchema,
-    handler: async (params) => {
+    inputSchema: {
+      pageId: z.string().min(1).describe("Confluence page ID to download"),
+      targetDirectory: z.string().optional().describe("Target directory for downloaded file (optional)")
+    },
+    handler: async ({ pageId, targetDirectory }) => {
       try {
-        const { pageId, targetDirectory } = downloadSchema.parse(params);
         
         if (!authManager.isAuthenticated()) {
           throw new ToolError("Not authenticated. Please authenticate first using confluence_authenticate.");
@@ -55,8 +57,8 @@ export function createDownloadPageTool(): ToolHandler<z.infer<typeof downloadSch
         const markdown = ADFConverter.adfToMarkdown(adfDocument, metadata);
         
         // Write files
-        await fs.writeFile(managedFile.filePath, markdown, 'utf-8');
-        await fs.writeFile(managedFile.metadataPath, JSON.stringify(metadata, null, 2), 'utf-8');
+        await fs.outputFile(managedFile.filePath, markdown, 'utf-8');
+        await fs.outputFile(managedFile.metadataPath, JSON.stringify(metadata, null, 2), 'utf-8');
         
         const displayPath = FileManager.getDisplayPath(managedFile.filePath);
         
