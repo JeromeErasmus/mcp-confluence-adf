@@ -174,8 +174,14 @@ Initialize OAuth 2.0 authentication flow.
 
 **Setup Requirements:**
 1. Create an OAuth 2.0 app in [Atlassian Developer Console](https://developer.atlassian.com/console/)
-2. Configure callback URL: `http://localhost:PORT/oauth/callback`
-3. Set scopes: `read:confluence-content.all`, `write:confluence-content`, `offline_access`
+2. Configure callback URL: `http://localhost:PORT/oauth/callback` (use port 3000 for default)
+3. **Required OAuth Scopes (must be added as granular scopes in Atlassian app):**
+   - `read:confluence-content.all` 
+   - `write:confluence-content`
+   - `read:content:confluence` (granular scope - required)
+   - `write:content:confluence` (granular scope - required)
+   - `read:space:confluence` (granular scope - required)
+   - `offline_access` (for token refresh)
 
 **OAuth Flow:**
 ```bash
@@ -437,27 +443,28 @@ The system automatically handles:
 #### Add API Permissions
 10. Select **"Permissions"** in the left menu
 11. Next to **Confluence API**, select **"Add"**
-12. Choose these **recommended scopes**:
+12. Choose these **required scopes**:
 
-**Content Operations:**
+**Content Operations (Required):**
 - `read:confluence-content.all` - Read all Confluence content
-- `read:confluence-content.summary` - Read content summaries
-- `read:confluence-content.permission` - Read content permissions
 - `write:confluence-content` - Create and edit Confluence content
+- `read:content:confluence` - **Granular scope - REQUIRED for reading pages**
+- `write:content:confluence` - **Granular scope - REQUIRED for writing pages**
 
-**Space Operations:**
+**Space Operations (Required):**
+- `read:space:confluence` - **Granular scope - REQUIRED for space access**
 - `read:confluence-space.summary` - Read space information
 
-**File Operations:**
+**Additional Recommended Scopes:**
+- `read:confluence-content.summary` - Read content summaries
+- `read:confluence-content.permission` - Read content permissions
 - `write:confluence-file` - Upload and manage files
 - `readonly:content.attachment:confluence` - Read attachments
-
-**Search & User Operations:**
 - `search:confluence` - Search Confluence content
 - `read:confluence-user` - Read user information
 
-**Essential for Persistence:**
-- `offline_access` - Get refresh tokens for persistent authentication
+**Authentication:**
+- `offline_access` - Required for token refresh
 
 #### Get Your Credentials
 13. Go to **"Settings"** in the left menu
