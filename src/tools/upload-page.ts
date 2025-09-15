@@ -1,5 +1,6 @@
 import { z } from "zod";
 import * as fs from "fs-extra";
+import { readFile } from "fs/promises";
 import { authManager } from "../auth/manager.js";
 import { ConfluenceClient } from "../client/confluence.js";
 import { FileManager } from "../filemanager/index.js";
@@ -17,10 +18,13 @@ export function createUploadPageTool(): ToolHandler<z.infer<typeof uploadSchema>
     name: "confluence_upload_page",
     title: "Upload Page to Confluence",
     description: "Upload a Markdown file to Confluence, converting to ADF format. Updates existing page if file contains page ID, creates new page otherwise.",
-    inputSchema: uploadSchema,
-    handler: async (params) => {
+    inputSchema: {
+      filePath: z.string().min(1).describe("Path to the Markdown file to upload"),
+      spaceKey: z.string().optional().describe("Target space key (required for new pages)"),
+      parentPageId: z.string().optional().describe("Parent page ID for new pages (optional)")
+    },
+    handler: async ({ filePath, spaceKey, parentPageId }) => {
       try {
-        const { filePath, spaceKey, parentPageId } = uploadSchema.parse(params);
         
         if (!authManager.isAuthenticated()) {
           throw new ToolError("Not authenticated. Please authenticate first using confluence_authenticate.");
@@ -32,7 +36,7 @@ export function createUploadPageTool(): ToolHandler<z.infer<typeof uploadSchema>
         }
         
         // Read markdown content
-        const markdownContent = await fs.readFile(filePath, 'utf-8');
+        const markdownContent = await readFile(filePath, 'utf-8');
         
         // Convert markdown to ADF
         const { adf, metadata } = ADFConverter.markdownToADF(markdownContent);
@@ -77,7 +81,7 @@ export function createUploadPageTool(): ToolHandler<z.infer<typeof uploadSchema>
                 spaceKey: updatedPage.space.key,
                 originalADF: JSON.stringify(adf)
               };
-              await fs.writeFile(metadataPath, JSON.stringify(updatedMetadata, null, 2), 'utf-8');
+              await fs.outputFile(metadataPath, JSON.stringify(updatedMetadata, null, 2), 'utf-8');
             }
             
             return {
@@ -133,7 +137,7 @@ export function createUploadPageTool(): ToolHandler<z.infer<typeof uploadSchema>
                 spaceKey: newPage.space.key,
                 originalADF: JSON.stringify(adf)
               };
-              await fs.writeFile(newManagedFile.metadataPath, JSON.stringify(newMetadata, null, 2), 'utf-8');
+              await fs.outputFile(newManagedFile.metadataPath, JSON.stringify(newMetadata, null, 2), 'utf-8');
               
               const displayPath = FileManager.getDisplayPath(newManagedFile.filePath);
               

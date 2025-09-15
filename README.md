@@ -30,7 +30,7 @@ npm install -g mcp-confluence-adf
 
 **Option A: Using Claude CLI (Recommended):**
 ```bash
-claude mcp add-json --scope user mcp-confluence-adf '{"command":"npx","args":["mcp-confluence-adf"]}'
+claude mcp add --scope user mcp-confluence-adf npx mcp-confluence-adf
 ```
 
 **Option B: Manual configuration file edit:**
@@ -91,6 +91,20 @@ npm install -g mcp-confluence-adf
 **Quick test without install:**
 ```bash
 npx mcp-confluence-adf --help
+```
+
+## Uninstall
+
+To completely remove the MCP server:
+
+**1. Remove from Claude configuration:**
+```bash
+claude mcp remove mcp-confluence-adf
+```
+
+**2. Uninstall the npm package:**
+```bash
+npm uninstall -g mcp-confluence-adf
 ```
 
 ## How It Works

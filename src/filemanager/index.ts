@@ -1,6 +1,7 @@
 import { join, resolve, basename } from 'path';
 import { homedir } from 'os';
 import * as fs from 'fs-extra';
+import { existsSync } from 'fs';
 import { ManagedFile, FileManagerConfig } from "../types/index.js";
 
 export class FileManager {
@@ -15,7 +16,7 @@ export class FileManager {
   private static getBaseDirectory(): string {
     // Priority 1: Current working directory + confluence-downloads
     const cwdPath = join(process.cwd(), 'confluence-downloads');
-    if (fs.existsSync(cwdPath) || !this.config.baseDirectory) {
+    if (existsSync(cwdPath) || !this.config.baseDirectory) {
       // Create if doesn't exist, or use as default
       fs.ensureDirSync(cwdPath);
       return cwdPath;
