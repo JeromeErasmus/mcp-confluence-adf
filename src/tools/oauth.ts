@@ -127,7 +127,9 @@ export function createOAuthCompleteTool(): ToolHandler {
         }
 
         // Stop callback server
-        globalOAuthClient.stopCallbackServer();
+        if (typeof globalOAuthClient.stopCallbackServer === 'function') {
+          globalOAuthClient.stopCallbackServer();
+        }
 
         return {
           content: [{
@@ -144,7 +146,7 @@ The OAuth tokens are securely stored in memory and will be automatically refresh
         };
       } catch (error) {
         // Clean up on error
-        if (globalOAuthClient) {
+        if (globalOAuthClient && typeof globalOAuthClient.stopCallbackServer === 'function') {
           globalOAuthClient.stopCallbackServer();
         }
         
