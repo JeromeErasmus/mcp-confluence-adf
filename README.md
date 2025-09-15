@@ -141,8 +141,8 @@ npx mcp-confluence-adf --help
 
 ### Authentication
 
-#### `authenticate`
-Set up authentication with your Confluence instance using API token.
+#### `confluence_authenticate`
+Set up authentication with your Confluence instance using email and API token.
 
 **Input:**
 ```json
@@ -160,7 +160,7 @@ Set up authentication with your Confluence instance using API token.
 
 ### File-Based Workflows
 
-#### `download_page`
+#### `confluence_download_page`
 Download a Confluence page as a Markdown file for local editing.
 
 **Input:**
@@ -189,7 +189,7 @@ webUrl: https://company.atlassian.net/wiki/spaces/DEV/pages/123456789
 > 9 **Info:** Rich content blocks are preserved as Markdown
 ```
 
-#### `upload_page`
+#### `confluence_upload_page`
 Upload a Markdown file to Confluence (create new or update existing).
 
 **Input:**

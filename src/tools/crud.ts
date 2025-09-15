@@ -13,16 +13,7 @@ function createGetPageTool(): ToolHandler<z.infer<typeof getPageSchema>> {
     name: "confluence_get_page",
     title: "Get Confluence Page Info",
     description: "Retrieve basic information about a Confluence page (metadata only, not content).",
-    inputSchema: {
-      type: "object",
-      properties: {
-        pageId: {
-          type: "string",
-          description: "Confluence page ID to retrieve"
-        }
-      },
-      required: ["pageId"]
-    },
+    inputSchema: getPageSchema,
     handler: async (params) => {
       try {
         const { pageId } = getPageSchema.parse(params);
@@ -67,16 +58,7 @@ function createDeletePageTool(): ToolHandler<z.infer<typeof deletePageSchema>> {
     name: "confluence_delete_page",
     title: "Delete Confluence Page",
     description: "Delete a Confluence page permanently.",
-    inputSchema: {
-      type: "object",
-      properties: {
-        pageId: {
-          type: "string",
-          description: "Confluence page ID to delete"
-        }
-      },
-      required: ["pageId"]
-    },
+    inputSchema: deletePageSchema,
     handler: async (params) => {
       try {
         const { pageId } = deletePageSchema.parse(params);
@@ -120,15 +102,7 @@ function createListSpacesTool(): ToolHandler<z.infer<typeof listSpacesSchema>> {
     name: "confluence_list_spaces",
     title: "List Confluence Spaces",
     description: "List available Confluence spaces.",
-    inputSchema: {
-      type: "object",
-      properties: {
-        limit: {
-          type: "number",
-          description: "Maximum number of spaces to return (1-100, default: 25)"
-        }
-      }
-    },
+    inputSchema: listSpacesSchema,
     handler: async (params) => {
       try {
         const { limit } = listSpacesSchema.parse(params);

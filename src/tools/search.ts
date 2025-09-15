@@ -14,20 +14,7 @@ function createSearchTool(): ToolHandler<z.infer<typeof searchSchema>> {
     name: "confluence_search",
     title: "Search Confluence Content",
     description: "Search for Confluence pages and content using text queries.",
-    inputSchema: {
-      type: "object",
-      properties: {
-        query: {
-          type: "string",
-          description: "Search query to find content"
-        },
-        limit: {
-          type: "number",
-          description: "Maximum number of results to return (1-100, default: 25)"
-        }
-      },
-      required: ["query"]
-    },
+    inputSchema: searchSchema,
     handler: async (params) => {
       try {
         const { query, limit } = searchSchema.parse(params);

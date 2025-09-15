@@ -14,7 +14,7 @@ import { createSearchTools } from "./tools/search.js";
 // Create MCP server
 const server = new McpServer({
   name: "mcp-confluence-adf",
-  version: "0.1.0"
+  version: "0.2.0"
 });
 
 // Register authentication tool

@@ -17,24 +17,7 @@ export function createUploadPageTool(): ToolHandler<z.infer<typeof uploadSchema>
     name: "confluence_upload_page",
     title: "Upload Page to Confluence",
     description: "Upload a Markdown file to Confluence, converting to ADF format. Updates existing page if file contains page ID, creates new page otherwise.",
-    inputSchema: {
-      type: "object",
-      properties: {
-        filePath: {
-          type: "string",
-          description: "Path to the Markdown file to upload"
-        },
-        spaceKey: {
-          type: "string",
-          description: "Target space key (required for new pages)"
-        },
-        parentPageId: {
-          type: "string",
-          description: "Parent page ID for new pages (optional)"
-        }
-      },
-      required: ["filePath"]
-    },
+    inputSchema: uploadSchema,
     handler: async (params) => {
       try {
         const { filePath, spaceKey, parentPageId } = uploadSchema.parse(params);
