@@ -172,6 +172,65 @@ Set up authentication with your Confluence instance using email and API token.
 - `email`: Your Atlassian account email address
 - `apiToken`: Your Confluence API token (create at Account Settings � Security � API tokens)
 
+**Note:** API tokens may have limited permissions. OAuth 2.0 is recommended for reliable access.
+
+#### OAuth 2.0 Authentication (Recommended)
+
+OAuth 2.0 provides secure, scoped access to Confluence with automatic token refresh.
+
+##### `confluence_oauth_init`
+Initialize OAuth 2.0 authentication flow.
+
+**Input:**
+```json
+{
+  "clientId": "your-oauth-client-id",
+  "clientSecret": "your-oauth-client-secret",
+  "redirectUri": "http://localhost:PORT/oauth/callback"
+}
+```
+
+**Setup Requirements:**
+1. Create an OAuth 2.0 app in [Atlassian Developer Console](https://developer.atlassian.com/console/)
+2. Configure callback URL: `http://localhost:PORT/oauth/callback`
+3. Set scopes: `read:confluence-content.all`, `write:confluence-content`, `offline_access`
+
+**OAuth Flow:**
+```bash
+# 1. Initialize OAuth flow
+confluence_oauth_init({
+  "clientId": "your-client-id",
+  "clientSecret": "your-client-secret"
+})
+
+# 2. Visit the generated authorization URL in your browser
+# 3. Grant permissions to the application
+
+# 4. Complete authentication
+confluence_oauth_complete({
+  "openBrowser": true
+})
+
+# 5. Check status
+confluence_oauth_status()
+```
+
+##### `confluence_oauth_complete`
+Complete OAuth authentication after visiting authorization URL.
+
+**Input:**
+```json
+{
+  "openBrowser": true
+}
+```
+
+##### `confluence_oauth_status`
+Check current OAuth authentication status.
+
+##### `confluence_oauth_clear`
+Clear OAuth authentication and tokens.
+
 ### File-Based Workflows
 
 #### `confluence_download_page`
@@ -310,10 +369,44 @@ function example() {
 
 ## Typical Workflow
 
-### Edit Existing Page
+### OAuth 2.0 Authentication (Recommended)
+```bash
+# 1. Initialize OAuth (one-time setup)
+confluence_oauth_init({
+  "clientId": "your-client-id",
+  "clientSecret": "your-client-secret"
+})
+
+# 2. Complete authentication (browser opens automatically)
+confluence_oauth_complete({
+  "openBrowser": true
+})
+
+# 3. Verify authentication
+confluence_oauth_status()
+```
+
+### Edit Existing Page (OAuth)
+```bash
+# 1. OAuth authentication (if not already done)
+# 2. Download page for editing
+confluence_download_page({
+  "pageId": "123456789"
+})
+# → Creates confluence-downloads/123456789-page-title.md
+
+# 3. Edit the Markdown file in your preferred editor
+
+# 4. Upload changes back to Confluence
+confluence_upload_page({
+  "filePath": "confluence-downloads/123456789-page-title.md"
+})
+```
+
+### Legacy API Token Workflow
 ```bash
 # 1. Authenticate (once per session)
-authenticate({
+confluence_authenticate({
   "baseUrl": "https://company.atlassian.net",
   "email": "your.email@company.com",
   "apiToken": "ATATT3xFfGF0..."
