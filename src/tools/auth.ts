@@ -12,8 +12,8 @@ const authSchema = z.object({
 export function createAuthTool(): ToolHandler<z.infer<typeof authSchema>> {
   return {
     name: "confluence_authenticate",
-    title: "Authenticate with Confluence",
-    description: "Authenticate with Confluence using API token. Required before using any other tools.",
+    title: "Authenticate with Confluence (Legacy)",
+    description: "Legacy authentication with Confluence using API token. OAuth 2.0 authentication is recommended.",
     inputSchema: {
       baseUrl: z.string().url().describe("Confluence instance base URL (e.g., https://yourcompany.atlassian.net)"),
       email: z.string().email().describe("Your Atlassian account email address"),
