@@ -5,7 +5,7 @@ import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js"
 import { z } from "zod";
 
 // Import tool handlers
-import { createAuthTool } from "./tools/auth.js";
+import { createOAuthTools } from "./tools/oauth.js";
 import { createDownloadPageTool } from "./tools/download-page.js";
 import { createUploadPageTool } from "./tools/upload-page.js";
 import { createCrudTools } from "./tools/crud.js";
@@ -17,17 +17,19 @@ const server = new McpServer({
   version: "0.2.0"
 });
 
-// Register authentication tool
-const authTool = createAuthTool();
-server.registerTool(
-  authTool.name,
-  {
-    title: authTool.title,
-    description: authTool.description,
-    inputSchema: authTool.inputSchema
-  },
-  authTool.handler
-);
+// Register OAuth tools
+const oauthTools = createOAuthTools();
+for (const tool of oauthTools) {
+  server.registerTool(
+    tool.name,
+    {
+      title: tool.title,
+      description: tool.description,
+      inputSchema: tool.inputSchema
+    },
+    tool.handler
+  );
+}
 
 // Register download page tool
 const downloadTool = createDownloadPageTool();

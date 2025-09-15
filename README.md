@@ -8,7 +8,8 @@ A Model Context Protocol (MCP) server for Confluence content management using At
 
 ## Features
 
-- **Direct REST API integration** with Confluence using API tokens
+- **OAuth 2.0 authentication** with secure token management and automatic refresh
+- **Direct REST API integration** with Confluence Cloud
 - **ADF to Markdown bidirectional conversion** for easy editing
 - **File-based workflows** with local storage in `confluence-downloads/` directory
 - **Full CRUD operations** for Confluence pages and content
@@ -109,13 +110,13 @@ npm uninstall -g mcp-confluence-adf
 
 ## How It Works
 
-### 1. Authentication Setup (One Time)
+### 1. OAuth Authentication Setup (One Time)
 
-**You:** "Authenticate with Confluence"
+**You:** "Set up OAuth authentication with Confluence"
 
-**Claude Code:** Uses `authenticate` tool with your base URL and API token
+**Claude Code:** Uses `confluence_oauth_init` and `confluence_oauth_complete` tools
 
-**Result:** Secure session-based authentication for all subsequent operations
+**Result:** Secure OAuth 2.0 authentication with automatic token refresh for all subsequent operations
 
 ### 2. Download and Edit Workflow
 
@@ -155,22 +156,70 @@ npm uninstall -g mcp-confluence-adf
 
 ### Authentication
 
-#### `confluence_authenticate`
-Set up authentication with your Confluence instance using email and API token.
+#### OAuth 2.0 Authentication (Primary Method)
+
+OAuth 2.0 provides secure, scoped access to Confluence with automatic token refresh.
+
+##### `confluence_oauth_init`
+Initialize OAuth 2.0 authentication flow.
 
 **Input:**
 ```json
 {
-  "baseUrl": "https://yourcompany.atlassian.net",
-  "email": "your.email@company.com",
-  "apiToken": "ATATT3xFfGF0T..."
+  "clientId": "your-oauth-client-id",
+  "clientSecret": "your-oauth-client-secret",
+  "redirectUri": "http://localhost:3000/oauth/callback"
 }
 ```
 
-**Parameters:**
-- `baseUrl`: Your Confluence base URL
-- `email`: Your Atlassian account email address
-- `apiToken`: Your Confluence API token (create at Account Settings � Security � API tokens)
+**Setup Requirements:**
+1. Create an OAuth 2.0 app in [Atlassian Developer Console](https://developer.atlassian.com/console/)
+2. Configure callback URL: `http://localhost:3000/oauth/callback` (port 3000 is required)
+3. **Required OAuth Scopes (must be added as granular scopes in Atlassian app):**
+   - `read:confluence-content.all` 
+   - `write:confluence-content`
+   - `read:content:confluence` (granular scope - required)
+   - `write:content:confluence` (granular scope - required)
+   - `read:space:confluence` (granular scope - required)
+   - `read:page:confluence` (granular scope - required for reading pages)
+   - `write:page:confluence` (granular scope - required for creating/editing pages)
+   - `offline_access` (for token refresh)
+
+**OAuth Flow:**
+```bash
+# 1. Initialize OAuth flow
+confluence_oauth_init({
+  "clientId": "your-client-id",
+  "clientSecret": "your-client-secret"
+})
+
+# 2. Visit the generated authorization URL in your browser
+# 3. Grant permissions to the application
+
+# 4. Complete authentication
+confluence_oauth_complete({
+  "openBrowser": true
+})
+
+# 5. Check status
+confluence_oauth_status()
+```
+
+##### `confluence_oauth_complete`
+Complete OAuth authentication after visiting authorization URL.
+
+**Input:**
+```json
+{
+  "openBrowser": true
+}
+```
+
+##### `confluence_oauth_status`
+Check current OAuth authentication status.
+
+##### `confluence_oauth_clear`
+Clear OAuth authentication and tokens.
 
 ### File-Based Workflows
 
@@ -310,29 +359,39 @@ function example() {
 
 ## Typical Workflow
 
+### OAuth 2.0 Authentication (Required - One-Time Setup)
+```bash
+# 1. Initialize OAuth (one-time setup)
+confluence_oauth_init({
+  "clientId": "your-client-id-from-developer-console",
+  "clientSecret": "your-client-secret-from-developer-console"
+})
+
+# 2. Complete authentication (browser opens automatically)
+confluence_oauth_complete({
+  "openBrowser": true
+})
+
+# 3. Verify authentication
+confluence_oauth_status()
+```
+
 ### Edit Existing Page
 ```bash
-# 1. Authenticate (once per session)
-authenticate({
-  "baseUrl": "https://company.atlassian.net",
-  "email": "your.email@company.com",
-  "apiToken": "ATATT3xFfGF0..."
-})
-
-# 2. Download page for editing
-download_page({
+# 1. Download page for editing
+confluence_download_page({
   "pageId": "123456789"
 })
-# � Creates confluence-downloads/123456789-page-title.md
+# → Creates confluence-downloads/123456789-page-title.md
 
-# 3. Edit the Markdown file in your preferred editor
+# 2. Edit the Markdown file in your preferred editor
 
-# 4. Upload changes back to Confluence
-upload_page({
-  "filePath": "confluence-downloads/123456789-page-title.md",
-  "mode": "update"
+# 3. Upload changes back to Confluence
+confluence_upload_page({
+  "filePath": "confluence-downloads/123456789-page-title.md"
 })
 ```
+
 
 ### Create New Page
 ```bash
@@ -363,12 +422,127 @@ The system automatically handles:
 - **Metadata preservation** for accurate uploads
 - **Rich content** formatting preservation
 
-## API Token Setup
+## OAuth 2.0 Setup
 
-1. Go to your Atlassian Account Settings
-2. Navigate to Security � API tokens
-3. Create a new API token
-4. Copy the token for use with the `authenticate` tool
+### Step 1: Create OAuth 2.0 App in Atlassian Developer Console
+
+#### Access Developer Console
+1. Go to **[developer.atlassian.com](https://developer.atlassian.com)**
+2. Select your **profile icon**
+3. Choose **"Developer console"**
+
+#### Create Your App
+4. Select **"Create app"** 
+5. Give your app a descriptive name (e.g., "Confluence MCP Integration")
+
+#### Configure OAuth 2.0 Authorization
+6. Select **"Authorization"** in the left menu
+7. Next to **OAuth 2.0 (3LO)**, select **"Configure"**
+8. Enter your **"Callback URL"** (e.g., `http://localhost:3000/oauth/callback`)
+   - ⚠️ **Important**: This URL must match the `redirect_uri` in your authorization requests
+9. Click **"Save changes"**
+
+#### Add API Permissions
+10. Select **"Permissions"** in the left menu
+11. Next to **Confluence API**, select **"Add"**
+12. Choose these **required scopes**:
+
+**Content Operations (Required):**
+- `read:confluence-content.all` - Read all Confluence content
+- `write:confluence-content` - Create and edit Confluence content
+- `read:content:confluence` - **Granular scope - REQUIRED for reading content**
+- `write:content:confluence` - **Granular scope - REQUIRED for writing content**
+- `read:page:confluence` - **Granular scope - REQUIRED for reading pages**
+- `write:page:confluence` - **Granular scope - REQUIRED for creating/editing pages**
+
+**Space Operations (Required):**
+- `read:space:confluence` - **Granular scope - REQUIRED for space access**
+- `read:confluence-space.summary` - Read space information
+
+**Additional Recommended Scopes:**
+- `read:confluence-content.summary` - Read content summaries
+- `read:confluence-content.permission` - Read content permissions
+- `write:confluence-file` - Upload and manage files
+- `readonly:content.attachment:confluence` - Read attachments
+- `search:confluence` - Search Confluence content
+- `read:confluence-user` - Read user information
+
+**Authentication:**
+- `offline_access` - Required for token refresh
+
+#### Get Your Credentials
+13. Go to **"Settings"** in the left menu
+14. Copy your **Client ID** and **Client Secret**
+15. **Keep these credentials secure!**
+
+### Step 2: Initialize OAuth in Claude Code
+
+#### Start OAuth Flow
+```bash
+confluence_oauth_init({
+  "clientId": "your-client-id-from-developer-console",
+  "clientSecret": "your-client-secret-from-developer-console"
+})
+```
+
+This automatically:
+- Starts a local callback server on an available port
+- Generates a secure authorization URL with PKCE security
+- Displays the URL to visit for authorization
+
+#### Complete Authorization
+```bash
+confluence_oauth_complete({
+  "openBrowser": true
+})
+```
+
+### Step 3: Browser Authorization Flow
+
+When you run `confluence_oauth_complete`:
+
+1. **Browser opens** to Atlassian's authorization page
+2. **Sign in** to your Atlassian account
+3. **Review permissions** - you'll see the scopes you configured
+4. **Click "Accept"** to grant permissions to your app
+5. **Automatic redirect** back to the callback server
+6. **Success confirmation** displays "Authentication Successful!"
+7. **Window closes** automatically
+
+### Step 4: Persistent Authentication Ready
+
+After successful authorization:
+- **Tokens stored securely** in `~/.mcp/confluence-adf/oauth-tokens.json` (or macOS Keychain)
+- **Auto-refresh enabled** - tokens refresh automatically before expiry
+- **Survives server restarts** - no need to re-authenticate
+- **Ready for all operations** - download, upload, search, CRUD
+
+### Verify Your Setup
+
+```bash
+confluence_oauth_status()
+```
+
+Expected output:
+```
+✅ OAuth Authentication Active
+
+🔐 Status: Connected
+🌐 Cloud ID: [your-cloud-id]
+🔧 Client Configured: Yes
+⚡ Ready for API calls: Yes
+💾 Token Storage: keychain (macOS Keychain) OR file (~/.mcp/confluence-adf/oauth-tokens.json)
+```
+
+### Managing Authentication
+
+#### Clear Authentication (if needed)
+```bash
+confluence_oauth_clear()
+```
+
+**This is a one-time setup!** Once completed, your OAuth authentication persists across all future Claude Code sessions automatically with secure token refresh.
+
 
 ## License
 

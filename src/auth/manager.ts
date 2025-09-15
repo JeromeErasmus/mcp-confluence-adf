@@ -1,47 +1,77 @@
-import { AuthCredentials } from "../types/index.js";
+import { isOAuthAuthenticated, getOAuthConfluenceClient } from "../tools/oauth.js";
 
-class AuthManager {
-  private credentials: AuthCredentials | null = null;
-
-  setCredentials(credentials: AuthCredentials): void {
-    this.credentials = credentials;
-  }
-
-  getCredentials(): AuthCredentials | null {
-    return this.credentials;
-  }
-
+export class AuthManager {
+  
   isAuthenticated(): boolean {
-    return this.credentials !== null && 
-           this.credentials.baseUrl !== '' && 
-           this.credentials.email !== '' &&
-           this.credentials.apiToken !== '';
+    return isOAuthAuthenticated();
   }
 
   getAuthHeaders(): Record<string, string> {
-    if (!this.credentials) {
-      throw new Error('Not authenticated');
+    if (!isOAuthAuthenticated()) {
+      throw new Error('Not authenticated - OAuth required');
     }
 
-    // Confluence uses Basic Auth with email:token format
-    const auth = Buffer.from(`${this.credentials.email}:${this.credentials.apiToken}`).toString('base64');
+    const oauthConfluenceClient = getOAuthConfluenceClient();
+    if (!oauthConfluenceClient) {
+      throw new Error('OAuth client not available');
+    }
 
-    return {
-      'Authorization': `Basic ${auth}`,
-      'Content-Type': 'application/json',
-      'Accept': 'application/json'
-    };
+    try {
+      return oauthConfluenceClient.getOAuthClient().getAuthHeaders();
+    } catch (error) {
+      throw new Error(`Failed to get OAuth headers: ${error instanceof Error ? error.message : String(error)}`);
+    }
+  }
+
+  getCloudId(): string {
+    if (!isOAuthAuthenticated()) {
+      throw new Error('Not authenticated - OAuth required');
+    }
+
+    const oauthConfluenceClient = getOAuthConfluenceClient();
+    if (!oauthConfluenceClient) {
+      throw new Error('OAuth client not available');
+    }
+
+    try {
+      return oauthConfluenceClient.getOAuthClient().getCloudId();
+    } catch (error) {
+      throw new Error(`Failed to get cloud ID: ${error instanceof Error ? error.message : String(error)}`);
+    }
+  }
+
+  getConfluenceClient() {
+    if (!isOAuthAuthenticated()) {
+      throw new Error('Not authenticated - OAuth required');
+    }
+
+    const oauthConfluenceClient = getOAuthConfluenceClient();
+    if (!oauthConfluenceClient) {
+      throw new Error('OAuth client not available');
+    }
+
+    return oauthConfluenceClient;
   }
 
   getBaseUrl(): string {
-    if (!this.credentials) {
-      throw new Error('Not authenticated');
+    if (!isOAuthAuthenticated()) {
+      throw new Error('Not authenticated - OAuth required');
     }
-    return this.credentials.baseUrl;
+
+    const oauthConfluenceClient = getOAuthConfluenceClient();
+    if (!oauthConfluenceClient) {
+      throw new Error('OAuth client not available');
+    }
+
+    try {
+      return oauthConfluenceClient.getOAuthClient().getDomainUrl();
+    } catch (error) {
+      throw new Error(`Failed to get domain URL: ${error instanceof Error ? error.message : String(error)}`);
+    }
   }
 
   clear(): void {
-    this.credentials = null;
+    // OAuth clearing is handled by OAuth tools
   }
 }
 
