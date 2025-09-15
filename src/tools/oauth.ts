@@ -3,6 +3,7 @@ import { exec } from "child_process";
 import { promisify } from "util";
 import { OAuthClient } from "../auth/oauth-client.js";
 import { OAuthConfluenceClient } from "../client/oauth-confluence.js";
+import { tokenStorage } from "../auth/token-storage.js";
 import { ToolHandler, ToolError, OAuthCredentials } from "../types/index.js";
 
 const execAsync = promisify(exec);
@@ -190,6 +191,7 @@ export function createOAuthStatusTool(): ToolHandler {
         const testResult = await globalOAuthConfluenceClient?.testConnection();
         
         const cloudId = globalOAuthConfluenceClient?.getOAuthClient().getCloudId() || 'Unknown';
+        const storageInfo = tokenStorage.getStorageInfo();
         
         return {
           content: [{
@@ -200,6 +202,7 @@ export function createOAuthStatusTool(): ToolHandler {
 🌐 **Cloud ID:** ${cloudId}
 🔧 **Client Configured:** Yes
 ⚡ **Ready for API calls:** ${testResult?.success ? 'Yes' : 'No'}
+💾 **Token Storage:** ${storageInfo.method} (${storageInfo.location})
 
 ${testResult?.success ? '' : `⚠️ **Connection Issue:** ${testResult?.error}`}`
           }]
@@ -223,7 +226,7 @@ export function createOAuthClearTool(): ToolHandler {
     handler: async () => {
       try {
         if (globalOAuthClient) {
-          globalOAuthClient.clear();
+          await globalOAuthClient.clear();
           globalOAuthClient = null;
         }
         

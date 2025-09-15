@@ -284,7 +284,7 @@ describe('OAuthClient', () => {
   });
 
   describe('clear', () => {
-    it('should clear all OAuth state', () => {
+    it('should clear all OAuth state', async () => {
       const mockState = {
         tokens: {
           access_token: 'test-access-token',
@@ -300,7 +300,7 @@ describe('OAuthClient', () => {
 
       expect(oauthClient.isAuthenticated()).toBe(true);
 
-      oauthClient.clear();
+      await oauthClient.clear();
 
       expect(oauthClient.isAuthenticated()).toBe(false);
       expect(() => oauthClient.getCloudId()).toThrow('No cloud ID available');
