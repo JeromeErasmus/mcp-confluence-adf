@@ -61,6 +61,7 @@ temp/
 
 # Lock files (yarn.lock is included in repo but ignored by Claude)
 package-lock.json
+yarn.lock
 
 # AI/Build plan files that shouldn't be analyzed
 ai/
