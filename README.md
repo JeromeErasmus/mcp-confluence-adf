@@ -168,13 +168,13 @@ Initialize OAuth 2.0 authentication flow.
 {
   "clientId": "your-oauth-client-id",
   "clientSecret": "your-oauth-client-secret",
-  "redirectUri": "http://localhost:PORT/oauth/callback"
+  "redirectUri": "http://localhost:3000/oauth/callback"
 }
 ```
 
 **Setup Requirements:**
 1. Create an OAuth 2.0 app in [Atlassian Developer Console](https://developer.atlassian.com/console/)
-2. Configure callback URL: `http://localhost:PORT/oauth/callback` (use port 3000 for default)
+2. Configure callback URL: `http://localhost:3000/oauth/callback` (port 3000 is required)
 3. **Required OAuth Scopes (must be added as granular scopes in Atlassian app):**
    - `read:confluence-content.all` 
    - `write:confluence-content`
