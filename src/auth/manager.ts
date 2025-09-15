@@ -14,6 +14,7 @@ class AuthManager {
   isAuthenticated(): boolean {
     return this.credentials !== null && 
            this.credentials.baseUrl !== '' && 
+           this.credentials.email !== '' &&
            this.credentials.apiToken !== '';
   }
 
@@ -22,8 +23,11 @@ class AuthManager {
       throw new Error('Not authenticated');
     }
 
+    // Confluence uses Basic Auth with email:token format
+    const auth = Buffer.from(`${this.credentials.email}:${this.credentials.apiToken}`).toString('base64');
+
     return {
-      'Authorization': `Bearer ${this.credentials.apiToken}`,
+      'Authorization': `Basic ${auth}`,
       'Content-Type': 'application/json',
       'Accept': 'application/json'
     };

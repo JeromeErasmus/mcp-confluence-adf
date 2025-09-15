@@ -24,7 +24,7 @@ describe('ConfluenceClient', () => {
     
     mockedAuthManager.getBaseUrl.mockReturnValue('https://test.atlassian.net');
     mockedAuthManager.getAuthHeaders.mockReturnValue({
-      'Authorization': 'Bearer test-token',
+      'Authorization': 'Basic dGVzdEBleGFtcGxlLmNvbTp0ZXN0LXRva2Vu', // test@example.com:test-token
       'Content-Type': 'application/json',
       'Accept': 'application/json'
     });
@@ -41,10 +41,10 @@ describe('ConfluenceClient', () => {
       
       expect(result).toEqual({ success: true });
       expect(mockedFetch).toHaveBeenCalledWith(
-        'https://test.atlassian.net/rest/api/user/current',
+        'https://test.atlassian.net/wiki/rest/api/user/current',
         {
           headers: {
-            'Authorization': 'Bearer test-token',
+            'Authorization': 'Basic dGVzdEBleGFtcGxlLmNvbTp0ZXN0LXRva2Vu',
             'Content-Type': 'application/json',
             'Accept': 'application/json'
           }
@@ -110,10 +110,10 @@ describe('ConfluenceClient', () => {
       
       expect(result).toEqual(mockContent);
       expect(mockedFetch).toHaveBeenCalledWith(
-        'https://test.atlassian.net/rest/api/content/123',
+        'https://test.atlassian.net/wiki/rest/api/content/123',
         {
           headers: {
-            'Authorization': 'Bearer test-token',
+            'Authorization': 'Basic dGVzdEBleGFtcGxlLmNvbTp0ZXN0LXRva2Vu',
             'Content-Type': 'application/json',
             'Accept': 'application/json'
           }
@@ -131,10 +131,10 @@ describe('ConfluenceClient', () => {
       
       expect(result).toEqual(mockContent);
       expect(mockedFetch).toHaveBeenCalledWith(
-        'https://test.atlassian.net/rest/api/content/123?expand=body.atlas_doc_format%2Cspace',
+        'https://test.atlassian.net/wiki/rest/api/content/123?expand=body.atlas_doc_format%2Cspace',
         {
           headers: {
-            'Authorization': 'Bearer test-token',
+            'Authorization': 'Basic dGVzdEBleGFtcGxlLmNvbTp0ZXN0LXRva2Vu',
             'Content-Type': 'application/json',
             'Accept': 'application/json'
           }
@@ -185,11 +185,11 @@ describe('ConfluenceClient', () => {
       
       expect(result).toEqual(mockResponse);
       expect(mockedFetch).toHaveBeenCalledWith(
-        'https://test.atlassian.net/rest/api/content',
+        'https://test.atlassian.net/wiki/rest/api/content',
         {
           method: 'POST',
           headers: {
-            'Authorization': 'Bearer test-token',
+            'Authorization': 'Basic dGVzdEBleGFtcGxlLmNvbTp0ZXN0LXRva2Vu',
             'Content-Type': 'application/json',
             'Accept': 'application/json'
           },
@@ -241,11 +241,11 @@ describe('ConfluenceClient', () => {
       
       expect(result).toEqual(mockResponse);
       expect(mockedFetch).toHaveBeenCalledWith(
-        'https://test.atlassian.net/rest/api/content/123',
+        'https://test.atlassian.net/wiki/rest/api/content/123',
         {
           method: 'PUT',
           headers: {
-            'Authorization': 'Bearer test-token',
+            'Authorization': 'Basic dGVzdEBleGFtcGxlLmNvbTp0ZXN0LXRva2Vu',
             'Content-Type': 'application/json',
             'Accept': 'application/json'
           },
@@ -274,11 +274,11 @@ describe('ConfluenceClient', () => {
       await client.deleteContent('123');
       
       expect(mockedFetch).toHaveBeenCalledWith(
-        'https://test.atlassian.net/rest/api/content/123',
+        'https://test.atlassian.net/wiki/rest/api/content/123',
         {
           method: 'DELETE',
           headers: {
-            'Authorization': 'Bearer test-token',
+            'Authorization': 'Basic dGVzdEBleGFtcGxlLmNvbTp0ZXN0LXRva2Vu',
             'Content-Type': 'application/json',
             'Accept': 'application/json'
           }
@@ -319,10 +319,10 @@ describe('ConfluenceClient', () => {
       
       expect(result).toEqual(mockSpaces);
       expect(mockedFetch).toHaveBeenCalledWith(
-        'https://test.atlassian.net/rest/api/space?limit=25',
+        'https://test.atlassian.net/wiki/rest/api/space?limit=25',
         {
           headers: {
-            'Authorization': 'Bearer test-token',
+            'Authorization': 'Basic dGVzdEBleGFtcGxlLmNvbTp0ZXN0LXRva2Vu',
             'Content-Type': 'application/json',
             'Accept': 'application/json'
           }
@@ -340,10 +340,10 @@ describe('ConfluenceClient', () => {
       
       expect(result).toEqual(mockSpaces);
       expect(mockedFetch).toHaveBeenCalledWith(
-        'https://test.atlassian.net/rest/api/space?limit=50',
+        'https://test.atlassian.net/wiki/rest/api/space?limit=50',
         {
           headers: {
-            'Authorization': 'Bearer test-token',
+            'Authorization': 'Basic dGVzdEBleGFtcGxlLmNvbTp0ZXN0LXRva2Vu',
             'Content-Type': 'application/json',
             'Accept': 'application/json'
           }
@@ -376,10 +376,10 @@ describe('ConfluenceClient', () => {
       
       expect(result).toEqual(mockSearchResults);
       expect(mockedFetch).toHaveBeenCalledWith(
-        'https://test.atlassian.net/rest/api/content/search?cql=title+%7E+%22test+query%22+OR+text+%7E+%22test+query%22&limit=25',
+        'https://test.atlassian.net/wiki/rest/api/content/search?cql=title+%7E+%22test+query%22+OR+text+%7E+%22test+query%22&limit=25',
         {
           headers: {
-            'Authorization': 'Bearer test-token',
+            'Authorization': 'Basic dGVzdEBleGFtcGxlLmNvbTp0ZXN0LXRva2Vu',
             'Content-Type': 'application/json',
             'Accept': 'application/json'
           }
@@ -397,10 +397,10 @@ describe('ConfluenceClient', () => {
       
       expect(result).toEqual(mockSearchResults);
       expect(mockedFetch).toHaveBeenCalledWith(
-        'https://test.atlassian.net/rest/api/content/search?cql=title+%7E+%22test+query%22+OR+text+%7E+%22test+query%22&limit=50',
+        'https://test.atlassian.net/wiki/rest/api/content/search?cql=title+%7E+%22test+query%22+OR+text+%7E+%22test+query%22&limit=50',
         {
           headers: {
-            'Authorization': 'Bearer test-token',
+            'Authorization': 'Basic dGVzdEBleGFtcGxlLmNvbTp0ZXN0LXRva2Vu',
             'Content-Type': 'application/json',
             'Accept': 'application/json'
           }
