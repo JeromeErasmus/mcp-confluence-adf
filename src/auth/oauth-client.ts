@@ -3,6 +3,7 @@ import express from 'express';
 import cors from 'cors';
 import { Server } from 'http';
 import { OAuthCredentials, OAuthTokens, OAuthState, AtlassianResource } from '../types/index.js';
+import { tokenStorage } from './token-storage.js';
 
 export class OAuthClient {
   private credentials: OAuthCredentials;
@@ -11,9 +12,12 @@ export class OAuthClient {
   private oauthState: OAuthState | null = null;
   private callbackServer: Server | null = null;
   private authCompletionResolver: ((value: { success: boolean; error?: string }) => void) | null = null;
+  private isLoaded: boolean = false;
 
   constructor(credentials: OAuthCredentials) {
     this.credentials = credentials;
+    // Load tokens on initialization
+    this.loadTokens();
   }
 
   /**
@@ -194,6 +198,7 @@ export class OAuthClient {
     }
 
     this.tokens = await response.json();
+    await this.saveTokens();
   }
 
   /**
@@ -224,6 +229,7 @@ export class OAuthClient {
     }
 
     this.cloudId = confluenceResource.id;
+    await this.saveTokens();
   }
 
   /**
@@ -251,12 +257,16 @@ export class OAuthClient {
     }
 
     this.tokens = await response.json();
+    await this.saveTokens();
   }
 
   /**
    * Ensure we have a valid access token
    */
   async ensureValidToken(): Promise<void> {
+    // Ensure tokens are loaded first
+    await this.loadTokens();
+    
     if (!this.tokens) {
       throw new Error('No OAuth tokens available');
     }
@@ -300,6 +310,11 @@ export class OAuthClient {
    * Check if client is authenticated
    */
   isAuthenticated(): boolean {
+    // Try to load tokens if not already loaded (synchronous check for existing state)
+    if (!this.isLoaded) {
+      this.loadTokens().catch(() => {}); // Fire and forget
+      return false;
+    }
     return !!(this.tokens && this.cloudId);
   }
 
@@ -323,16 +338,68 @@ export class OAuthClient {
   /**
    * Clear authentication state
    */
-  clear(): void {
+  async clear(): Promise<void> {
     this.tokens = null;
     this.cloudId = null;
     this.oauthState = null;
     this.stopCallbackServer();
     this.authCompletionResolver = null;
+    
+    // Clear persistent storage
+    await tokenStorage.clear();
   }
 
   /**
-   * Serialize state for persistence
+   * Load tokens from persistent storage
+   */
+  private async loadTokens(): Promise<void> {
+    if (this.isLoaded) return;
+    
+    try {
+      const storedData = await tokenStorage.retrieve();
+      if (storedData) {
+        // Check if token needs refresh
+        if (tokenStorage.isTokenExpired(storedData)) {
+          if (storedData.tokens?.refresh_token) {
+            this.tokens = storedData.tokens;
+            this.cloudId = storedData.cloudId;
+            await this.refreshAccessToken();
+          } else {
+            // Token expired and no refresh token, clear storage
+            await tokenStorage.clear();
+          }
+        } else {
+          // Token is still valid
+          this.tokens = storedData.tokens;
+          this.cloudId = storedData.cloudId;
+          this.oauthState = storedData.oauthState;
+        }
+      }
+    } catch (error) {
+      console.error('Failed to load stored tokens:', error);
+    } finally {
+      this.isLoaded = true;
+    }
+  }
+
+  /**
+   * Save tokens to persistent storage
+   */
+  private async saveTokens(): Promise<void> {
+    try {
+      await tokenStorage.store({
+        tokens: this.tokens,
+        cloudId: this.cloudId,
+        oauthState: this.oauthState,
+        lastUpdated: Date.now()
+      });
+    } catch (error) {
+      console.error('Failed to save tokens:', error);
+    }
+  }
+
+  /**
+   * Serialize state for persistence (legacy support)
    */
   serialize(): string {
     return JSON.stringify({
@@ -343,7 +410,7 @@ export class OAuthClient {
   }
 
   /**
-   * Deserialize state from persistence
+   * Deserialize state from persistence (legacy support)
    */
   deserialize(data: string): void {
     try {
@@ -351,6 +418,7 @@ export class OAuthClient {
       this.tokens = parsed.tokens;
       this.cloudId = parsed.cloudId;
       this.oauthState = parsed.oauthState;
+      this.isLoaded = true; // Mark as loaded for testing
     } catch (error) {
       console.error('Failed to deserialize OAuth state:', error);
     }
