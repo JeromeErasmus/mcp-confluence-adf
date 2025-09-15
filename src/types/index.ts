@@ -14,6 +14,35 @@ export interface AuthCredentials {
   apiToken: string;
 }
 
+export interface OAuthCredentials {
+  clientId: string;
+  clientSecret: string;
+  redirectUri: string;
+}
+
+export interface OAuthTokens {
+  access_token: string;
+  refresh_token?: string;
+  expires_in: number;
+  token_type: 'Bearer';
+  scope: string;
+}
+
+export interface AtlassianResource {
+  id: string;
+  url: string;
+  name: string;
+  scopes: string[];
+  avatarUrl: string;
+}
+
+export interface OAuthState {
+  state: string;
+  codeVerifier: string;
+  codeChallenge: string;
+  timestamp: number;
+}
+
 export interface ConfluenceContent {
   id: string;
   type: string;

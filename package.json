@@ -4,9 +4,7 @@
   "description": "MCP server for Confluence content management using Atlassian Document Format (ADF)",
   "type": "module",
   "main": "dist/server.js",
-  "bin": {
-    "mcp-confluence-adf": "dist/server.js"
-  },
+  "bin": "dist/server.js",
   "scripts": {
     "build": "tsc",
     "dev": "tsx src/server.ts",
@@ -17,12 +15,17 @@
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.18.0",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "express": "^5.1.0",
     "fs-extra": "^11.2.0",
     "node-fetch": "^3.3.0",
     "yaml": "^2.4.0",
     "zod": "^3.22.0"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
     "@types/fs-extra": "^11.0.4",
     "@types/jest": "^29.0.0",
     "@types/node": "^20.0.0",
