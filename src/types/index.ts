@@ -8,12 +8,6 @@ export interface FileManagerConfig {
   baseDirectory?: string;
 }
 
-export interface AuthCredentials {
-  baseUrl: string;
-  email: string;
-  apiToken: string;
-}
-
 export interface OAuthCredentials {
   clientId: string;
   clientSecret: string;

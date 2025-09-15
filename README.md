@@ -213,29 +213,6 @@ Check current OAuth authentication status.
 ##### `confluence_oauth_clear`
 Clear OAuth authentication and tokens.
 
-#### Legacy API Token Authentication
-
-For legacy compatibility, basic authentication is still supported but not recommended.
-
-##### `confluence_authenticate`
-Set up authentication with your Confluence instance using email and API token.
-
-**Input:**
-```json
-{
-  "baseUrl": "https://yourcompany.atlassian.net", 
-  "email": "your.email@company.com",
-  "apiToken": "ATATT3xFfGF0T..."
-}
-```
-
-**Parameters:**
-- `baseUrl`: Your Confluence base URL
-- `email`: Your Atlassian account email address  
-- `apiToken`: Your Confluence API token (create at Account Settings → Security → API tokens)
-
-**⚠️ Important:** API tokens have limited permissions on Confluence Cloud and may not work for all operations. OAuth 2.0 is strongly recommended.
-
 ### File-Based Workflows
 
 #### `confluence_download_page`
@@ -446,13 +423,6 @@ The system automatically handles:
 4. Set scopes: `read:confluence-content.all`, `write:confluence-content`, `offline_access`
 5. Copy the Client ID and Client Secret for use with OAuth tools
 
-### Legacy API Token Setup
-
-For legacy compatibility:
-1. Go to your Atlassian Account Settings
-2. Navigate to Security → API tokens
-3. Create a new API token
-4. **Note:** API tokens have limited permissions on Confluence Cloud and may not work for all operations
 
 ## License
 

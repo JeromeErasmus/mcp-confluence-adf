@@ -5,7 +5,6 @@ import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js"
 import { z } from "zod";
 
 // Import tool handlers
-import { createAuthTool } from "./tools/auth.js";
 import { createOAuthTools } from "./tools/oauth.js";
 import { createDownloadPageTool } from "./tools/download-page.js";
 import { createUploadPageTool } from "./tools/upload-page.js";
@@ -17,18 +16,6 @@ const server = new McpServer({
   name: "mcp-confluence-adf",
   version: "0.2.0"
 });
-
-// Register authentication tool (API Token)
-const authTool = createAuthTool();
-server.registerTool(
-  authTool.name,
-  {
-    title: authTool.title,
-    description: authTool.description,
-    inputSchema: authTool.inputSchema
-  },
-  authTool.handler
-);
 
 // Register OAuth tools
 const oauthTools = createOAuthTools();
