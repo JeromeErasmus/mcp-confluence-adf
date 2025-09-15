@@ -1,6 +1,6 @@
 {
   "name": "mcp-confluence-adf",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "MCP server for Confluence content management using Atlassian Document Format (ADF)",
   "type": "module",
   "main": "dist/server.js",

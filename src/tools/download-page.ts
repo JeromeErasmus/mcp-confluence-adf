@@ -16,20 +16,7 @@ export function createDownloadPageTool(): ToolHandler<z.infer<typeof downloadSch
     name: "confluence_download_page",
     title: "Download Confluence Page",
     description: "Download a Confluence page as Markdown with metadata, converting from ADF format.",
-    inputSchema: {
-      type: "object",
-      properties: {
-        pageId: {
-          type: "string",
-          description: "Confluence page ID to download"
-        },
-        targetDirectory: {
-          type: "string",
-          description: "Target directory for downloaded file (optional)"
-        }
-      },
-      required: ["pageId"]
-    },
+    inputSchema: downloadSchema,
     handler: async (params) => {
       try {
         const { pageId, targetDirectory } = downloadSchema.parse(params);

@@ -15,27 +15,12 @@ export function createAuthTool(): ToolHandler<z.infer<typeof authSchema>> {
     title: "Authenticate with Confluence",
     description: "Authenticate with Confluence using API token. Required before using any other tools.",
     inputSchema: {
-      type: "object",
-      properties: {
-        baseUrl: {
-          type: "string",
-          description: "Confluence instance base URL (e.g., https://yourcompany.atlassian.net)"
-        },
-        email: {
-          type: "string",
-          description: "Your Atlassian account email address"
-        },
-        apiToken: {
-          type: "string",
-          description: "Confluence API token for authentication"
-        }
-      },
-      required: ["baseUrl", "email", "apiToken"]
+      baseUrl: z.string().url().describe("Confluence instance base URL (e.g., https://yourcompany.atlassian.net)"),
+      email: z.string().email().describe("Your Atlassian account email address"),
+      apiToken: z.string().min(1).describe("Confluence API token for authentication")
     },
-    handler: async (params) => {
+    handler: async ({ baseUrl, email, apiToken }) => {
       try {
-        const { baseUrl, email, apiToken } = authSchema.parse(params);
-        
         // Clean up base URL
         const cleanBaseUrl = baseUrl.replace(/\/+$/, '');
         
