@@ -9,6 +9,7 @@ export class OAuthClient {
   private credentials: OAuthCredentials;
   private tokens: OAuthTokens | null = null;
   private cloudId: string | null = null;
+  private domainUrl: string | null = null;
   private oauthState: OAuthState | null = null;
   private callbackServer: Server | null = null;
   private authCompletionResolver: ((value: { success: boolean; error?: string }) => void) | null = null;
@@ -202,7 +203,7 @@ export class OAuthClient {
   }
 
   /**
-   * Get accessible Atlassian resources and extract cloud ID
+   * Get accessible Atlassian resources and extract cloud ID and domain URL
    */
   private async fetchCloudId(): Promise<void> {
     if (!this.tokens) {
@@ -229,6 +230,7 @@ export class OAuthClient {
     }
 
     this.cloudId = confluenceResource.id;
+    this.domainUrl = confluenceResource.url;
     await this.saveTokens();
   }
 
@@ -307,6 +309,16 @@ export class OAuthClient {
   }
 
   /**
+   * Get domain URL for web links
+   */
+  getDomainUrl(): string {
+    if (!this.domainUrl) {
+      throw new Error('No domain URL available');
+    }
+    return this.domainUrl;
+  }
+
+  /**
    * Check if client is authenticated
    */
   isAuthenticated(): boolean {
@@ -315,7 +327,7 @@ export class OAuthClient {
       this.loadTokens().catch(() => {}); // Fire and forget
       return false;
     }
-    return !!(this.tokens && this.cloudId);
+    return !!(this.tokens && this.cloudId && this.domainUrl);
   }
 
   /**
@@ -341,6 +353,7 @@ export class OAuthClient {
   async clear(): Promise<void> {
     this.tokens = null;
     this.cloudId = null;
+    this.domainUrl = null;
     this.oauthState = null;
     this.stopCallbackServer();
     this.authCompletionResolver = null;
@@ -363,6 +376,7 @@ export class OAuthClient {
           if (storedData.tokens?.refresh_token) {
             this.tokens = storedData.tokens;
             this.cloudId = storedData.cloudId;
+            this.domainUrl = storedData.domainUrl;
             await this.refreshAccessToken();
           } else {
             // Token expired and no refresh token, clear storage
@@ -372,6 +386,7 @@ export class OAuthClient {
           // Token is still valid
           this.tokens = storedData.tokens;
           this.cloudId = storedData.cloudId;
+          this.domainUrl = storedData.domainUrl;
           this.oauthState = storedData.oauthState;
         }
       }
@@ -390,6 +405,7 @@ export class OAuthClient {
       await tokenStorage.store({
         tokens: this.tokens,
         cloudId: this.cloudId,
+        domainUrl: this.domainUrl,
         oauthState: this.oauthState,
         lastUpdated: Date.now()
       });
@@ -405,6 +421,7 @@ export class OAuthClient {
     return JSON.stringify({
       tokens: this.tokens,
       cloudId: this.cloudId,
+      domainUrl: this.domainUrl,
       oauthState: this.oauthState
     });
   }
@@ -417,6 +434,7 @@ export class OAuthClient {
       const parsed = JSON.parse(data);
       this.tokens = parsed.tokens;
       this.cloudId = parsed.cloudId;
+      this.domainUrl = parsed.domainUrl;
       this.oauthState = parsed.oauthState;
       this.isLoaded = true; // Mark as loaded for testing
     } catch (error) {

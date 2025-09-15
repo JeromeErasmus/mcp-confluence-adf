@@ -13,6 +13,7 @@ const FALLBACK_FILE = join(FALLBACK_DIR, 'oauth-tokens.json');
 export interface StoredOAuthData {
   tokens: OAuthTokens | null;
   cloudId: string | null;
+  domainUrl: string | null;
   oauthState: OAuthState | null;
   lastUpdated: number;
 }
@@ -173,6 +174,7 @@ export class TokenStorage {
       data !== null &&
       (data.tokens === null || (typeof data.tokens === 'object' && typeof data.tokens.access_token === 'string')) &&
       (data.cloudId === null || typeof data.cloudId === 'string') &&
+      (data.domainUrl === null || typeof data.domainUrl === 'string') &&
       (data.oauthState === null || typeof data.oauthState === 'object') &&
       typeof data.lastUpdated === 'number'
     );

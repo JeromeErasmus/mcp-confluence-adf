@@ -111,6 +111,7 @@ describe('OAuthClient', () => {
           scope: 'read:confluence-content.all'
         },
         cloudId: 'test-cloud-id',
+        domainUrl: 'https://test.atlassian.net',
         oauthState: null
       };
       oauthClient.deserialize(JSON.stringify(mockState));
@@ -145,6 +146,7 @@ describe('OAuthClient', () => {
           scope: 'read:confluence-content.all'
         },
         cloudId: 'test-cloud-id',
+        domainUrl: 'https://test.atlassian.net',
         oauthState: null
       };
       oauthClient.deserialize(JSON.stringify(mockState));
@@ -168,6 +170,7 @@ describe('OAuthClient', () => {
           scope: 'read:confluence-content.all'
         },
         cloudId: 'test-cloud-id',
+        domainUrl: 'https://test.atlassian.net',
         oauthState: null
       };
       oauthClient.deserialize(JSON.stringify(mockState));
@@ -197,11 +200,36 @@ describe('OAuthClient', () => {
           scope: 'read:confluence-content.all'
         },
         cloudId: 'test-cloud-id',
+        domainUrl: 'https://test.atlassian.net',
         oauthState: null
       };
       oauthClient.deserialize(JSON.stringify(mockState));
 
       expect(oauthClient.getCloudId()).toBe('test-cloud-id');
+    });
+  });
+
+  describe('getDomainUrl', () => {
+    it('should throw error when no domain URL available', () => {
+      expect(() => oauthClient.getDomainUrl()).toThrow('No domain URL available');
+    });
+
+    it('should return domain URL when available', () => {
+      const mockState = {
+        tokens: {
+          access_token: 'test-access-token',
+          refresh_token: 'test-refresh-token',
+          expires_in: 3600,
+          token_type: 'Bearer' as const,
+          scope: 'read:confluence-content.all'
+        },
+        cloudId: 'test-cloud-id',
+        domainUrl: 'https://test.atlassian.net',
+        oauthState: null
+      };
+      oauthClient.deserialize(JSON.stringify(mockState));
+
+      expect(oauthClient.getDomainUrl()).toBe('https://test.atlassian.net');
     });
   });
 
@@ -220,6 +248,7 @@ describe('OAuthClient', () => {
           scope: 'read:confluence-content.all'
         },
         cloudId: null,
+        domainUrl: 'https://test.atlassian.net',
         oauthState: null
       };
       oauthClient.deserialize(JSON.stringify(mockState));
@@ -227,7 +256,7 @@ describe('OAuthClient', () => {
       expect(oauthClient.isAuthenticated()).toBe(false);
     });
 
-    it('should return true when both tokens and cloud ID available', () => {
+    it('should return false when tokens and cloud ID but no domain URL', () => {
       const mockState = {
         tokens: {
           access_token: 'test-access-token',
@@ -237,6 +266,25 @@ describe('OAuthClient', () => {
           scope: 'read:confluence-content.all'
         },
         cloudId: 'test-cloud-id',
+        domainUrl: null,
+        oauthState: null
+      };
+      oauthClient.deserialize(JSON.stringify(mockState));
+
+      expect(oauthClient.isAuthenticated()).toBe(false);
+    });
+
+    it('should return true when tokens, cloud ID, and domain URL available', () => {
+      const mockState = {
+        tokens: {
+          access_token: 'test-access-token',
+          refresh_token: 'test-refresh-token',
+          expires_in: 3600,
+          token_type: 'Bearer' as const,
+          scope: 'read:confluence-content.all'
+        },
+        cloudId: 'test-cloud-id',
+        domainUrl: 'https://test.atlassian.net',
         oauthState: null
       };
       oauthClient.deserialize(JSON.stringify(mockState));
@@ -256,6 +304,7 @@ describe('OAuthClient', () => {
           scope: 'read:confluence-content.all'
         },
         cloudId: 'test-cloud-id',
+        domainUrl: 'https://test.atlassian.net',
         oauthState: {
           state: 'test-state',
           codeVerifier: 'test-verifier',
@@ -294,6 +343,7 @@ describe('OAuthClient', () => {
           scope: 'read:confluence-content.all'
         },
         cloudId: 'test-cloud-id',
+        domainUrl: 'https://test.atlassian.net',
         oauthState: null
       };
       oauthClient.deserialize(JSON.stringify(mockState));
@@ -304,6 +354,7 @@ describe('OAuthClient', () => {
 
       expect(oauthClient.isAuthenticated()).toBe(false);
       expect(() => oauthClient.getCloudId()).toThrow('No cloud ID available');
+      expect(() => oauthClient.getDomainUrl()).toThrow('No domain URL available');
       expect(() => oauthClient.getAuthHeaders()).toThrow('No OAuth tokens available');
     });
   });

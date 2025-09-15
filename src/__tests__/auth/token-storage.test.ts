@@ -31,6 +31,7 @@ describe('TokenStorage', () => {
       scope: 'read:confluence-content.all write:confluence-content'
     },
     cloudId: 'test-cloud-id',
+    domainUrl: 'https://test.atlassian.net',
     oauthState: {
       state: 'test-state',
       codeVerifier: 'test-verifier',
