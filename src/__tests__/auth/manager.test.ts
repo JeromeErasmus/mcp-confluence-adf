@@ -11,6 +11,7 @@ describe('AuthManager', () => {
     it('should store credentials correctly', () => {
       const credentials: AuthCredentials = {
         baseUrl: 'https://test.atlassian.net',
+        email: 'test@example.com',
         apiToken: 'test-token'
       };
 
@@ -21,11 +22,13 @@ describe('AuthManager', () => {
     it('should overwrite existing credentials', () => {
       const oldCredentials: AuthCredentials = {
         baseUrl: 'https://old.atlassian.net',
+        email: 'old@example.com',
         apiToken: 'old-token'
       };
 
       const newCredentials: AuthCredentials = {
         baseUrl: 'https://new.atlassian.net',
+        email: 'new@example.com',
         apiToken: 'new-token'
       };
 
@@ -44,6 +47,7 @@ describe('AuthManager', () => {
     it('should return stored credentials', () => {
       const credentials: AuthCredentials = {
         baseUrl: 'https://test.atlassian.net',
+        email: 'test@example.com',
         apiToken: 'test-token'
       };
 
@@ -60,6 +64,18 @@ describe('AuthManager', () => {
     it('should return false when baseUrl is empty', () => {
       const credentials: AuthCredentials = {
         baseUrl: '',
+        email: 'test@example.com',
+        apiToken: 'test-token'
+      };
+
+      authManager.setCredentials(credentials);
+      expect(authManager.isAuthenticated()).toBe(false);
+    });
+
+    it('should return false when email is empty', () => {
+      const credentials: AuthCredentials = {
+        baseUrl: 'https://test.atlassian.net',
+        email: '',
         apiToken: 'test-token'
       };
 
@@ -70,6 +86,7 @@ describe('AuthManager', () => {
     it('should return false when apiToken is empty', () => {
       const credentials: AuthCredentials = {
         baseUrl: 'https://test.atlassian.net',
+        email: 'test@example.com',
         apiToken: ''
       };
 
@@ -80,6 +97,7 @@ describe('AuthManager', () => {
     it('should return true when both baseUrl and apiToken are provided', () => {
       const credentials: AuthCredentials = {
         baseUrl: 'https://test.atlassian.net',
+        email: 'test@example.com',
         apiToken: 'test-token'
       };
 
@@ -96,6 +114,7 @@ describe('AuthManager', () => {
     it('should return correct headers when authenticated', () => {
       const credentials: AuthCredentials = {
         baseUrl: 'https://test.atlassian.net',
+        email: 'test@example.com',
         apiToken: 'test-token'
       };
 
@@ -103,7 +122,7 @@ describe('AuthManager', () => {
       const headers = authManager.getAuthHeaders();
 
       expect(headers).toEqual({
-        'Authorization': 'Bearer test-token',
+        'Authorization': 'Basic dGVzdEBleGFtcGxlLmNvbTp0ZXN0LXRva2Vu', // test@example.com:test-token
         'Content-Type': 'application/json',
         'Accept': 'application/json'
       });
@@ -118,6 +137,7 @@ describe('AuthManager', () => {
     it('should return baseUrl when authenticated', () => {
       const credentials: AuthCredentials = {
         baseUrl: 'https://test.atlassian.net',
+        email: 'test@example.com',
         apiToken: 'test-token'
       };
 
@@ -130,6 +150,7 @@ describe('AuthManager', () => {
     it('should clear stored credentials', () => {
       const credentials: AuthCredentials = {
         baseUrl: 'https://test.atlassian.net',
+        email: 'test@example.com',
         apiToken: 'test-token'
       };
 

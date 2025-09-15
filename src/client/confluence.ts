@@ -4,7 +4,8 @@ import { ConfluenceContent, ConfluenceSpace } from "../types/index.js";
 export class ConfluenceClient {
   async testConnection(): Promise<{ success: boolean; error?: string }> {
     try {
-      const response = await fetch(`${authManager.getBaseUrl()}/rest/api/user/current`, {
+      // Use Confluence-specific API endpoint
+      const response = await fetch(`${authManager.getBaseUrl()}/wiki/rest/api/user/current`, {
         headers: authManager.getAuthHeaders()
       });
 
@@ -30,7 +31,7 @@ export class ConfluenceClient {
       params.set('expand', expand.join(','));
     }
 
-    const url = `${authManager.getBaseUrl()}/rest/api/content/${pageId}${params.toString() ? '?' + params.toString() : ''}`;
+    const url = `${authManager.getBaseUrl()}/wiki/rest/api/content/${pageId}${params.toString() ? '?' + params.toString() : ''}`;
     
     const response = await fetch(url, {
       headers: authManager.getAuthHeaders()
@@ -55,7 +56,7 @@ export class ConfluenceClient {
     };
     ancestors?: Array<{ id: string }>;
   }): Promise<ConfluenceContent> {
-    const response = await fetch(`${authManager.getBaseUrl()}/rest/api/content`, {
+    const response = await fetch(`${authManager.getBaseUrl()}/wiki/rest/api/content`, {
       method: 'POST',
       headers: authManager.getAuthHeaders(),
       body: JSON.stringify(content)
@@ -79,7 +80,7 @@ export class ConfluenceClient {
       };
     };
   }): Promise<ConfluenceContent> {
-    const response = await fetch(`${authManager.getBaseUrl()}/rest/api/content/${pageId}`, {
+    const response = await fetch(`${authManager.getBaseUrl()}/wiki/rest/api/content/${pageId}`, {
       method: 'PUT',
       headers: authManager.getAuthHeaders(),
       body: JSON.stringify(content)
@@ -93,7 +94,7 @@ export class ConfluenceClient {
   }
 
   async deleteContent(pageId: string): Promise<void> {
-    const response = await fetch(`${authManager.getBaseUrl()}/rest/api/content/${pageId}`, {
+    const response = await fetch(`${authManager.getBaseUrl()}/wiki/rest/api/content/${pageId}`, {
       method: 'DELETE',
       headers: authManager.getAuthHeaders()
     });
@@ -108,7 +109,7 @@ export class ConfluenceClient {
       limit: limit.toString()
     });
 
-    const response = await fetch(`${authManager.getBaseUrl()}/rest/api/space?${params}`, {
+    const response = await fetch(`${authManager.getBaseUrl()}/wiki/rest/api/space?${params}`, {
       headers: authManager.getAuthHeaders()
     });
 
@@ -126,7 +127,7 @@ export class ConfluenceClient {
       limit: limit.toString()
     });
 
-    const response = await fetch(`${authManager.getBaseUrl()}/rest/api/content/search?${params}`, {
+    const response = await fetch(`${authManager.getBaseUrl()}/wiki/rest/api/content/search?${params}`, {
       headers: authManager.getAuthHeaders()
     });
 

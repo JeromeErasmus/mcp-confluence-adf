@@ -5,6 +5,7 @@ import { ToolHandler, ToolError } from "../types/index.js";
 
 const authSchema = z.object({
   baseUrl: z.string().url().describe("Confluence instance base URL (e.g., https://yourcompany.atlassian.net)"),
+  email: z.string().email().describe("Your Atlassian account email address"),
   apiToken: z.string().min(1).describe("Confluence API token for authentication")
 });
 
@@ -20,16 +21,20 @@ export function createAuthTool(): ToolHandler<z.infer<typeof authSchema>> {
           type: "string",
           description: "Confluence instance base URL (e.g., https://yourcompany.atlassian.net)"
         },
+        email: {
+          type: "string",
+          description: "Your Atlassian account email address"
+        },
         apiToken: {
           type: "string",
           description: "Confluence API token for authentication"
         }
       },
-      required: ["baseUrl", "apiToken"]
+      required: ["baseUrl", "email", "apiToken"]
     },
     handler: async (params) => {
       try {
-        const { baseUrl, apiToken } = authSchema.parse(params);
+        const { baseUrl, email, apiToken } = authSchema.parse(params);
         
         // Clean up base URL
         const cleanBaseUrl = baseUrl.replace(/\/+$/, '');
@@ -37,6 +42,7 @@ export function createAuthTool(): ToolHandler<z.infer<typeof authSchema>> {
         // Set credentials
         authManager.setCredentials({
           baseUrl: cleanBaseUrl,
+          email,
           apiToken
         });
         

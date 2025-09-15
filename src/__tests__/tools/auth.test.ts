@@ -39,12 +39,16 @@ describe('Auth Tool', () => {
             type: "string",
             description: "Confluence instance base URL (e.g., https://yourcompany.atlassian.net)"
           },
+          email: {
+            type: "string",
+            description: "Your Atlassian account email address"
+          },
           apiToken: {
             type: "string",
             description: "Confluence API token for authentication"
           }
         },
-        required: ["baseUrl", "apiToken"]
+        required: ["baseUrl", "email", "apiToken"]
       });
     });
   });
@@ -56,6 +60,7 @@ describe('Auth Tool', () => {
 
       const params = {
         baseUrl: 'https://test.atlassian.net',
+        email: 'test@example.com',
         apiToken: 'valid-token'
       };
 
@@ -63,6 +68,7 @@ describe('Auth Tool', () => {
 
       expect(mockedAuthManager.setCredentials).toHaveBeenCalledWith({
         baseUrl: 'https://test.atlassian.net',
+        email: 'test@example.com',
         apiToken: 'valid-token'
       });
       expect(mockTestConnection).toHaveBeenCalled();
@@ -80,6 +86,7 @@ describe('Auth Tool', () => {
 
       const params = {
         baseUrl: 'https://test.atlassian.net///',
+        email: 'test@example.com',
         apiToken: 'valid-token'
       };
 
@@ -87,6 +94,7 @@ describe('Auth Tool', () => {
 
       expect(mockedAuthManager.setCredentials).toHaveBeenCalledWith({
         baseUrl: 'https://test.atlassian.net',
+        email: 'test@example.com',
         apiToken: 'valid-token'
       });
     });
@@ -100,6 +108,7 @@ describe('Auth Tool', () => {
 
       const params = {
         baseUrl: 'https://test.atlassian.net',
+        email: 'test@example.com',
         apiToken: 'invalid-token'
       };
 
@@ -115,6 +124,7 @@ describe('Auth Tool', () => {
 
       const params = {
         baseUrl: 'https://test.atlassian.net',
+        email: 'test@example.com',
         apiToken: 'valid-token'
       };
 
@@ -127,6 +137,7 @@ describe('Auth Tool', () => {
     it('should validate required parameters', async () => {
       const invalidParams = {
         baseUrl: '',
+        email: 'test@example.com',
         apiToken: 'valid-token'
       };
 
@@ -137,6 +148,18 @@ describe('Auth Tool', () => {
     it('should validate baseUrl format', async () => {
       const invalidParams = {
         baseUrl: 'not-a-url',
+        email: 'test@example.com',
+        apiToken: 'valid-token'
+      };
+
+      await expect(authTool.handler(invalidParams)).rejects.toThrow(ToolError);
+      await expect(authTool.handler(invalidParams)).rejects.toThrow('Invalid parameters');
+    });
+
+    it('should validate email format', async () => {
+      const invalidParams = {
+        baseUrl: 'https://test.atlassian.net',
+        email: 'invalid-email',
         apiToken: 'valid-token'
       };
 
@@ -147,6 +170,7 @@ describe('Auth Tool', () => {
     it('should validate apiToken is not empty', async () => {
       const invalidParams = {
         baseUrl: 'https://test.atlassian.net',
+        email: 'test@example.com',
         apiToken: ''
       };
 
@@ -156,7 +180,8 @@ describe('Auth Tool', () => {
 
     it('should handle missing parameters', async () => {
       const invalidParams = {
-        baseUrl: 'https://test.atlassian.net'
+        baseUrl: 'https://test.atlassian.net',
+        email: 'test@example.com'
         // missing apiToken
       };
 
@@ -170,6 +195,7 @@ describe('Auth Tool', () => {
 
       const params = {
         baseUrl: 'https://test.atlassian.net',
+        email: 'test@example.com',
         apiToken: 'valid-token'
       };
 

@@ -10,6 +10,7 @@ export interface FileManagerConfig {
 
 export interface AuthCredentials {
   baseUrl: string;
+  email: string;
   apiToken: string;
 }
 
