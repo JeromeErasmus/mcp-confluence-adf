@@ -181,6 +181,7 @@ Initialize OAuth 2.0 authentication flow.
    - `read:content:confluence` (granular scope - required)
    - `write:content:confluence` (granular scope - required)
    - `read:space:confluence` (granular scope - required)
+   - `read:page:confluence` (granular scope - required for page operations)
    - `offline_access` (for token refresh)
 
 **OAuth Flow:**
@@ -448,8 +449,9 @@ The system automatically handles:
 **Content Operations (Required):**
 - `read:confluence-content.all` - Read all Confluence content
 - `write:confluence-content` - Create and edit Confluence content
-- `read:content:confluence` - **Granular scope - REQUIRED for reading pages**
-- `write:content:confluence` - **Granular scope - REQUIRED for writing pages**
+- `read:content:confluence` - **Granular scope - REQUIRED for reading content**
+- `write:content:confluence` - **Granular scope - REQUIRED for writing content**
+- `read:page:confluence` - **Granular scope - REQUIRED for page operations**
 
 **Space Operations (Required):**
 - `read:space:confluence` - **Granular scope - REQUIRED for space access**
