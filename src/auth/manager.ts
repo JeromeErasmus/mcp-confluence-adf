@@ -17,7 +17,11 @@ export class AuthManager {
     }
 
     try {
-      return oauthConfluenceClient.getOAuthClient().getAuthHeaders();
+      const oauthClient = oauthConfluenceClient.getOAuthClient();
+      if (!oauthClient) {
+        throw new Error('OAuth client not available');
+      }
+      return oauthClient.getAuthHeaders();
     } catch (error) {
       throw new Error(`Failed to get OAuth headers: ${error instanceof Error ? error.message : String(error)}`);
     }
@@ -34,7 +38,11 @@ export class AuthManager {
     }
 
     try {
-      return oauthConfluenceClient.getOAuthClient().getCloudId();
+      const oauthClient = oauthConfluenceClient.getOAuthClient();
+      if (!oauthClient) {
+        throw new Error('OAuth client not available');
+      }
+      return oauthClient.getCloudId();
     } catch (error) {
       throw new Error(`Failed to get cloud ID: ${error instanceof Error ? error.message : String(error)}`);
     }
@@ -64,7 +72,11 @@ export class AuthManager {
     }
 
     try {
-      return oauthConfluenceClient.getOAuthClient().getDomainUrl();
+      const oauthClient = oauthConfluenceClient.getOAuthClient();
+      if (!oauthClient) {
+        throw new Error('OAuth client not available');
+      }
+      return oauthClient.getDomainUrl();
     } catch (error) {
       throw new Error(`Failed to get domain URL: ${error instanceof Error ? error.message : String(error)}`);
     }
