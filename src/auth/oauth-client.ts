@@ -61,6 +61,11 @@ export class OAuthClient {
       'read:content:confluence',
       'write:content:confluence',
       'read:space:confluence',
+      'read:page:confluence',
+      'write:page:confluence',
+      'read:confluence-content.summary',
+      'read:confluence-space.summary',
+      'search:confluence',
       'offline_access'
     ].join(' ');
 
@@ -149,7 +154,11 @@ export class OAuthClient {
         }
       });
 
-      this.callbackServer = app.listen(0, 'localhost', () => {
+      // Extract port from redirect URI
+      const redirectUrl = new URL(this.credentials.redirectUri);
+      const port = redirectUrl.port ? parseInt(redirectUrl.port) : (redirectUrl.protocol === 'https:' ? 443 : 80);
+      
+      this.callbackServer = app.listen(port, 'localhost', () => {
         const address = this.callbackServer!.address();
         if (address && typeof address === 'object') {
           resolve(address.port);

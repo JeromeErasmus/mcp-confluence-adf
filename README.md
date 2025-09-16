@@ -168,22 +168,25 @@ Initialize OAuth 2.0 authentication flow.
 {
   "clientId": "your-oauth-client-id",
   "clientSecret": "your-oauth-client-secret",
-  "redirectUri": "http://localhost:3000/oauth/callback"
+  "redirectUri": "http://localhost:9000/oauth/callback"
 }
 ```
 
 **Setup Requirements:**
 1. Create an OAuth 2.0 app in [Atlassian Developer Console](https://developer.atlassian.com/console/)
-2. Configure callback URL: `http://localhost:3000/oauth/callback` (port 3000 is required)
-3. **Required OAuth Scopes (must be added as granular scopes in Atlassian app):**
-   - `read:confluence-content.all` 
+2. Configure callback URL: `http://localhost:9000/oauth/callback` (port 9000 is recommended)
+3. **Required OAuth Scopes (add all of these to your Atlassian app):**
+   - `read:confluence-content.all`
    - `write:confluence-content`
-   - `read:content:confluence` (granular scope - required)
-   - `write:content:confluence` (granular scope - required)
-   - `read:space:confluence` (granular scope - required)
-   - `read:page:confluence` (granular scope - required for reading pages)
-   - `write:page:confluence` (granular scope - required for creating/editing pages)
-   - `offline_access` (for token refresh)
+   - `read:content:confluence`
+   - `write:content:confluence`
+   - `read:space:confluence`
+   - `read:page:confluence`
+   - `write:page:confluence`
+   - `read:confluence-content.summary`
+   - `read:confluence-space.summary`
+   - `search:confluence`
+   - `offline_access`
 
 **OAuth Flow:**
 ```bash
@@ -438,7 +441,7 @@ The system automatically handles:
 #### Configure OAuth 2.0 Authorization
 6. Select **"Authorization"** in the left menu
 7. Next to **OAuth 2.0 (3LO)**, select **"Configure"**
-8. Enter your **"Callback URL"** (e.g., `http://localhost:3000/oauth/callback`)
+8. Enter your **"Callback URL"** (e.g., `http://localhost:9000/oauth/callback`)
    - ⚠️ **Important**: This URL must match the `redirect_uri` in your authorization requests
 9. Click **"Save changes"**
 
@@ -447,28 +450,18 @@ The system automatically handles:
 11. Next to **Confluence API**, select **"Add"**
 12. Choose these **required scopes**:
 
-**Content Operations (Required):**
+**Required OAuth Scopes:**
 - `read:confluence-content.all` - Read all Confluence content
 - `write:confluence-content` - Create and edit Confluence content
-- `read:content:confluence` - **Granular scope - REQUIRED for reading content**
-- `write:content:confluence` - **Granular scope - REQUIRED for writing content**
-- `read:page:confluence` - **Granular scope - REQUIRED for reading pages**
-- `write:page:confluence` - **Granular scope - REQUIRED for creating/editing pages**
-
-**Space Operations (Required):**
-- `read:space:confluence` - **Granular scope - REQUIRED for space access**
-- `read:confluence-space.summary` - Read space information
-
-**Additional Recommended Scopes:**
-- `read:confluence-content.summary` - Read content summaries
-- `read:confluence-content.permission` - Read content permissions
-- `write:confluence-file` - Upload and manage files
-- `readonly:content.attachment:confluence` - Read attachments
-- `search:confluence` - Search Confluence content
-- `read:confluence-user` - Read user information
-
-**Authentication:**
-- `offline_access` - Required for token refresh
+- `read:content:confluence` - Read content (granular scope)
+- `write:content:confluence` - Write content (granular scope)
+- `read:space:confluence` - Access spaces (granular scope)
+- `read:page:confluence` - Read pages (granular scope)
+- `write:page:confluence` - Create/edit pages (granular scope)
+- `read:confluence-content.summary` - Read content summaries (granular scope)
+- `read:confluence-space.summary` - Read space information (granular scope)
+- `search:confluence` - Search functionality (granular scope)
+- `offline_access` - Token refresh
 
 #### Get Your Credentials
 13. Go to **"Settings"** in the left menu

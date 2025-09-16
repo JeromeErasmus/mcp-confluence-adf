@@ -41,7 +41,7 @@ describe('OAuth Tools', () => {
     });
 
     it('should initialize OAuth client and start callback server', async () => {
-      const mockStartCallbackServer = jest.fn().mockResolvedValue(3000);
+      const mockStartCallbackServer = jest.fn().mockResolvedValue(9000);
       const mockGenerateAuthUrl = jest.fn().mockReturnValue('https://auth.atlassian.com/authorize?test');
 
       mockOAuthClient.mockImplementation(() => ({
@@ -53,7 +53,7 @@ describe('OAuth Tools', () => {
       const result = await tool.handler({
         clientId: 'test-client-id',
         clientSecret: 'test-secret',
-        redirectUri: 'http://localhost:3000/oauth/callback'
+        redirectUri: 'http://localhost:9000/oauth/callback'
       });
 
       expect(mockOAuthClient).toHaveBeenCalledTimes(2); // Once for port detection, once for final client
@@ -61,7 +61,7 @@ describe('OAuth Tools', () => {
       expect(mockGenerateAuthUrl).toHaveBeenCalled();
       expect(result.content[0].text).toContain('OAuth initialization successful!');
       expect(result.content[0].text).toContain('https://auth.atlassian.com/authorize?test');
-      expect(result.content[0].text).toContain('http://localhost:3000/oauth/callback');
+      expect(result.content[0].text).toContain('http://localhost:9000/oauth/callback');
     });
 
     it('should handle OAuth initialization errors', async () => {
@@ -78,7 +78,7 @@ describe('OAuth Tools', () => {
     });
 
     it('should use default redirect URI when not provided', async () => {
-      const mockStartCallbackServer = jest.fn().mockResolvedValue(3000);
+      const mockStartCallbackServer = jest.fn().mockResolvedValue(9000);
       const mockGenerateAuthUrl = jest.fn().mockReturnValue('https://auth.atlassian.com/authorize?test');
 
       mockOAuthClient.mockImplementation(() => ({

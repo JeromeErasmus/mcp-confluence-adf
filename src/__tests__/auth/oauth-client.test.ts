@@ -13,7 +13,7 @@ describe('OAuthClient', () => {
     credentials = {
       clientId: 'test-client-id',
       clientSecret: 'test-client-secret',
-      redirectUri: 'http://localhost:3000/oauth/callback'
+      redirectUri: 'http://localhost:9000/oauth/callback'
     };
     oauthClient = new OAuthClient(credentials);
     mockFetch.mockClear();

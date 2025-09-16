@@ -58,3 +58,5 @@ confluence-downloads/
 
 # Test files that may contain sensitive data
 *.mjs
+
+*.sh
