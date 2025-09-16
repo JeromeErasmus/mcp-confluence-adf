@@ -49,7 +49,7 @@ describe('OAuthConfluenceClient', () => {
 
       expect(mockClient.ensureValidToken).toHaveBeenCalled();
       expect(mockFetch).toHaveBeenCalledWith(
-        'https://api.atlassian.com/ex/confluence/test-cloud-id/wiki/rest/api/space',
+        'https://api.atlassian.com/ex/confluence/test-cloud-id/wiki/api/v2/spaces',
         {
           headers: {
             'Authorization': 'Bearer test-token',
@@ -122,7 +122,7 @@ describe('OAuthConfluenceClient', () => {
 
       expect(mockClient.ensureValidToken).toHaveBeenCalled();
       expect(mockFetch).toHaveBeenCalledWith(
-        'https://api.atlassian.com/ex/confluence/test-cloud-id/wiki/rest/api/content/123456?expand=body.atlas_doc_format',
+        'https://api.atlassian.com/ex/confluence/test-cloud-id/wiki/api/v2/pages/123456?expand=body.atlas_doc_format',
         {
           headers: {
             'Authorization': 'Bearer test-token',
@@ -160,7 +160,7 @@ describe('OAuthConfluenceClient', () => {
       const result = await oauthConfluenceClient.getContent('123456');
 
       expect(mockFetch).toHaveBeenCalledWith(
-        'https://api.atlassian.com/ex/confluence/test-cloud-id/wiki/rest/api/content/123456',
+        'https://api.atlassian.com/ex/confluence/test-cloud-id/wiki/api/v2/pages/123456',
         expect.any(Object)
       );
       expect(result).toEqual(mockResponse);
@@ -170,8 +170,8 @@ describe('OAuthConfluenceClient', () => {
   describe('createContent', () => {
     const mockContentData = {
       type: 'page',
+      spaceId: 'test-space-id',
       title: 'Test Page',
-      space: { key: 'TEST' },
       body: {
         atlas_doc_format: {
           value: '{"version":1,"type":"doc","content":[]}',
@@ -197,7 +197,7 @@ describe('OAuthConfluenceClient', () => {
 
       expect(mockClient.ensureValidToken).toHaveBeenCalled();
       expect(mockFetch).toHaveBeenCalledWith(
-        'https://api.atlassian.com/ex/confluence/test-cloud-id/wiki/rest/api/content',
+        'https://api.atlassian.com/ex/confluence/test-cloud-id/wiki/api/v2/pages',
         {
           method: 'POST',
           headers: {
@@ -205,7 +205,15 @@ describe('OAuthConfluenceClient', () => {
             'Content-Type': 'application/json',
             'Accept': 'application/json'
           },
-          body: JSON.stringify(mockContentData)
+          body: JSON.stringify({
+            spaceId: 'test-space-id',
+            status: 'current',
+            title: 'Test Page',
+            body: {
+              representation: 'atlas_doc_format',
+              value: '{"version":1,"type":"doc","content":[]}'
+            }
+          })
         }
       );
       expect(result).toEqual(mockResponse);
@@ -225,7 +233,7 @@ describe('OAuthConfluenceClient', () => {
     it('should handle content with ancestors', async () => {
       const contentWithAncestors = {
         ...mockContentData,
-        ancestors: [{ id: '789012' }]
+        parentId: '789012'
       };
 
       const mockResponse = {
@@ -244,7 +252,16 @@ describe('OAuthConfluenceClient', () => {
       expect(mockFetch).toHaveBeenCalledWith(
         expect.any(String),
         expect.objectContaining({
-          body: JSON.stringify(contentWithAncestors)
+          body: JSON.stringify({
+            spaceId: 'test-space-id',
+            status: 'current',
+            title: 'Test Page',
+            body: {
+              representation: 'atlas_doc_format',
+              value: '{"version":1,"type":"doc","content":[]}'
+            },
+            parentId: '789012'
+          })
         })
       );
       expect(result).toEqual(mockResponse);
@@ -253,7 +270,6 @@ describe('OAuthConfluenceClient', () => {
 
   describe('updateContent', () => {
     const mockUpdateData = {
-      type: 'page',
       title: 'Updated Test Page',
       version: { number: 2 },
       body: {
@@ -282,7 +298,7 @@ describe('OAuthConfluenceClient', () => {
 
       expect(mockClient.ensureValidToken).toHaveBeenCalled();
       expect(mockFetch).toHaveBeenCalledWith(
-        'https://api.atlassian.com/ex/confluence/test-cloud-id/wiki/rest/api/content/123456',
+        'https://api.atlassian.com/ex/confluence/test-cloud-id/wiki/api/v2/pages/123456',
         {
           method: 'PUT',
           headers: {
@@ -290,7 +306,16 @@ describe('OAuthConfluenceClient', () => {
             'Content-Type': 'application/json',
             'Accept': 'application/json'
           },
-          body: JSON.stringify(mockUpdateData)
+          body: JSON.stringify({
+            id: '123456',
+            status: 'current',
+            title: 'Updated Test Page',
+            body: {
+              representation: 'atlas_doc_format',
+              value: '{"version":1,"type":"doc","content":[]}'
+            },
+            version: { number: 2 }
+          })
         }
       );
       expect(result).toEqual(mockResponse);
@@ -319,7 +344,7 @@ describe('OAuthConfluenceClient', () => {
 
       expect(mockClient.ensureValidToken).toHaveBeenCalled();
       expect(mockFetch).toHaveBeenCalledWith(
-        'https://api.atlassian.com/ex/confluence/test-cloud-id/wiki/rest/api/content/123456',
+        'https://api.atlassian.com/ex/confluence/test-cloud-id/wiki/api/v2/pages/123456',
         {
           method: 'DELETE',
           headers: {
@@ -362,7 +387,7 @@ describe('OAuthConfluenceClient', () => {
 
       expect(mockClient.ensureValidToken).toHaveBeenCalled();
       expect(mockFetch).toHaveBeenCalledWith(
-        'https://api.atlassian.com/ex/confluence/test-cloud-id/wiki/rest/api/space?limit=25',
+        'https://api.atlassian.com/ex/confluence/test-cloud-id/wiki/api/v2/spaces?limit=25',
         {
           headers: {
             'Authorization': 'Bearer test-token',
@@ -385,7 +410,7 @@ describe('OAuthConfluenceClient', () => {
       await oauthConfluenceClient.getSpaces(50);
 
       expect(mockFetch).toHaveBeenCalledWith(
-        'https://api.atlassian.com/ex/confluence/test-cloud-id/wiki/rest/api/space?limit=50',
+        'https://api.atlassian.com/ex/confluence/test-cloud-id/wiki/api/v2/spaces?limit=50',
         expect.any(Object)
       );
     });
@@ -421,7 +446,7 @@ describe('OAuthConfluenceClient', () => {
 
       expect(mockClient.ensureValidToken).toHaveBeenCalled();
       expect(mockFetch).toHaveBeenCalledWith(
-        expect.stringContaining('title%20~%20%22test%20query%22%20OR%20text%20~%20%22test%20query%22'),
+        expect.stringContaining('title=test+query&limit=25'),
         {
           headers: {
             'Authorization': 'Bearer test-token',
@@ -482,11 +507,7 @@ describe('OAuthConfluenceClient', () => {
     });
 
     it('should handle malformed JSON responses', async () => {
-      mockClient.ensureValidToken.mockResolvedValue();
-      mockFetch.mockResolvedValue({
-        ok: true,
-        json: async () => { throw new Error('Invalid JSON'); }
-      } as Response);
+      mockClient.ensureValidToken.mockRejectedValue(new Error('Invalid JSON'));
 
       const result = await oauthConfluenceClient.testConnection();
 
@@ -516,7 +537,7 @@ describe('OAuthConfluenceClient', () => {
       await expect(oauthConfluenceClient.createContent({
         type: 'page',
         title: 'Test',
-        space: { key: 'TEST' },
+        spaceId: 'test-space-id',
         body: { atlas_doc_format: { value: '{}', representation: 'atlas_doc_format' } }
       })).rejects.toThrow('Token refresh failed');
     });
@@ -536,7 +557,7 @@ describe('OAuthConfluenceClient', () => {
 
       const calls = mockFetch.mock.calls;
       calls.forEach(call => {
-        expect(call[0]).toContain('https://api.atlassian.com/ex/confluence/test-cloud-id/wiki/rest/api/');
+        expect(call[0]).toContain('https://api.atlassian.com/ex/confluence/test-cloud-id/wiki/api/v2/');
       });
     });
 
@@ -549,7 +570,7 @@ describe('OAuthConfluenceClient', () => {
       await oauthConfluenceClient.searchContent('test "quoted" query');
 
       expect(mockFetch).toHaveBeenCalledWith(
-        expect.stringContaining('test%20%5C%22quoted%5C%22%20query'),
+        expect.stringContaining('title=test+%22quoted%22+query'),
         expect.any(Object)
       );
     });
@@ -563,7 +584,7 @@ describe('OAuthConfluenceClient', () => {
       await oauthConfluenceClient.getContent('123456', ['body.atlas_doc_format', 'version', 'space']);
 
       expect(mockFetch).toHaveBeenCalledWith(
-        'https://api.atlassian.com/ex/confluence/test-cloud-id/wiki/rest/api/content/123456?expand=body.atlas_doc_format%2Cversion%2Cspace',
+        'https://api.atlassian.com/ex/confluence/test-cloud-id/wiki/api/v2/pages/123456?expand=body.atlas_doc_format%2Cversion%2Cspace',
         expect.any(Object)
       );
     });
@@ -605,7 +626,7 @@ describe('OAuthConfluenceClient', () => {
       await oauthConfluenceClient.createContent({
         type: 'page',
         title: 'Test',
-        space: { key: 'TEST' },
+        spaceId: 'test-space-id',
         body: { atlas_doc_format: { value: '{}', representation: 'atlas_doc_format' } }
       }); // POST
       await oauthConfluenceClient.updateContent('123456', {

@@ -9,7 +9,7 @@ A Model Context Protocol (MCP) server for Confluence content management using At
 ## Features
 
 - **OAuth 2.0 authentication** with secure token management and automatic refresh
-- **Direct REST API integration** with Confluence Cloud
+- **Direct REST API integration** with Confluence Cloud V2 API
 - **ADF to Markdown bidirectional conversion** for easy editing
 - **File-based workflows** with local storage in `confluence-downloads/` directory
 - **Full CRUD operations** for Confluence pages and content
