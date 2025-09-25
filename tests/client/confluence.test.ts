@@ -1,6 +1,6 @@
-import { ConfluenceClient } from '../../client/confluence.js';
-import { authManager } from '../../auth/manager.js';
-import { ConfluenceContent, ConfluenceSpace } from '../../types/index.js';
+import { ConfluenceClient } from '../src/client/confluence';
+import { authManager } from '../src/auth/manager';
+import { ConfluenceContent, ConfluenceSpace } from '../src/types/index';
 
 // Mock the fetch function
 global.fetch = jest.fn();

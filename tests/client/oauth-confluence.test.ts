@@ -1,5 +1,5 @@
-import { OAuthConfluenceClient } from '../../client/oauth-confluence.js';
-import { OAuthClient } from '../../auth/oauth-client.js';
+import { OAuthConfluenceClient } from '../src/client/oauth-confluence';
+import { OAuthClient } from '../src/auth/oauth-client';
 
 // Mock dependencies
 jest.mock('../../auth/oauth-client.js');

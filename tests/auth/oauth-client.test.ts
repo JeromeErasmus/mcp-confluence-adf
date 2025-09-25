@@ -1,5 +1,5 @@
-import { OAuthClient } from '../../auth/oauth-client.js';
-import { OAuthCredentials } from '../../types/index.js';
+import { OAuthClient } from '../src/auth/oauth-client';
+import { OAuthCredentials } from '../src/types/index';
 
 // Mock fetch globally
 global.fetch = jest.fn();

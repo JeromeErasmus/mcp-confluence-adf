@@ -1,5 +1,5 @@
-import { AuthManager } from '../../auth/manager.js';
-import * as oauthModule from '../../tools/oauth.js';
+import { AuthManager } from '../src/auth/manager';
+import * as oauthModule from '../src/tools/oauth';
 
 // Mock the oauth module
 jest.mock('../../tools/oauth.js');

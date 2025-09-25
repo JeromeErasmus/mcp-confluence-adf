@@ -1,7 +1,7 @@
-import { createSearchTools } from '../../tools/search.js';
-import { authManager } from '../../auth/manager.js';
-import { ConfluenceClient } from '../../client/confluence.js';
-import { ToolError } from '../../types/index.js';
+import { createSearchTools } from '../src/tools/search';
+import { authManager } from '../src/auth/manager';
+import { ConfluenceClient } from '../src/client/confluence';
+import { ToolError } from '../src/types/index';
 
 // Mock dependencies
 jest.mock('../../auth/manager.js');

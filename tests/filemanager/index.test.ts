@@ -1,5 +1,5 @@
-import { FileManager } from '../../filemanager/index.js';
-import { FileManagerConfig } from '../../types/index.js';
+import { FileManager } from '../src/filemanager/index';
+import { FileManagerConfig } from '../src/types/index';
 import * as fs from 'fs-extra';
 import { join, resolve, basename } from 'path';
 import { homedir } from 'os';

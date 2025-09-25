@@ -540,3 +540,6 @@ confluence_oauth_clear()
 ## License
 
 MIT
+
+## Important References
+https://developer.atlassian.com/cloud/jira/platform/jira-entity-properties/

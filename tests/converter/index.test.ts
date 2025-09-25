@@ -1,5 +1,5 @@
-import { ADFConverter } from '../../converter/index.js';
-import { ADFDocument } from '../../types/index.js';
+import { ADFConverter } from '../src/converter/index';
+import { ADFDocument } from '../src/types/index';
 
 describe('ADFConverter', () => {
   describe('adfToMarkdown', () => {

@@ -1,5 +1,5 @@
-import { TokenStorage } from '../../auth/token-storage.js';
-import { StoredOAuthData } from '../../auth/token-storage.js';
+import { TokenStorage } from '../src/auth/token-storage';
+import { StoredOAuthData } from '../src/auth/token-storage';
 import * as keytar from 'keytar';
 import { existsSync, mkdirSync } from 'fs';
 import { writeFile, readFile } from 'fs/promises';

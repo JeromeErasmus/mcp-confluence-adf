@@ -1,9 +1,9 @@
-import { createDownloadPageTool } from '../../tools/download-page.js';
-import { authManager } from '../../auth/manager.js';
-import { ConfluenceClient } from '../../client/confluence.js';
-import { FileManager } from '../../filemanager/index.js';
-import { ADFConverter } from '../../converter/index.js';
-import { ToolError } from '../../types/index.js';
+import { createDownloadPageTool } from '../src/tools/download-page';
+import { authManager } from '../src/auth/manager';
+import { ConfluenceClient } from '../src/client/confluence';
+import { FileManager } from '../src/filemanager/index';
+import { ADFConverter } from '../src/converter/index';
+import { ToolError } from '../src/types/index';
 import * as fs from 'fs-extra';
 
 // Mock dependencies

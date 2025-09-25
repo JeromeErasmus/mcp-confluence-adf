@@ -5,7 +5,7 @@ import {
   createOAuthClearTool,
   getOAuthConfluenceClient,
   isOAuthAuthenticated
-} from '../../tools/oauth.js';
+} from '../src/tools/oauth';
 
 // Mock dependencies
 jest.mock('../../auth/oauth-client.js');
@@ -13,8 +13,8 @@ jest.mock('../../client/oauth-confluence.js');
 jest.mock('../../auth/token-storage.js');
 jest.mock('child_process');
 
-import { OAuthClient } from '../../auth/oauth-client.js';
-import { OAuthConfluenceClient } from '../../client/oauth-confluence.js';
+import { OAuthClient } from '../src/auth/oauth-client';
+import { OAuthConfluenceClient } from '../src/client/oauth-confluence';
 import { exec } from 'child_process';
 
 const mockOAuthClient = OAuthClient as jest.MockedClass<typeof OAuthClient>;

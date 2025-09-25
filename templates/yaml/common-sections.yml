@@ -1,0 +1,57 @@
+---
+name: "Common Sections"
+description: "Reusable template sections that can be referenced by other templates"
+version: "1.0.0"
+category: "common"
+output_type: "reusable_modules"
+sections: ["troubleshooting", "support", "changelog", "faq", "installation"]
+---
+
+structure:
+  - section: "troubleshooting_section"
+    description: "Standard troubleshooting section with common issues and diagnostic steps"
+    content_instruction: "Provide a comprehensive troubleshooting guide with common problems, error messages, and step-by-step solutions"
+
+  - section: "support_section"
+    description: "Support and help resources section with contact information and community links"
+    content_instruction: "List available support channels, contact information, community forums, and additional help resources"
+
+  - section: "changelog_section"
+    description: "Version history and changelog section documenting releases and changes"
+    content_instruction: "Document version history, release notes, bug fixes, new features, and breaking changes in reverse chronological order"
+
+  - section: "faq_section"
+    description: "Frequently asked questions section addressing common user queries"
+    content_instruction: "Compile and answer the most commonly asked questions from users, organized by topic or frequency"
+
+  - section: "installation_section"
+    description: "Installation and setup instructions for multiple platforms"
+    content_instruction: "Provide detailed installation steps for all supported platforms, including prerequisites and post-installation verification"
+
+  - section: "getting_started_section"
+    description: "Quick start guide for new users to get productive immediately"
+    content_instruction: "Create a streamlined getting started guide that helps new users achieve their first success quickly"
+
+  - section: "best_practices_section"
+    description: "Best practices, tips, and recommended usage patterns"
+    content_instruction: "Document recommended approaches, performance tips, security best practices, and expert advice"
+
+  - section: "api_reference_section"
+    description: "Comprehensive API reference with endpoints, parameters, and examples"
+    content_instruction: "Document all API endpoints with detailed parameter descriptions, example requests/responses, and error codes"
+
+  - section: "configuration_section"
+    description: "Configuration options, settings, and customization guide"
+    content_instruction: "Detail all configuration options, default values, environment variables, and customization possibilities"
+
+  - section: "security_section"
+    description: "Security considerations, authentication, and best practices"
+    content_instruction: "Cover security requirements, authentication methods, authorization, data protection, and security best practices"
+
+  - section: "performance_section"
+    description: "Performance optimization, monitoring, and troubleshooting guide"
+    content_instruction: "Provide guidance on performance optimization, monitoring tools, common bottlenecks, and tuning recommendations"
+
+  - section: "migration_section"
+    description: "Migration guide for upgrading from previous versions"
+    content_instruction: "Document migration steps, breaking changes, compatibility issues, and upgrade procedures between versions"
