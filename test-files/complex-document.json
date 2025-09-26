@@ -1,0 +1,3397 @@
+{
+  "version": 1,
+  "type": "doc",
+  "content": [
+    {
+      "type": "heading",
+      "attrs": {
+        "level": 1
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Project Alpha Documentation"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Project Manager",
+          "marks": [
+            {
+              "type": "strong"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ": "
+        },
+        {
+          "type": "mention",
+          "attrs": {
+            "id": "project.alpha.pm",
+            "text": "@project.alpha.pm",
+            "userType": "DEFAULT"
+          }
+        },
+        {
+          "type": "hardBreak"
+        },
+        {
+          "type": "text",
+          "text": "Status",
+          "marks": [
+            {
+              "type": "strong"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ": "
+        },
+        {
+          "type": "status",
+          "attrs": {
+            "text": "active",
+            "color": "neutral",
+            "style": "default"
+          }
+        },
+        {
+          "type": "hardBreak"
+        },
+        {
+          "type": "text",
+          "text": "Last Updated",
+          "marks": [
+            {
+              "type": "strong"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ": "
+        },
+        {
+          "type": "date",
+          "attrs": {
+            "timestamp": "2024-01-15"
+          }
+        }
+      ]
+    },
+    {
+      "type": "rule"
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "level": 2
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Overview"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Project Alpha is our next-generation platform initiative "
+        },
+        {
+          "type": "emoji",
+          "attrs": {
+            "shortName": "rocket",
+            "id": "rocket",
+            "text": ":rocket:"
+          }
+        },
+        {
+          "type": "text",
+          "text": " Led by "
+        },
+        {
+          "type": "mention",
+          "attrs": {
+            "id": "tech.lead",
+            "text": "@tech.lead",
+            "userType": "DEFAULT"
+          }
+        },
+        {
+          "type": "text",
+          "text": ", we're building something amazing!"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "level": 3
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Key Objectives"
+        }
+      ]
+    },
+    {
+      "type": "orderedList",
+      "content": [
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Performance Improvement",
+                  "marks": [
+                    {
+                      "type": "strong"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " - Reduce load times by 50% "
+                },
+                {
+                  "type": "emoji",
+                  "attrs": {
+                    "shortName": "zap",
+                    "id": "zap",
+                    "text": ":zap:"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "User Experience",
+                  "marks": [
+                    {
+                      "type": "strong"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " - Modernize UI/UX design "
+                },
+                {
+                  "type": "emoji",
+                  "attrs": {
+                    "shortName": "art",
+                    "id": "art",
+                    "text": ":art:"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Scalability",
+                  "marks": [
+                    {
+                      "type": "strong"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " - Support 10x more concurrent users "
+                },
+                {
+                  "type": "emoji",
+                  "attrs": {
+                    "shortName": "chart_with_upwards_trend",
+                    "id": "chart_with_upwards_trend",
+                    "text": ":chart_with_upwards_trend:"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "level": 2
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Team Structure"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "level": 3
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Development Team"
+        }
+      ]
+    },
+    {
+      "type": "bulletList",
+      "content": [
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Tech Lead",
+                  "marks": [
+                    {
+                      "type": "strong"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ": "
+                },
+                {
+                  "type": "mention",
+                  "attrs": {
+                    "id": "tech.lead",
+                    "text": "@tech.lead",
+                    "userType": "DEFAULT"
+                  }
+                },
+                {
+                  "type": "emoji",
+                  "attrs": {
+                    "shortName": "crown",
+                    "id": "crown",
+                    "text": ":crown:"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Senior Developers",
+                  "marks": [
+                    {
+                      "type": "strong"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ":"
+                }
+              ]
+            },
+            {
+              "type": "bulletList",
+              "content": [
+                {
+                  "type": "listItem",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "type": "mention",
+                          "attrs": {
+                            "id": "dev.sarah",
+                            "text": "@dev.sarah",
+                            "userType": "DEFAULT"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "text": " (Frontend Specialist)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "listItem",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "type": "mention",
+                          "attrs": {
+                            "id": "dev.mike",
+                            "text": "@dev.mike",
+                            "userType": "DEFAULT"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "text": " (Backend Expert)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "listItem",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "type": "mention",
+                          "attrs": {
+                            "id": "dev.lisa",
+                            "text": "@dev.lisa",
+                            "userType": "DEFAULT"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "text": " (Full Stack)"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Junior Developers",
+                  "marks": [
+                    {
+                      "type": "strong"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ":"
+                }
+              ]
+            },
+            {
+              "type": "bulletList",
+              "content": [
+                {
+                  "type": "listItem",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "type": "mention",
+                          "attrs": {
+                            "id": "junior.tom",
+                            "text": "@junior.tom",
+                            "userType": "DEFAULT"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "listItem",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "type": "mention",
+                          "attrs": {
+                            "id": "junior.emma",
+                            "text": "@junior.emma",
+                            "userType": "DEFAULT"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "level": 3
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Design & QA"
+        }
+      ]
+    },
+    {
+      "type": "bulletList",
+      "content": [
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "UX Designer",
+                  "marks": [
+                    {
+                      "type": "strong"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ": "
+                },
+                {
+                  "type": "mention",
+                  "attrs": {
+                    "id": "design.alex",
+                    "text": "@design.alex",
+                    "userType": "DEFAULT"
+                  }
+                },
+                {
+                  "type": "emoji",
+                  "attrs": {
+                    "shortName": "art",
+                    "id": "art",
+                    "text": ":art:"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "QA Lead",
+                  "marks": [
+                    {
+                      "type": "strong"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ": "
+                },
+                {
+                  "type": "mention",
+                  "attrs": {
+                    "id": "qa.jordan",
+                    "text": "@qa.jordan",
+                    "userType": "DEFAULT"
+                  }
+                },
+                {
+                  "type": "emoji",
+                  "attrs": {
+                    "shortName": "mag",
+                    "id": "mag",
+                    "text": ":mag:"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "level": 2
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Project Timeline"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "| Phase | Start Date | End Date | Status |\n|-------|------------|----------|--------|\n| Planning | "
+        },
+        {
+          "type": "date",
+          "attrs": {
+            "timestamp": "2024-01-01"
+          }
+        },
+        {
+          "type": "text",
+          "text": " | "
+        },
+        {
+          "type": "date",
+          "attrs": {
+            "timestamp": "2024-01-15"
+          }
+        },
+        {
+          "type": "text",
+          "text": " | "
+        },
+        {
+          "type": "status",
+          "attrs": {
+            "text": "completed",
+            "color": "neutral",
+            "style": "default"
+          }
+        },
+        {
+          "type": "text",
+          "text": " |\n| Development | "
+        },
+        {
+          "type": "date",
+          "attrs": {
+            "timestamp": "2024-01-16"
+          }
+        },
+        {
+          "type": "text",
+          "text": " | "
+        },
+        {
+          "type": "date",
+          "attrs": {
+            "timestamp": "2024-03-01"
+          }
+        },
+        {
+          "type": "text",
+          "text": " | "
+        },
+        {
+          "type": "status",
+          "attrs": {
+            "text": "in-progress",
+            "color": "neutral",
+            "style": "default"
+          }
+        },
+        {
+          "type": "text",
+          "text": " |\n| Testing | "
+        },
+        {
+          "type": "date",
+          "attrs": {
+            "timestamp": "2024-02-15"
+          }
+        },
+        {
+          "type": "text",
+          "text": " | "
+        },
+        {
+          "type": "date",
+          "attrs": {
+            "timestamp": "2024-03-15"
+          }
+        },
+        {
+          "type": "text",
+          "text": " | "
+        },
+        {
+          "type": "status",
+          "attrs": {
+            "text": "not-started",
+            "color": "neutral",
+            "style": "default"
+          }
+        },
+        {
+          "type": "text",
+          "text": " |\n| Deployment | "
+        },
+        {
+          "type": "date",
+          "attrs": {
+            "timestamp": "2024-03-16"
+          }
+        },
+        {
+          "type": "text",
+          "text": " | "
+        },
+        {
+          "type": "date",
+          "attrs": {
+            "timestamp": "2024-03-30"
+          }
+        },
+        {
+          "type": "text",
+          "text": " | "
+        },
+        {
+          "type": "status",
+          "attrs": {
+            "text": "planned",
+            "color": "neutral",
+            "style": "default"
+          }
+        },
+        {
+          "type": "text",
+          "text": " |"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "level": 2
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Architecture Overview"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Our new architecture includes several key components:"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "mediaSingle",
+          "attrs": {
+            "layout": "center"
+          },
+          "content": [
+            {
+              "type": "media",
+              "attrs": {
+                "id": "alpha-architecture",
+                "type": "file",
+                "alt": "System Architecture",
+                "collection": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "level": 3
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Key Components"
+        }
+      ]
+    },
+    {
+      "type": "orderedList",
+      "content": [
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Frontend Application",
+                  "marks": [
+                    {
+                      "type": "strong"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "bulletList",
+              "content": [
+                {
+                  "type": "listItem",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "React 18 with TypeScript"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "listItem",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "Modern component library"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "listItem",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "Responsive design"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Backend Services",
+                  "marks": [
+                    {
+                      "type": "strong"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "bulletList",
+              "content": [
+                {
+                  "type": "listItem",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "Microservices architecture"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "listItem",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "Node.js with Express"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "listItem",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "GraphQL API layer"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Database Layer",
+                  "marks": [
+                    {
+                      "type": "strong"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "bulletList",
+              "content": [
+                {
+                  "type": "listItem",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "PostgreSQL for primary data"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "listItem",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "Redis for caching"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "listItem",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "Elasticsearch for search"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "level": 2
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Current Progress "
+        },
+        {
+          "type": "emoji",
+          "attrs": {
+            "shortName": "bar_chart",
+            "id": "bar_chart",
+            "text": ":bar_chart:"
+          }
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "level": 3
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Completed Features "
+        },
+        {
+          "type": "emoji",
+          "attrs": {
+            "shortName": "white_check_mark",
+            "id": "white_check_mark",
+            "text": ":white_check_mark:"
+          }
+        }
+      ]
+    },
+    {
+      "type": "bulletList",
+      "content": [
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "User authentication system"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Basic UI components"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Database schema design"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "API endpoint structure"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "level": 3
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "In Progress Features "
+        },
+        {
+          "type": "emoji",
+          "attrs": {
+            "shortName": "construction",
+            "id": "construction",
+            "text": ":construction:"
+          }
+        }
+      ]
+    },
+    {
+      "type": "bulletList",
+      "content": [
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Frontend dashboard ("
+                },
+                {
+                  "type": "mention",
+                  "attrs": {
+                    "id": "dev.sarah",
+                    "text": "@dev.sarah",
+                    "userType": "DEFAULT"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": " leading)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "User management API ("
+                },
+                {
+                  "type": "mention",
+                  "attrs": {
+                    "id": "dev.mike",
+                    "text": "@dev.mike",
+                    "userType": "DEFAULT"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": " leading)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Search functionality ("
+                },
+                {
+                  "type": "mention",
+                  "attrs": {
+                    "id": "dev.lisa",
+                    "text": "@dev.lisa",
+                    "userType": "DEFAULT"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": " leading)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "level": 3
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Upcoming Features "
+        },
+        {
+          "type": "emoji",
+          "attrs": {
+            "shortName": "calendar",
+            "id": "calendar",
+            "text": ":calendar:"
+          }
+        }
+      ]
+    },
+    {
+      "type": "bulletList",
+      "content": [
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Real-time notifications (planned for "
+                },
+                {
+                  "type": "date",
+                  "attrs": {
+                    "timestamp": "2024-02-01"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": ")"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Mobile responsive design (planned for "
+                },
+                {
+                  "type": "date",
+                  "attrs": {
+                    "timestamp": "2024-02-15"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": ")"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Performance optimizations (planned for "
+                },
+                {
+                  "type": "date",
+                  "attrs": {
+                    "timestamp": "2024-02-20"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": ")"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "level": 2
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Resources & Documentation"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Essential project resources:"
+        }
+      ]
+    },
+    {
+      "type": "bulletList",
+      "content": [
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "inlineCard",
+                  "attrs": {
+                    "url": "https://company.atlassian.net/wiki/alpha-charter"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "inlineCard",
+                  "attrs": {
+                    "url": "https://docs.company.com/alpha-requirements"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "inlineCard",
+                  "attrs": {
+                    "url": "https://design.company.com/alpha-system"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "inlineCard",
+                  "attrs": {
+                    "url": "https://api-docs.company.com/alpha"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "level": 2
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Screenshots & Mockups"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Current progress screenshots:"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "mediaSingle",
+          "attrs": {
+            "layout": "center"
+          },
+          "content": [
+            {
+              "type": "media",
+              "attrs": {
+                "id": "alpha-login-screen",
+                "type": "file",
+                "alt": "Login Screen",
+                "collection": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Updated dashboard design:"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "mediaSingle",
+          "attrs": {
+            "layout": "center"
+          },
+          "content": [
+            {
+              "type": "media",
+              "attrs": {
+                "id": "alpha-dashboard-mockup",
+                "type": "file",
+                "alt": "Dashboard Mockup",
+                "collection": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Mobile responsive design:"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "mediaSingle",
+          "attrs": {
+            "layout": "center"
+          },
+          "content": [
+            {
+              "type": "media",
+              "attrs": {
+                "id": "alpha-mobile-design",
+                "type": "file",
+                "alt": "Mobile Design",
+                "collection": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "level": 2
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Risk Assessment "
+        },
+        {
+          "type": "emoji",
+          "attrs": {
+            "shortName": "warning",
+            "id": "warning",
+            "text": ":warning:"
+          }
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "level": 3
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "High Priority Risks"
+        }
+      ]
+    },
+    {
+      "type": "bulletList",
+      "content": [
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Timeline Risk",
+                  "marks": [
+                    {
+                      "type": "strong"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ": Aggressive deadline "
+                },
+                {
+                  "type": "date",
+                  "attrs": {
+                    "timestamp": "2024-03-30"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": " - mitigation: add "
+                },
+                {
+                  "type": "mention",
+                  "attrs": {
+                    "id": "contractor.dev",
+                    "text": "@contractor.dev",
+                    "userType": "DEFAULT"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": " if needed"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Technical Risk",
+                  "marks": [
+                    {
+                      "type": "strong"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ": New architecture complexity - mitigation: additional code reviews by "
+                },
+                {
+                  "type": "mention",
+                  "attrs": {
+                    "id": "senior.architect",
+                    "text": "@senior.architect",
+                    "userType": "DEFAULT"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "level": 3
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Medium Priority Risks"
+        }
+      ]
+    },
+    {
+      "type": "bulletList",
+      "content": [
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Resource Risk",
+                  "marks": [
+                    {
+                      "type": "strong"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ": Team capacity during holiday season"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Integration Risk",
+                  "marks": [
+                    {
+                      "type": "strong"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ": Third-party service dependencies"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "level": 2
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Next Steps "
+        },
+        {
+          "type": "emoji",
+          "attrs": {
+            "shortName": "arrow_forward",
+            "id": "arrow_forward",
+            "text": ":arrow_forward:"
+          }
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "level": 3
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "This Week"
+        }
+      ]
+    },
+    {
+      "type": "orderedList",
+      "content": [
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Complete user authentication module ("
+                },
+                {
+                  "type": "mention",
+                  "attrs": {
+                    "id": "dev.mike",
+                    "text": "@dev.mike",
+                    "userType": "DEFAULT"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": ") "
+                },
+                {
+                  "type": "emoji",
+                  "attrs": {
+                    "shortName": "key",
+                    "id": "key",
+                    "text": ":key:"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Finalize design system ("
+                },
+                {
+                  "type": "mention",
+                  "attrs": {
+                    "id": "design.alex",
+                    "text": "@design.alex",
+                    "userType": "DEFAULT"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": ") "
+                },
+                {
+                  "type": "emoji",
+                  "attrs": {
+                    "shortName": "art",
+                    "id": "art",
+                    "text": ":art:"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Set up CI/CD pipeline ("
+                },
+                {
+                  "type": "mention",
+                  "attrs": {
+                    "id": "devops.sam",
+                    "text": "@devops.sam",
+                    "userType": "DEFAULT"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": ") "
+                },
+                {
+                  "type": "emoji",
+                  "attrs": {
+                    "shortName": "gear",
+                    "id": "gear",
+                    "text": ":gear:"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "level": 3
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Next Week ("
+        },
+        {
+          "type": "date",
+          "attrs": {
+            "timestamp": "2024-01-22"
+          }
+        },
+        {
+          "type": "text",
+          "text": ")"
+        }
+      ]
+    },
+    {
+      "type": "orderedList",
+      "content": [
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Begin frontend dashboard implementation"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Start API integration testing"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Review security requirements with "
+                },
+                {
+                  "type": "mention",
+                  "attrs": {
+                    "id": "security.expert",
+                    "text": "@security.expert",
+                    "userType": "DEFAULT"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "rule"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Status Update",
+          "marks": [
+            {
+              "type": "strong"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ": "
+        },
+        {
+          "type": "status",
+          "attrs": {
+            "text": "on-track",
+            "color": "neutral",
+            "style": "default"
+          }
+        },
+        {
+          "type": "emoji",
+          "attrs": {
+            "shortName": "thumbsup",
+            "id": "thumbsup",
+            "text": ":thumbsup:"
+          }
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "For questions, contact "
+        },
+        {
+          "type": "mention",
+          "attrs": {
+            "id": "project.alpha.pm",
+            "text": "@project.alpha.pm",
+            "userType": "DEFAULT"
+          }
+        },
+        {
+          "type": "text",
+          "text": " or join our Slack channel."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Great work team! "
+        },
+        {
+          "type": "emoji",
+          "attrs": {
+            "shortName": "rocket",
+            "id": "rocket",
+            "text": ":rocket:"
+          }
+        },
+        {
+          "type": "emoji",
+          "attrs": {
+            "shortName": "tada",
+            "id": "tada",
+            "text": ":tada:"
+          }
+        }
+      ]
+    },
+    {
+      "type": "rule"
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "level": 2
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Advanced Rich Media Integration"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "level": 3
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "System Architecture with Panels"
+        }
+      ]
+    },
+    {
+      "type": "panel",
+      "attrs": {
+        "panelType": "info",
+        "title": "Architecture Overview"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Our microservices architecture designed by {user:system.architect} on {date:2024-01-10}:\n\n![Architecture Diagram](media:microservices-architecture)\n\n**Current Status:**\n- Services: 12 active :gear:\n- Health: {status:optimal} :white_check_mark:\n- Load: {status:normal} :chart_with_upwards_trend:"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "level": 3
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Deployment Pipeline"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "[HTML: <details>\n<summary>🚀 **CI/CD Pipeline Configuration** - Managed by {user:devops.lead}</summary>]"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Pipeline Stages:",
+          "marks": [
+            {
+              "type": "strong"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "| Stage | Duration | Owner | Status | Last Run |\n|-------|----------|-------|--------|----------|\n| Build | 3 min | "
+        },
+        {
+          "type": "mention",
+          "attrs": {
+            "id": "build.engineer",
+            "text": "@build.engineer",
+            "userType": "DEFAULT"
+          }
+        },
+        {
+          "type": "text",
+          "text": " | "
+        },
+        {
+          "type": "status",
+          "attrs": {
+            "text": "active",
+            "color": "neutral",
+            "style": "default"
+          }
+        },
+        {
+          "type": "text",
+          "text": " | "
+        },
+        {
+          "type": "date",
+          "attrs": {
+            "timestamp": "2024-01-30"
+          }
+        },
+        {
+          "type": "text",
+          "text": " |\n| Test | 8 min | "
+        },
+        {
+          "type": "mention",
+          "attrs": {
+            "id": "test.automation",
+            "text": "@test.automation",
+            "userType": "DEFAULT"
+          }
+        },
+        {
+          "type": "text",
+          "text": " | "
+        },
+        {
+          "type": "status",
+          "attrs": {
+            "text": "active",
+            "color": "neutral",
+            "style": "default"
+          }
+        },
+        {
+          "type": "text",
+          "text": " | "
+        },
+        {
+          "type": "date",
+          "attrs": {
+            "timestamp": "2024-01-30"
+          }
+        },
+        {
+          "type": "text",
+          "text": " |\n| Security Scan | 5 min | "
+        },
+        {
+          "type": "mention",
+          "attrs": {
+            "id": "security.officer",
+            "text": "@security.officer",
+            "userType": "DEFAULT"
+          }
+        },
+        {
+          "type": "text",
+          "text": " | "
+        },
+        {
+          "type": "status",
+          "attrs": {
+            "text": "active",
+            "color": "neutral",
+            "style": "default"
+          }
+        },
+        {
+          "type": "text",
+          "text": " | "
+        },
+        {
+          "type": "date",
+          "attrs": {
+            "timestamp": "2024-01-30"
+          }
+        },
+        {
+          "type": "text",
+          "text": " |\n| Deploy Staging | 2 min | "
+        },
+        {
+          "type": "mention",
+          "attrs": {
+            "id": "deploy.manager",
+            "text": "@deploy.manager",
+            "userType": "DEFAULT"
+          }
+        },
+        {
+          "type": "text",
+          "text": " | "
+        },
+        {
+          "type": "status",
+          "attrs": {
+            "text": "active",
+            "color": "neutral",
+            "style": "default"
+          }
+        },
+        {
+          "type": "text",
+          "text": " | "
+        },
+        {
+          "type": "date",
+          "attrs": {
+            "timestamp": "2024-01-30"
+          }
+        },
+        {
+          "type": "text",
+          "text": " |\n| Deploy Production | 2 min | "
+        },
+        {
+          "type": "mention",
+          "attrs": {
+            "id": "release.engineer",
+            "text": "@release.engineer",
+            "userType": "DEFAULT"
+          }
+        },
+        {
+          "type": "text",
+          "text": " | "
+        },
+        {
+          "type": "status",
+          "attrs": {
+            "text": "manual",
+            "color": "neutral",
+            "style": "default"
+          }
+        },
+        {
+          "type": "text",
+          "text": " | "
+        },
+        {
+          "type": "date",
+          "attrs": {
+            "timestamp": "2024-01-29"
+          }
+        },
+        {
+          "type": "text",
+          "text": " |"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Pipeline Visualizations:",
+          "marks": [
+            {
+              "type": "strong"
+            }
+          ]
+        },
+        {
+          "type": "mediaSingle",
+          "attrs": {
+            "layout": "center"
+          },
+          "content": [
+            {
+              "type": "media",
+              "attrs": {
+                "id": "build-pipeline-flow",
+                "type": "file",
+                "alt": "Build Pipeline",
+                "collection": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "mediaSingle",
+          "attrs": {
+            "layout": "center"
+          },
+          "content": [
+            {
+              "type": "media",
+              "attrs": {
+                "id": "deployment-success-rates",
+                "type": "file",
+                "alt": "Deployment Metrics",
+                "collection": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Monitoring Dashboard:",
+          "marks": [
+            {
+              "type": "strong"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "\nCurrent system health monitored by "
+        },
+        {
+          "type": "mention",
+          "attrs": {
+            "id": "monitoring.specialist",
+            "text": "@monitoring.specialist",
+            "userType": "DEFAULT"
+          }
+        },
+        {
+          "type": "text",
+          "text": ":"
+        }
+      ]
+    },
+    {
+      "type": "bulletList",
+      "content": [
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Success Rate: "
+                },
+                {
+                  "type": "status",
+                  "attrs": {
+                    "text": "excellent",
+                    "color": "neutral",
+                    "style": "default"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": " 98.5% "
+                },
+                {
+                  "type": "emoji",
+                  "attrs": {
+                    "shortName": "chart_with_upwards_trend",
+                    "id": "chart_with_upwards_trend",
+                    "text": ":chart_with_upwards_trend:"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Performance: "
+                },
+                {
+                  "type": "status",
+                  "attrs": {
+                    "text": "optimal",
+                    "color": "neutral",
+                    "style": "default"
+                  }
+                },
+                {
+                  "type": "emoji",
+                  "attrs": {
+                    "shortName": "zap",
+                    "id": "zap",
+                    "text": ":zap:"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Last Incident: "
+                },
+                {
+                  "type": "date",
+                  "attrs": {
+                    "timestamp": "2024-01-15"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": " (resolved) "
+                },
+                {
+                  "type": "emoji",
+                  "attrs": {
+                    "shortName": "white_check_mark",
+                    "id": "white_check_mark",
+                    "text": ":white_check_mark:"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "[HTML: </details>]"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "level": 3
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Team Performance Analytics"
+        }
+      ]
+    },
+    {
+      "type": "panel",
+      "attrs": {
+        "panelType": "note",
+        "title": "Sprint Performance Data"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "![Sprint Analytics](media:sprint-performance-dashboard)\n\n**Key Metrics** (Updated {date:2024-01-30}):\n- Velocity: {status:increasing} +15% :arrow_up:\n- Bug Rate: {status:decreasing} -20% :arrow_down:\n- Team Satisfaction: {status:high} 9.2/10 :heart:\n\n**Top Performers:**\n- Code Quality: {user:quality.champion} :trophy:\n- Innovation: {user:innovation.leader} :bulb:\n- Mentorship: {user:mentor.expert} :mortar_board:"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "level": 3
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Feature Development Status"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "level": 4
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Authentication & Security"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Lead: "
+        },
+        {
+          "type": "mention",
+          "attrs": {
+            "id": "security.architect",
+            "text": "@security.architect",
+            "userType": "DEFAULT"
+          }
+        },
+        {
+          "type": "text",
+          "text": " | Timeline: "
+        },
+        {
+          "type": "date",
+          "attrs": {
+            "timestamp": "2024-01-01"
+          }
+        },
+        {
+          "type": "text",
+          "text": " - "
+        },
+        {
+          "type": "date",
+          "attrs": {
+            "timestamp": "2024-02-15"
+          }
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "mediaSingle",
+          "attrs": {
+            "layout": "center"
+          },
+          "content": [
+            {
+              "type": "media",
+              "attrs": {
+                "id": "security-features-progress",
+                "type": "file",
+                "alt": "Security Implementation",
+                "collection": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "panel",
+      "attrs": {
+        "panelType": "warning",
+        "title": "Two-factor authentication implementation"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "**Implementation phases:**\n1. Backend API: {status:completed} :white_check_mark:\n2. Frontend Integration: {status:in-progress} :construction:\n3. Mobile App: {status:pending} :calendar:\n\nSecurity review scheduled for {date:2024-02-10} with {user:security.auditor}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "level": 4
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "User Experience Enhancements"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Lead: "
+        },
+        {
+          "type": "mention",
+          "attrs": {
+            "id": "ux.designer",
+            "text": "@ux.designer",
+            "userType": "DEFAULT"
+          }
+        },
+        {
+          "type": "text",
+          "text": " | Timeline: "
+        },
+        {
+          "type": "date",
+          "attrs": {
+            "timestamp": "2024-01-15"
+          }
+        },
+        {
+          "type": "text",
+          "text": " - "
+        },
+        {
+          "type": "date",
+          "attrs": {
+            "timestamp": "2024-03-01"
+          }
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "[HTML: <details>\n<summary>🎨 **UX Design Evolution** - Click to expand</summary>]"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Design Journey:",
+          "marks": [
+            {
+              "type": "strong"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Phase 1: Research",
+          "marks": [
+            {
+              "type": "strong"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " ("
+        },
+        {
+          "type": "date",
+          "attrs": {
+            "timestamp": "2024-01-15"
+          }
+        },
+        {
+          "type": "text",
+          "text": " - "
+        },
+        {
+          "type": "date",
+          "attrs": {
+            "timestamp": "2024-01-25"
+          }
+        },
+        {
+          "type": "text",
+          "text": ")\n"
+        },
+        {
+          "type": "mediaSingle",
+          "attrs": {
+            "layout": "center"
+          },
+          "content": [
+            {
+              "type": "media",
+              "attrs": {
+                "id": "ux-research-findings",
+                "type": "file",
+                "alt": "User Research",
+                "collection": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "\nResearch conducted by "
+        },
+        {
+          "type": "mention",
+          "attrs": {
+            "id": "user.researcher",
+            "text": "@user.researcher",
+            "userType": "DEFAULT"
+          }
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Phase 2: Wireframes",
+          "marks": [
+            {
+              "type": "strong"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " ("
+        },
+        {
+          "type": "date",
+          "attrs": {
+            "timestamp": "2024-01-25"
+          }
+        },
+        {
+          "type": "text",
+          "text": " - "
+        },
+        {
+          "type": "date",
+          "attrs": {
+            "timestamp": "2024-02-05"
+          }
+        },
+        {
+          "type": "text",
+          "text": ")\n"
+        },
+        {
+          "type": "mediaSingle",
+          "attrs": {
+            "layout": "center"
+          },
+          "content": [
+            {
+              "type": "media",
+              "attrs": {
+                "id": "wireframe-evolution",
+                "type": "file",
+                "alt": "Wireframe Iterations",
+                "collection": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "\nDesigns by "
+        },
+        {
+          "type": "mention",
+          "attrs": {
+            "id": "wireframe.specialist",
+            "text": "@wireframe.specialist",
+            "userType": "DEFAULT"
+          }
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Phase 3: Prototypes",
+          "marks": [
+            {
+              "type": "strong"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " ("
+        },
+        {
+          "type": "date",
+          "attrs": {
+            "timestamp": "2024-02-05"
+          }
+        },
+        {
+          "type": "text",
+          "text": " - "
+        },
+        {
+          "type": "date",
+          "attrs": {
+            "timestamp": "2024-02-20"
+          }
+        },
+        {
+          "type": "text",
+          "text": ")\n"
+        },
+        {
+          "type": "mediaSingle",
+          "attrs": {
+            "layout": "center"
+          },
+          "content": [
+            {
+              "type": "media",
+              "attrs": {
+                "id": "prototype-demos",
+                "type": "file",
+                "alt": "Interactive Prototypes",
+                "collection": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "\nDevelopment by "
+        },
+        {
+          "type": "mention",
+          "attrs": {
+            "id": "prototype.developer",
+            "text": "@prototype.developer",
+            "userType": "DEFAULT"
+          }
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Current Status:",
+          "marks": [
+            {
+              "type": "strong"
+            }
+          ]
+        },
+        {
+          "type": "status",
+          "attrs": {
+            "text": "design-review",
+            "color": "neutral",
+            "style": "default"
+          }
+        },
+        {
+          "type": "emoji",
+          "attrs": {
+            "shortName": "eyes",
+            "id": "eyes",
+            "text": ":eyes:"
+          }
+        },
+        {
+          "type": "text",
+          "text": "\nNext milestone: "
+        },
+        {
+          "type": "date",
+          "attrs": {
+            "timestamp": "2024-02-25"
+          }
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "[HTML: </details>]"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "level": 3
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Resource Management Dashboard"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Project Resources",
+          "marks": [
+            {
+              "type": "strong"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " - Last updated by "
+        },
+        {
+          "type": "mention",
+          "attrs": {
+            "id": "resource.coordinator",
+            "text": "@resource.coordinator",
+            "userType": "DEFAULT"
+          }
+        },
+        {
+          "type": "text",
+          "text": " on "
+        },
+        {
+          "type": "date",
+          "attrs": {
+            "timestamp": "2024-01-31"
+          }
+        },
+        {
+          "type": "text",
+          "text": ":"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "| Resource Type | Current Usage | Capacity | Status | Contact |\n|---------------|---------------|----------|--------|---------|\n| Development Team | 85% | 12 developers | "
+        },
+        {
+          "type": "status",
+          "attrs": {
+            "text": "optimal",
+            "color": "neutral",
+            "style": "default"
+          }
+        },
+        {
+          "type": "text",
+          "text": " | "
+        },
+        {
+          "type": "mention",
+          "attrs": {
+            "id": "dev.manager",
+            "text": "@dev.manager",
+            "userType": "DEFAULT"
+          }
+        },
+        {
+          "type": "text",
+          "text": " |\n| Testing Team | 70% | 6 testers | "
+        },
+        {
+          "type": "status",
+          "attrs": {
+            "text": "good",
+            "color": "neutral",
+            "style": "default"
+          }
+        },
+        {
+          "type": "text",
+          "text": " | "
+        },
+        {
+          "type": "mention",
+          "attrs": {
+            "id": "qa.director",
+            "text": "@qa.director",
+            "userType": "DEFAULT"
+          }
+        },
+        {
+          "type": "text",
+          "text": " |\n| Infrastructure | 60% | Cloud resources | "
+        },
+        {
+          "type": "status",
+          "attrs": {
+            "text": "available",
+            "color": "neutral",
+            "style": "default"
+          }
+        },
+        {
+          "type": "text",
+          "text": " | "
+        },
+        {
+          "type": "mention",
+          "attrs": {
+            "id": "infra.admin",
+            "text": "@infra.admin",
+            "userType": "DEFAULT"
+          }
+        },
+        {
+          "type": "text",
+          "text": " |\n| Budget | 45% | $500K allocated | "
+        },
+        {
+          "type": "status",
+          "attrs": {
+            "text": "on-track",
+            "color": "neutral",
+            "style": "default"
+          }
+        },
+        {
+          "type": "text",
+          "text": " | "
+        },
+        {
+          "type": "mention",
+          "attrs": {
+            "id": "budget.controller",
+            "text": "@budget.controller",
+            "userType": "DEFAULT"
+          }
+        },
+        {
+          "type": "text",
+          "text": " |"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "mediaSingle",
+          "attrs": {
+            "layout": "center"
+          },
+          "content": [
+            {
+              "type": "media",
+              "attrs": {
+                "id": "resource-utilization-charts",
+                "type": "file",
+                "alt": "Resource Utilization",
+                "collection": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "level": 3
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Documentation & Knowledge Base"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Essential documentation maintained by "
+        },
+        {
+          "type": "mention",
+          "attrs": {
+            "id": "documentation.lead",
+            "text": "@documentation.lead",
+            "userType": "DEFAULT"
+          }
+        },
+        {
+          "type": "text",
+          "text": ":"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Technical Documentation:",
+          "marks": [
+            {
+              "type": "strong"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "bulletList",
+      "content": [
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "inlineCard",
+                  "attrs": {
+                    "url": "https://docs.company.com/architecture"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": " - Status: "
+                },
+                {
+                  "type": "status",
+                  "attrs": {
+                    "text": "current",
+                    "color": "neutral",
+                    "style": "default"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "inlineCard",
+                  "attrs": {
+                    "url": "https://api.company.com/docs"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": " - Updated: "
+                },
+                {
+                  "type": "date",
+                  "attrs": {
+                    "timestamp": "2024-01-28"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "inlineCard",
+                  "attrs": {
+                    "url": "https://security.company.com/guidelines"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": " - Review: "
+                },
+                {
+                  "type": "status",
+                  "attrs": {
+                    "text": "approved",
+                    "color": "neutral",
+                    "style": "default"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Process Documentation:",
+          "marks": [
+            {
+              "type": "strong"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "bulletList",
+      "content": [
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "inlineCard",
+                  "attrs": {
+                    "url": "https://process.company.com/dev-workflow"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": " - Owner: "
+                },
+                {
+                  "type": "mention",
+                  "attrs": {
+                    "id": "process.manager",
+                    "text": "@process.manager",
+                    "userType": "DEFAULT"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "inlineCard",
+                  "attrs": {
+                    "url": "https://release.company.com/procedures"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": " - Status: "
+                },
+                {
+                  "type": "status",
+                  "attrs": {
+                    "text": "validated",
+                    "color": "neutral",
+                    "style": "default"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "inlineCard",
+                  "attrs": {
+                    "url": "https://incident.company.com/response"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": " - Last drill: "
+                },
+                {
+                  "type": "date",
+                  "attrs": {
+                    "timestamp": "2024-01-20"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "mediaSingle",
+          "attrs": {
+            "layout": "center"
+          },
+          "content": [
+            {
+              "type": "media",
+              "attrs": {
+                "id": "documentation-coverage-map",
+                "type": "file",
+                "alt": "Documentation Coverage",
+                "collection": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "level": 3
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Final Project Status"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Overall Project Health",
+          "marks": [
+            {
+              "type": "strong"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " assessed by "
+        },
+        {
+          "type": "mention",
+          "attrs": {
+            "id": "project.health.monitor",
+            "text": "@project.health.monitor",
+            "userType": "DEFAULT"
+          }
+        },
+        {
+          "type": "text",
+          "text": " on "
+        },
+        {
+          "type": "date",
+          "attrs": {
+            "timestamp": "2024-01-31"
+          }
+        },
+        {
+          "type": "text",
+          "text": ":"
+        }
+      ]
+    },
+    {
+      "type": "panel",
+      "attrs": {
+        "panelType": "success",
+        "title": "Project Alpha exceeding expectations!"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "![Project Health Dashboard](media:project-health-overview)\n\n**Achievement Highlights:**\n- Timeline: {status:ahead-of-schedule} :racing_car:\n- Budget: {status:under-budget} :moneybag:\n- Quality: {status:exceeds-expectations} :star:\n- Team Morale: {status:excellent} :heart:\n\n**Recognition:**\n- Project Management: {user:project.alpha.pm} :trophy:\n- Technical Leadership: {user:tech.lead} :crown:\n- Innovation: {user:innovation.team} :bulb:\n\nCelebration planned for {date:2024-04-01}! :confetti_ball:"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "mediaSingle",
+          "attrs": {
+            "layout": "center"
+          },
+          "content": [
+            {
+              "type": "media",
+              "attrs": {
+                "id": "project-success-celebration",
+                "type": "file",
+                "alt": "Success Celebration",
+                "collection": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Continue to maintain this momentum through Q2 2024!",
+          "marks": [
+            {
+              "type": "strong"
+            }
+          ]
+        },
+        {
+          "type": "emoji",
+          "attrs": {
+            "shortName": "rocket",
+            "id": "rocket",
+            "text": ":rocket:"
+          }
+        }
+      ]
+    }
+  ]
+}
