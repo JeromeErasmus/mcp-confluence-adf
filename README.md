@@ -22,9 +22,9 @@ A Model Context Protocol (MCP) server for Confluence content management using At
 
 ### NPM Package Install (Recommended)
 
-**1. Install the package from npm:**
+**1. Install the package globally:**
 ```bash
-npm install -g mcp-confluence-adf
+yarn global add mcp-confluence-adf
 ```
 
 **2. Add the server configuration:**
@@ -86,7 +86,7 @@ Add this to the `"mcp"` � `"servers"` section:
 
 **Global install:**
 ```bash
-npm install -g mcp-confluence-adf
+yarn global add mcp-confluence-adf
 ```
 
 **Quick test without install:**
@@ -103,9 +103,9 @@ To completely remove the MCP server:
 claude mcp remove mcp-confluence-adf
 ```
 
-**2. Uninstall the npm package:**
+**2. Uninstall the package:**
 ```bash
-npm uninstall -g mcp-confluence-adf
+yarn global remove mcp-confluence-adf
 ```
 
 ## How It Works
@@ -581,7 +581,7 @@ structure:
   - type: code_block
     title: "Quick Install"
     language: "bash"
-    content_instruction: "Provide the simplest installation command for {{project_name}} using the most common package manager for {{main_technology}}"
+    content_instruction: "Provide the simplest installation command for {{project_name}} using yarn or the most common package manager for {{main_technology}}"
     purpose: "Get users up and running quickly"
 ```
 
@@ -644,13 +644,13 @@ variables:
 ### Requirements
 Before installing Node.js API Server, ensure you have:
 - Node.js v18.0.0 or higher
-- npm v8.0.0 or higher
+- yarn v1.22.0 or higher
 - Git for version control
 
 ## Installation
 
 ```bash
-npm install -g nodejs-api-server
+yarn global add nodejs-api-server
 ```
 
 ### Verification
