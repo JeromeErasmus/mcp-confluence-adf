@@ -47,7 +47,58 @@
           "content": [
             {
               "type": "text",
-              "text": "This is an info panel with rich content including {user:info.user} and :information_source: emoji. \n\nImportant date: {date:2024-01-01}\nStatus: {status:active}"
+              "text": "This is an info panel with rich content including "
+            },
+            {
+              "type": "mention",
+              "attrs": {
+                "id": "info.user",
+                "text": "@info.user",
+                "userType": "DEFAULT"
+              }
+            },
+            {
+              "type": "text",
+              "text": " and "
+            },
+            {
+              "type": "emoji",
+              "attrs": {
+                "shortName": "information_source",
+                "id": "information_source",
+                "text": ":information_source:"
+              }
+            },
+            {
+              "type": "text",
+              "text": " emoji."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Important date: "
+            },
+            {
+              "type": "date",
+              "attrs": {
+                "timestamp": "2024-01-01"
+              }
+            },
+            {
+              "type": "text",
+              "text": "\nStatus: "
+            },
+            {
+              "type": "status",
+              "attrs": {
+                "text": "active",
+                "color": "neutral",
+                "style": "default"
+              }
             }
           ]
         }
@@ -65,7 +116,46 @@
           "content": [
             {
               "type": "text",
-              "text": "Critical system maintenance scheduled for {date:2024-02-15}! \n\nContact {user:system.admin} for questions. Current status: {status:maintenance-mode}"
+              "text": "Critical system maintenance scheduled for "
+            },
+            {
+              "type": "date",
+              "attrs": {
+                "timestamp": "2024-02-15"
+              }
+            },
+            {
+              "type": "text",
+              "text": "!"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Contact "
+            },
+            {
+              "type": "mention",
+              "attrs": {
+                "id": "system.admin",
+                "text": "@system.admin",
+                "userType": "DEFAULT"
+              }
+            },
+            {
+              "type": "text",
+              "text": " for questions. Current status: "
+            },
+            {
+              "type": "status",
+              "attrs": {
+                "text": "maintenance-mode",
+                "color": "neutral",
+                "style": "default"
+              }
             }
           ]
         }
@@ -83,7 +173,56 @@
           "content": [
             {
               "type": "text",
-              "text": "Deployment completed successfully! :tada:\n\nTeam members: {user:dev.lead}, {user:qa.manager}\nFinal status: {status:deployed}"
+              "text": "Deployment completed successfully! "
+            },
+            {
+              "type": "emoji",
+              "attrs": {
+                "shortName": "tada",
+                "id": "tada",
+                "text": ":tada:"
+              }
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Team members: "
+            },
+            {
+              "type": "mention",
+              "attrs": {
+                "id": "dev.lead",
+                "text": "@dev.lead",
+                "userType": "DEFAULT"
+              }
+            },
+            {
+              "type": "text",
+              "text": ", "
+            },
+            {
+              "type": "mention",
+              "attrs": {
+                "id": "qa.manager",
+                "text": "@qa.manager",
+                "userType": "DEFAULT"
+              }
+            },
+            {
+              "type": "text",
+              "text": "\nFinal status: "
+            },
+            {
+              "type": "status",
+              "attrs": {
+                "text": "deployed",
+                "color": "neutral",
+                "style": "default"
+              }
             }
           ]
         }
@@ -101,7 +240,34 @@
           "content": [
             {
               "type": "text",
-              "text": "Code review guidelines updated.\n\nPlease review the new requirements by {date:2024-01-20}.\nAssigned to: {user:tech.reviewer}"
+              "text": "Code review guidelines updated."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Please review the new requirements by "
+            },
+            {
+              "type": "date",
+              "attrs": {
+                "timestamp": "2024-01-20"
+              }
+            },
+            {
+              "type": "text",
+              "text": ".\nAssigned to: "
+            },
+            {
+              "type": "mention",
+              "attrs": {
+                "id": "tech.reviewer",
+                "text": "@tech.reviewer",
+                "userType": "DEFAULT"
+              }
             }
           ]
         }
@@ -224,113 +390,201 @@
       ]
     },
     {
-      "type": "paragraph",
+      "type": "table",
       "content": [
         {
-          "type": "text",
-          "text": "| Component | Lead | Status | Deadline |\n|-----------|------|--------|----------|\n| Frontend | "
+          "type": "tableRow",
+          "content": [
+            {
+              "type": "tableHeader",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Component"
+                }
+              ]
+            },
+            {
+              "type": "tableHeader",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Lead"
+                }
+              ]
+            },
+            {
+              "type": "tableHeader",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Status"
+                }
+              ]
+            },
+            {
+              "type": "tableHeader",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Deadline"
+                }
+              ]
+            }
+          ]
         },
         {
-          "type": "mention",
-          "attrs": {
-            "id": "frontend.lead",
-            "text": "@frontend.lead",
-            "userType": "DEFAULT"
-          }
+          "type": "tableRow",
+          "content": [
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Frontend"
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "mention",
+                  "attrs": {
+                    "id": "frontend.lead",
+                    "text": "@frontend.lead",
+                    "userType": "DEFAULT"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "status",
+                  "attrs": {
+                    "text": "in-progress",
+                    "color": "neutral",
+                    "style": "default"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "date",
+                  "attrs": {
+                    "timestamp": "2024-02-01"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "type": "text",
-          "text": " | "
+          "type": "tableRow",
+          "content": [
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Backend"
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "mention",
+                  "attrs": {
+                    "id": "backend.lead",
+                    "text": "@backend.lead",
+                    "userType": "DEFAULT"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "status",
+                  "attrs": {
+                    "text": "completed",
+                    "color": "neutral",
+                    "style": "default"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "date",
+                  "attrs": {
+                    "timestamp": "2024-01-15"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
-          "type": "status",
-          "attrs": {
-            "text": "in-progress",
-            "color": "neutral",
-            "style": "default"
-          }
-        },
-        {
-          "type": "text",
-          "text": " | "
-        },
-        {
-          "type": "date",
-          "attrs": {
-            "timestamp": "2024-02-01"
-          }
-        },
-        {
-          "type": "text",
-          "text": " |\n| Backend | "
-        },
-        {
-          "type": "mention",
-          "attrs": {
-            "id": "backend.lead",
-            "text": "@backend.lead",
-            "userType": "DEFAULT"
-          }
-        },
-        {
-          "type": "text",
-          "text": " | "
-        },
-        {
-          "type": "status",
-          "attrs": {
-            "text": "completed",
-            "color": "neutral",
-            "style": "default"
-          }
-        },
-        {
-          "type": "text",
-          "text": " | "
-        },
-        {
-          "type": "date",
-          "attrs": {
-            "timestamp": "2024-01-15"
-          }
-        },
-        {
-          "type": "text",
-          "text": " |\n| Testing | "
-        },
-        {
-          "type": "mention",
-          "attrs": {
-            "id": "qa.lead",
-            "text": "@qa.lead",
-            "userType": "DEFAULT"
-          }
-        },
-        {
-          "type": "text",
-          "text": " | "
-        },
-        {
-          "type": "status",
-          "attrs": {
-            "text": "pending",
-            "color": "neutral",
-            "style": "default"
-          }
-        },
-        {
-          "type": "text",
-          "text": " | "
-        },
-        {
-          "type": "date",
-          "attrs": {
-            "timestamp": "2024-02-10"
-          }
-        },
-        {
-          "type": "text",
-          "text": " |"
+          "type": "tableRow",
+          "content": [
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Testing"
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "mention",
+                  "attrs": {
+                    "id": "qa.lead",
+                    "text": "@qa.lead",
+                    "userType": "DEFAULT"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "status",
+                  "attrs": {
+                    "text": "pending",
+                    "color": "neutral",
+                    "style": "default"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "date",
+                  "attrs": {
+                    "timestamp": "2024-02-10"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -872,8 +1126,138 @@
           "type": "paragraph",
           "content": [
             {
+              "type": "mediaReference",
+              "attrs": {
+                "id": "sprint-progress",
+                "alt": "Sprint Progress",
+                "mediaType": "file",
+                "collection": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
               "type": "text",
-              "text": "![Sprint Progress](media:sprint-progress)\n\nKey accomplishments:\n- Authentication: {status:completed} :white_check_mark:\n- Database: {status:in-progress} :construction:\n- UI Components: {status:completed} :white_check_mark:\n\nNext sprint goals assigned to {user:scrum.master}."
+              "text": "Key accomplishments:"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Authentication: "
+                    },
+                    {
+                      "type": "status",
+                      "attrs": {
+                        "text": "completed",
+                        "color": "neutral",
+                        "style": "default"
+                      }
+                    },
+                    {
+                      "type": "emoji",
+                      "attrs": {
+                        "shortName": "white_check_mark",
+                        "id": "white_check_mark",
+                        "text": ":white_check_mark:"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Database: "
+                    },
+                    {
+                      "type": "status",
+                      "attrs": {
+                        "text": "in-progress",
+                        "color": "neutral",
+                        "style": "default"
+                      }
+                    },
+                    {
+                      "type": "emoji",
+                      "attrs": {
+                        "shortName": "construction",
+                        "id": "construction",
+                        "text": ":construction:"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "UI Components: "
+                    },
+                    {
+                      "type": "status",
+                      "attrs": {
+                        "text": "completed",
+                        "color": "neutral",
+                        "style": "default"
+                      }
+                    },
+                    {
+                      "type": "emoji",
+                      "attrs": {
+                        "shortName": "white_check_mark",
+                        "id": "white_check_mark",
+                        "text": ":white_check_mark:"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Next sprint goals assigned to "
+            },
+            {
+              "type": "mention",
+              "attrs": {
+                "id": "scrum.master",
+                "text": "@scrum.master",
+                "userType": "DEFAULT"
+              }
+            },
+            {
+              "type": "text",
+              "text": "."
             }
           ]
         }
@@ -904,231 +1288,349 @@
       ]
     },
     {
-      "type": "paragraph",
+      "type": "table",
       "content": [
         {
-          "type": "text",
-          "text": "| Phase | Preview | Lead | Status | Completion |\n|-------|---------|------|--------|------------|\n| Design | "
-        },
-        {
-          "type": "mediaSingle",
-          "attrs": {
-            "layout": "center"
-          },
+          "type": "tableRow",
           "content": [
             {
-              "type": "media",
-              "attrs": {
-                "id": "phase1-design",
-                "type": "file",
-                "alt": "Design Preview",
-                "collection": ""
-              }
+              "type": "tableHeader",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Phase"
+                }
+              ]
+            },
+            {
+              "type": "tableHeader",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Preview"
+                }
+              ]
+            },
+            {
+              "type": "tableHeader",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Lead"
+                }
+              ]
+            },
+            {
+              "type": "tableHeader",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Status"
+                }
+              ]
+            },
+            {
+              "type": "tableHeader",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Completion"
+                }
+              ]
             }
           ]
         },
         {
-          "type": "text",
-          "text": " | "
-        },
-        {
-          "type": "mention",
-          "attrs": {
-            "id": "design.lead",
-            "text": "@design.lead",
-            "userType": "DEFAULT"
-          }
-        },
-        {
-          "type": "text",
-          "text": " | "
-        },
-        {
-          "type": "status",
-          "attrs": {
-            "text": "completed",
-            "color": "neutral",
-            "style": "default"
-          }
-        },
-        {
-          "type": "text",
-          "text": " | "
-        },
-        {
-          "type": "date",
-          "attrs": {
-            "timestamp": "2024-01-10"
-          }
-        },
-        {
-          "type": "text",
-          "text": " |\n| Development | "
-        },
-        {
-          "type": "mediaSingle",
-          "attrs": {
-            "layout": "center"
-          },
+          "type": "tableRow",
           "content": [
             {
-              "type": "media",
-              "attrs": {
-                "id": "phase2-dev",
-                "type": "file",
-                "alt": "Dev Progress",
-                "collection": ""
-              }
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Design"
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "mediaSingle",
+                  "attrs": {
+                    "layout": "center"
+                  },
+                  "content": [
+                    {
+                      "type": "media",
+                      "attrs": {
+                        "id": "phase1-design",
+                        "type": "file",
+                        "alt": "Design Preview",
+                        "collection": ""
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "mention",
+                  "attrs": {
+                    "id": "design.lead",
+                    "text": "@design.lead",
+                    "userType": "DEFAULT"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "status",
+                  "attrs": {
+                    "text": "completed",
+                    "color": "neutral",
+                    "style": "default"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "date",
+                  "attrs": {
+                    "timestamp": "2024-01-10"
+                  }
+                }
+              ]
             }
           ]
         },
         {
-          "type": "text",
-          "text": " | "
-        },
-        {
-          "type": "mention",
-          "attrs": {
-            "id": "dev.lead",
-            "text": "@dev.lead",
-            "userType": "DEFAULT"
-          }
-        },
-        {
-          "type": "text",
-          "text": " | "
-        },
-        {
-          "type": "status",
-          "attrs": {
-            "text": "in-progress",
-            "color": "neutral",
-            "style": "default"
-          }
-        },
-        {
-          "type": "text",
-          "text": " | "
-        },
-        {
-          "type": "date",
-          "attrs": {
-            "timestamp": "2024-02-15"
-          }
-        },
-        {
-          "type": "text",
-          "text": " |\n| Testing | "
-        },
-        {
-          "type": "mediaSingle",
-          "attrs": {
-            "layout": "center"
-          },
+          "type": "tableRow",
           "content": [
             {
-              "type": "media",
-              "attrs": {
-                "id": "phase3-test",
-                "type": "file",
-                "alt": "Test Results",
-                "collection": ""
-              }
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Development"
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "mediaSingle",
+                  "attrs": {
+                    "layout": "center"
+                  },
+                  "content": [
+                    {
+                      "type": "media",
+                      "attrs": {
+                        "id": "phase2-dev",
+                        "type": "file",
+                        "alt": "Dev Progress",
+                        "collection": ""
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "mention",
+                  "attrs": {
+                    "id": "dev.lead",
+                    "text": "@dev.lead",
+                    "userType": "DEFAULT"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "status",
+                  "attrs": {
+                    "text": "in-progress",
+                    "color": "neutral",
+                    "style": "default"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "date",
+                  "attrs": {
+                    "timestamp": "2024-02-15"
+                  }
+                }
+              ]
             }
           ]
         },
         {
-          "type": "text",
-          "text": " | "
-        },
-        {
-          "type": "mention",
-          "attrs": {
-            "id": "qa.lead",
-            "text": "@qa.lead",
-            "userType": "DEFAULT"
-          }
-        },
-        {
-          "type": "text",
-          "text": " | "
-        },
-        {
-          "type": "status",
-          "attrs": {
-            "text": "pending",
-            "color": "neutral",
-            "style": "default"
-          }
-        },
-        {
-          "type": "text",
-          "text": " | "
-        },
-        {
-          "type": "date",
-          "attrs": {
-            "timestamp": "2024-03-01"
-          }
-        },
-        {
-          "type": "text",
-          "text": " |\n| Deployment | "
-        },
-        {
-          "type": "mediaSingle",
-          "attrs": {
-            "layout": "center"
-          },
+          "type": "tableRow",
           "content": [
             {
-              "type": "media",
-              "attrs": {
-                "id": "phase4-deploy",
-                "type": "file",
-                "alt": "Deploy Pipeline",
-                "collection": ""
-              }
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Testing"
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "mediaSingle",
+                  "attrs": {
+                    "layout": "center"
+                  },
+                  "content": [
+                    {
+                      "type": "media",
+                      "attrs": {
+                        "id": "phase3-test",
+                        "type": "file",
+                        "alt": "Test Results",
+                        "collection": ""
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "mention",
+                  "attrs": {
+                    "id": "qa.lead",
+                    "text": "@qa.lead",
+                    "userType": "DEFAULT"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "status",
+                  "attrs": {
+                    "text": "pending",
+                    "color": "neutral",
+                    "style": "default"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "date",
+                  "attrs": {
+                    "timestamp": "2024-03-01"
+                  }
+                }
+              ]
             }
           ]
         },
         {
-          "type": "text",
-          "text": " | "
-        },
-        {
-          "type": "mention",
-          "attrs": {
-            "id": "devops.lead",
-            "text": "@devops.lead",
-            "userType": "DEFAULT"
-          }
-        },
-        {
-          "type": "text",
-          "text": " | "
-        },
-        {
-          "type": "status",
-          "attrs": {
-            "text": "not-started",
-            "color": "neutral",
-            "style": "default"
-          }
-        },
-        {
-          "type": "text",
-          "text": " | "
-        },
-        {
-          "type": "date",
-          "attrs": {
-            "timestamp": "2024-03-15"
-          }
-        },
-        {
-          "type": "text",
-          "text": " |"
+          "type": "tableRow",
+          "content": [
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Deployment"
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "mediaSingle",
+                  "attrs": {
+                    "layout": "center"
+                  },
+                  "content": [
+                    {
+                      "type": "media",
+                      "attrs": {
+                        "id": "phase4-deploy",
+                        "type": "file",
+                        "alt": "Deploy Pipeline",
+                        "collection": ""
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "mention",
+                  "attrs": {
+                    "id": "devops.lead",
+                    "text": "@devops.lead",
+                    "userType": "DEFAULT"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "status",
+                  "attrs": {
+                    "text": "not-started",
+                    "color": "neutral",
+                    "style": "default"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "date",
+                  "attrs": {
+                    "timestamp": "2024-03-15"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -1145,209 +1647,309 @@
       ]
     },
     {
-      "type": "paragraph",
+      "type": "table",
       "content": [
         {
-          "type": "text",
-          "text": "| Feature | Current Version | Next Version | Owner | Priority |\n|---------|----------------|--------------|-------|----------|\n| Authentication | "
-        },
-        {
-          "type": "mediaSingle",
-          "attrs": {
-            "layout": "center"
-          },
+          "type": "tableRow",
           "content": [
             {
-              "type": "media",
-              "attrs": {
-                "id": "auth-current",
-                "type": "file",
-                "alt": "Auth Current",
-                "collection": ""
-              }
+              "type": "tableHeader",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Feature"
+                }
+              ]
+            },
+            {
+              "type": "tableHeader",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Current Version"
+                }
+              ]
+            },
+            {
+              "type": "tableHeader",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Next Version"
+                }
+              ]
+            },
+            {
+              "type": "tableHeader",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Owner"
+                }
+              ]
+            },
+            {
+              "type": "tableHeader",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Priority"
+                }
+              ]
             }
           ]
         },
         {
-          "type": "text",
-          "text": " | "
-        },
-        {
-          "type": "mediaSingle",
-          "attrs": {
-            "layout": "center"
-          },
+          "type": "tableRow",
           "content": [
             {
-              "type": "media",
-              "attrs": {
-                "id": "auth-next",
-                "type": "file",
-                "alt": "Auth Next",
-                "collection": ""
-              }
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Authentication"
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "mediaSingle",
+                  "attrs": {
+                    "layout": "center"
+                  },
+                  "content": [
+                    {
+                      "type": "media",
+                      "attrs": {
+                        "id": "auth-current",
+                        "type": "file",
+                        "alt": "Auth Current",
+                        "collection": ""
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "mediaSingle",
+                  "attrs": {
+                    "layout": "center"
+                  },
+                  "content": [
+                    {
+                      "type": "media",
+                      "attrs": {
+                        "id": "auth-next",
+                        "type": "file",
+                        "alt": "Auth Next",
+                        "collection": ""
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "mention",
+                  "attrs": {
+                    "id": "auth.specialist",
+                    "text": "@auth.specialist",
+                    "userType": "DEFAULT"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "status",
+                  "attrs": {
+                    "text": "high",
+                    "color": "neutral",
+                    "style": "default"
+                  }
+                }
+              ]
             }
           ]
         },
         {
-          "type": "text",
-          "text": " | "
-        },
-        {
-          "type": "mention",
-          "attrs": {
-            "id": "auth.specialist",
-            "text": "@auth.specialist",
-            "userType": "DEFAULT"
-          }
-        },
-        {
-          "type": "text",
-          "text": " | "
-        },
-        {
-          "type": "status",
-          "attrs": {
-            "text": "high",
-            "color": "neutral",
-            "style": "default"
-          }
-        },
-        {
-          "type": "text",
-          "text": " |\n| Dashboard | "
-        },
-        {
-          "type": "mediaSingle",
-          "attrs": {
-            "layout": "center"
-          },
+          "type": "tableRow",
           "content": [
             {
-              "type": "media",
-              "attrs": {
-                "id": "dash-current",
-                "type": "file",
-                "alt": "Dashboard Current",
-                "collection": ""
-              }
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Dashboard"
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "mediaSingle",
+                  "attrs": {
+                    "layout": "center"
+                  },
+                  "content": [
+                    {
+                      "type": "media",
+                      "attrs": {
+                        "id": "dash-current",
+                        "type": "file",
+                        "alt": "Dashboard Current",
+                        "collection": ""
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "mediaSingle",
+                  "attrs": {
+                    "layout": "center"
+                  },
+                  "content": [
+                    {
+                      "type": "media",
+                      "attrs": {
+                        "id": "dash-next",
+                        "type": "file",
+                        "alt": "Dashboard Next",
+                        "collection": ""
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "mention",
+                  "attrs": {
+                    "id": "ui.developer",
+                    "text": "@ui.developer",
+                    "userType": "DEFAULT"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "status",
+                  "attrs": {
+                    "text": "medium",
+                    "color": "neutral",
+                    "style": "default"
+                  }
+                }
+              ]
             }
           ]
         },
         {
-          "type": "text",
-          "text": " | "
-        },
-        {
-          "type": "mediaSingle",
-          "attrs": {
-            "layout": "center"
-          },
+          "type": "tableRow",
           "content": [
             {
-              "type": "media",
-              "attrs": {
-                "id": "dash-next",
-                "type": "file",
-                "alt": "Dashboard Next",
-                "collection": ""
-              }
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "text": " | "
-        },
-        {
-          "type": "mention",
-          "attrs": {
-            "id": "ui.developer",
-            "text": "@ui.developer",
-            "userType": "DEFAULT"
-          }
-        },
-        {
-          "type": "text",
-          "text": " | "
-        },
-        {
-          "type": "status",
-          "attrs": {
-            "text": "medium",
-            "color": "neutral",
-            "style": "default"
-          }
-        },
-        {
-          "type": "text",
-          "text": " |\n| Reports | "
-        },
-        {
-          "type": "mediaSingle",
-          "attrs": {
-            "layout": "center"
-          },
-          "content": [
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Reports"
+                }
+              ]
+            },
             {
-              "type": "media",
-              "attrs": {
-                "id": "reports-current",
-                "type": "file",
-                "alt": "Reports Current",
-                "collection": ""
-              }
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "text": " | "
-        },
-        {
-          "type": "mediaSingle",
-          "attrs": {
-            "layout": "center"
-          },
-          "content": [
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "mediaSingle",
+                  "attrs": {
+                    "layout": "center"
+                  },
+                  "content": [
+                    {
+                      "type": "media",
+                      "attrs": {
+                        "id": "reports-current",
+                        "type": "file",
+                        "alt": "Reports Current",
+                        "collection": ""
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
             {
-              "type": "media",
-              "attrs": {
-                "id": "reports-next",
-                "type": "file",
-                "alt": "Reports Next",
-                "collection": ""
-              }
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "mediaSingle",
+                  "attrs": {
+                    "layout": "center"
+                  },
+                  "content": [
+                    {
+                      "type": "media",
+                      "attrs": {
+                        "id": "reports-next",
+                        "type": "file",
+                        "alt": "Reports Next",
+                        "collection": ""
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "mention",
+                  "attrs": {
+                    "id": "analytics.dev",
+                    "text": "@analytics.dev",
+                    "userType": "DEFAULT"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "status",
+                  "attrs": {
+                    "text": "low",
+                    "color": "neutral",
+                    "style": "default"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "text",
-          "text": " | "
-        },
-        {
-          "type": "mention",
-          "attrs": {
-            "id": "analytics.dev",
-            "text": "@analytics.dev",
-            "userType": "DEFAULT"
-          }
-        },
-        {
-          "type": "text",
-          "text": " | "
-        },
-        {
-          "type": "status",
-          "attrs": {
-            "text": "low",
-            "color": "neutral",
-            "style": "default"
-          }
-        },
-        {
-          "type": "text",
-          "text": " |"
         }
       ]
     },
@@ -1706,8 +2308,216 @@
           "type": "paragraph",
           "content": [
             {
+              "type": "mediaReference",
+              "attrs": {
+                "id": "q1-milestone",
+                "alt": "Milestone Celebration",
+                "mediaType": "file",
+                "collection": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
               "type": "text",
-              "text": "![Milestone Celebration](media:q1-milestone)\n\n**Team Recognition:**\n- MVP Developer: {user:star.developer} :star:\n- Best Collaboration: {user:team.player} :handshake:\n- Innovation Award: {user:creative.thinker} :bulb:\n\n**Next Quarter Planning:**\n- Planning session: {date:2024-04-01}\n- Feature freeze: {date:2024-05-15}\n- Release target: {date:2024-06-30}\n\nStatus board: [Q2 Planning](card:https://planning.company.com/q2-2024)"
+              "text": "Team Recognition:",
+              "marks": [
+                {
+                  "type": "strong"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "MVP Developer: "
+                    },
+                    {
+                      "type": "mention",
+                      "attrs": {
+                        "id": "star.developer",
+                        "text": "@star.developer",
+                        "userType": "DEFAULT"
+                      }
+                    },
+                    {
+                      "type": "emoji",
+                      "attrs": {
+                        "shortName": "star",
+                        "id": "star",
+                        "text": ":star:"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Best Collaboration: "
+                    },
+                    {
+                      "type": "mention",
+                      "attrs": {
+                        "id": "team.player",
+                        "text": "@team.player",
+                        "userType": "DEFAULT"
+                      }
+                    },
+                    {
+                      "type": "emoji",
+                      "attrs": {
+                        "shortName": "handshake",
+                        "id": "handshake",
+                        "text": ":handshake:"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Innovation Award: "
+                    },
+                    {
+                      "type": "mention",
+                      "attrs": {
+                        "id": "creative.thinker",
+                        "text": "@creative.thinker",
+                        "userType": "DEFAULT"
+                      }
+                    },
+                    {
+                      "type": "emoji",
+                      "attrs": {
+                        "shortName": "bulb",
+                        "id": "bulb",
+                        "text": ":bulb:"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Next Quarter Planning:",
+              "marks": [
+                {
+                  "type": "strong"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Planning session: "
+                    },
+                    {
+                      "type": "date",
+                      "attrs": {
+                        "timestamp": "2024-04-01"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Feature freeze: "
+                    },
+                    {
+                      "type": "date",
+                      "attrs": {
+                        "timestamp": "2024-05-15"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Release target: "
+                    },
+                    {
+                      "type": "date",
+                      "attrs": {
+                        "timestamp": "2024-06-30"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Status board: "
+            },
+            {
+              "type": "inlineCard",
+              "attrs": {
+                "url": "https://planning.company.com/q2-2024"
+              }
             }
           ]
         }
@@ -1765,7 +2575,211 @@
           "content": [
             {
               "type": "text",
-              "text": "**Phase 1: Assessment** ({date:2023-06-01} - {date:2023-08-01})\n![Assessment Results](media:migration-assessment)\nLead: {user:architecture.lead}\nStatus: {status:completed}\n\n**Phase 2: Design** ({date:2023-08-01} - {date:2023-10-01})  \n![New Architecture](media:architecture-new)\nLead: {user:system.designer}\nStatus: {status:completed}\n\n**Phase 3: Implementation** ({date:2023-10-01} - {date:2024-01-01})\n![Implementation Progress](media:implementation-tracking)\nLead: {user:migration.manager}\nStatus: {status:completed}"
+              "text": "Phase 1: Assessment",
+              "marks": [
+                {
+                  "type": "strong"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " ("
+            },
+            {
+              "type": "date",
+              "attrs": {
+                "timestamp": "2023-06-01"
+              }
+            },
+            {
+              "type": "text",
+              "text": " - "
+            },
+            {
+              "type": "date",
+              "attrs": {
+                "timestamp": "2023-08-01"
+              }
+            },
+            {
+              "type": "text",
+              "text": ")\n"
+            },
+            {
+              "type": "mediaReference",
+              "attrs": {
+                "id": "migration-assessment",
+                "alt": "Assessment Results",
+                "mediaType": "file",
+                "collection": ""
+              }
+            },
+            {
+              "type": "text",
+              "text": "\nLead: "
+            },
+            {
+              "type": "mention",
+              "attrs": {
+                "id": "architecture.lead",
+                "text": "@architecture.lead",
+                "userType": "DEFAULT"
+              }
+            },
+            {
+              "type": "text",
+              "text": "\nStatus: "
+            },
+            {
+              "type": "status",
+              "attrs": {
+                "text": "completed",
+                "color": "neutral",
+                "style": "default"
+              }
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Phase 2: Design",
+              "marks": [
+                {
+                  "type": "strong"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " ("
+            },
+            {
+              "type": "date",
+              "attrs": {
+                "timestamp": "2023-08-01"
+              }
+            },
+            {
+              "type": "text",
+              "text": " - "
+            },
+            {
+              "type": "date",
+              "attrs": {
+                "timestamp": "2023-10-01"
+              }
+            },
+            {
+              "type": "text",
+              "text": ")  \n"
+            },
+            {
+              "type": "mediaReference",
+              "attrs": {
+                "id": "architecture-new",
+                "alt": "New Architecture",
+                "mediaType": "file",
+                "collection": ""
+              }
+            },
+            {
+              "type": "text",
+              "text": "\nLead: "
+            },
+            {
+              "type": "mention",
+              "attrs": {
+                "id": "system.designer",
+                "text": "@system.designer",
+                "userType": "DEFAULT"
+              }
+            },
+            {
+              "type": "text",
+              "text": "\nStatus: "
+            },
+            {
+              "type": "status",
+              "attrs": {
+                "text": "completed",
+                "color": "neutral",
+                "style": "default"
+              }
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Phase 3: Implementation",
+              "marks": [
+                {
+                  "type": "strong"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " ("
+            },
+            {
+              "type": "date",
+              "attrs": {
+                "timestamp": "2023-10-01"
+              }
+            },
+            {
+              "type": "text",
+              "text": " - "
+            },
+            {
+              "type": "date",
+              "attrs": {
+                "timestamp": "2024-01-01"
+              }
+            },
+            {
+              "type": "text",
+              "text": ")\n"
+            },
+            {
+              "type": "mediaReference",
+              "attrs": {
+                "id": "implementation-tracking",
+                "alt": "Implementation Progress",
+                "mediaType": "file",
+                "collection": ""
+              }
+            },
+            {
+              "type": "text",
+              "text": "\nLead: "
+            },
+            {
+              "type": "mention",
+              "attrs": {
+                "id": "migration.manager",
+                "text": "@migration.manager",
+                "userType": "DEFAULT"
+              }
+            },
+            {
+              "type": "text",
+              "text": "\nStatus: "
+            },
+            {
+              "type": "status",
+              "attrs": {
+                "text": "completed",
+                "color": "neutral",
+                "style": "default"
+              }
             }
           ]
         }
