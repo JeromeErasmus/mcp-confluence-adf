@@ -31,7 +31,7 @@ export class ADFConverter {
       await initializeParser();
       
       if (Parser) {
-        const parser = new Parser();
+        const parser = new Parser(); // No options needed - basic parser now supports all ADF elements  
         const adfMarkdown = parser.adfToMarkdown(adf);
         
         // Combine frontmatter with ADF markdown
@@ -70,7 +70,7 @@ export class ADFConverter {
       throw new Error('ADF parser not available. Please install extended-markdown-adf-parser.');
     }
     
-    const parser = new Parser();
+    const parser = new Parser(); // No options needed - basic parser now supports all ADF elements
     const adfDocument = await parser.markdownToAdf(content);
     
     return {

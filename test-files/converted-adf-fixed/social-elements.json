@@ -1,0 +1,2573 @@
+{
+  "version": 1,
+  "type": "doc",
+  "content": [
+    {
+      "type": "heading",
+      "attrs": {
+        "level": 1
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Social Elements Test Document"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "This document tests the new social elements functionality in extended-adf-markdown-parser v2.1.0."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "level": 2
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "User Mentions"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Hello "
+        },
+        {
+          "type": "mention",
+          "attrs": {
+            "id": "john.doe",
+            "text": "@john.doe",
+            "userType": "DEFAULT"
+          }
+        },
+        {
+          "type": "text",
+          "text": "! Please review this document."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "The project team includes:"
+        }
+      ]
+    },
+    {
+      "type": "bulletList",
+      "content": [
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "mention",
+                  "attrs": {
+                    "id": "alice.developer",
+                    "text": "@alice.developer",
+                    "userType": "DEFAULT"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": " (Lead Developer)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "mention",
+                  "attrs": {
+                    "id": "bob.designer",
+                    "text": "@bob.designer",
+                    "userType": "DEFAULT"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": " (UI/UX Designer)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "mention",
+                  "attrs": {
+                    "id": "carol.manager",
+                    "text": "@carol.manager",
+                    "userType": "DEFAULT"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": " (Project Manager)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "level": 2
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Emoji Support"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Great work everyone! "
+        },
+        {
+          "type": "emoji",
+          "attrs": {
+            "shortName": "thumbsup",
+            "id": "thumbsup",
+            "text": ":thumbsup:"
+          }
+        },
+        {
+          "type": "emoji",
+          "attrs": {
+            "shortName": "rocket",
+            "id": "rocket",
+            "text": ":rocket:"
+          }
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Let's celebrate our success "
+        },
+        {
+          "type": "emoji",
+          "attrs": {
+            "shortName": "tada",
+            "id": "tada",
+            "text": ":tada:"
+          }
+        },
+        {
+          "type": "text",
+          "text": " and keep the momentum going "
+        },
+        {
+          "type": "emoji",
+          "attrs": {
+            "shortName": "muscle",
+            "id": "muscle",
+            "text": ":muscle:"
+          }
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Status indicators:"
+        }
+      ]
+    },
+    {
+      "type": "bulletList",
+      "content": [
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Completed tasks "
+                },
+                {
+                  "type": "emoji",
+                  "attrs": {
+                    "shortName": "white_check_mark",
+                    "id": "white_check_mark",
+                    "text": ":white_check_mark:"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "In progress "
+                },
+                {
+                  "type": "emoji",
+                  "attrs": {
+                    "shortName": "hourglass_flowing_sand",
+                    "id": "hourglass_flowing_sand",
+                    "text": ":hourglass_flowing_sand:"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Blocked items "
+                },
+                {
+                  "type": "emoji",
+                  "attrs": {
+                    "shortName": "warning",
+                    "id": "warning",
+                    "text": ":warning:"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "level": 2
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Date References"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Important dates:"
+        }
+      ]
+    },
+    {
+      "type": "bulletList",
+      "content": [
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Project kickoff: "
+                },
+                {
+                  "type": "date",
+                  "attrs": {
+                    "timestamp": "2024-01-01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "First milestone: "
+                },
+                {
+                  "type": "date",
+                  "attrs": {
+                    "timestamp": "2024-01-15"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Final delivery: "
+                },
+                {
+                  "type": "date",
+                  "attrs": {
+                    "timestamp": "2024-02-01"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "level": 2
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Status Tracking"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Current project status: "
+        },
+        {
+          "type": "status",
+          "attrs": {
+            "text": "on-track",
+            "color": "neutral",
+            "style": "default"
+          }
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Component status updates:"
+        }
+      ]
+    },
+    {
+      "type": "bulletList",
+      "content": [
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Frontend: "
+                },
+                {
+                  "type": "status",
+                  "attrs": {
+                    "text": "completed",
+                    "color": "neutral",
+                    "style": "default"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Backend API: "
+                },
+                {
+                  "type": "status",
+                  "attrs": {
+                    "text": "in-progress",
+                    "color": "neutral",
+                    "style": "default"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Testing: "
+                },
+                {
+                  "type": "status",
+                  "attrs": {
+                    "text": "not-started",
+                    "color": "neutral",
+                    "style": "default"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Documentation: "
+                },
+                {
+                  "type": "status",
+                  "attrs": {
+                    "text": "review",
+                    "color": "neutral",
+                    "style": "default"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "level": 2
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Media References"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Here's our latest dashboard screenshot:"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "mediaSingle",
+          "attrs": {
+            "layout": "center"
+          },
+          "content": [
+            {
+              "type": "media",
+              "attrs": {
+                "id": "dashboard-v2",
+                "type": "file",
+                "alt": "Dashboard Screenshot",
+                "collection": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Architecture diagram:"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "mediaSingle",
+          "attrs": {
+            "layout": "center"
+          },
+          "content": [
+            {
+              "type": "media",
+              "attrs": {
+                "id": "architecture-diagram",
+                "type": "file",
+                "alt": "System Architecture",
+                "collection": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "level": 2
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Inline Cards"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Useful resources:"
+        }
+      ]
+    },
+    {
+      "type": "bulletList",
+      "content": [
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "inlineCard",
+                  "attrs": {
+                    "url": "https://company.atlassian.net/wiki/requirements"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "inlineCard",
+                  "attrs": {
+                    "url": "https://docs.company.com/tech-specs"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "inlineCard",
+                  "attrs": {
+                    "url": "https://company.atlassian.net/browse/PROJ-123"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "level": 2
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Mixed Content Example"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Hi "
+        },
+        {
+          "type": "mention",
+          "attrs": {
+            "id": "dev.team",
+            "text": "@dev.team",
+            "userType": "DEFAULT"
+          }
+        },
+        {
+          "type": "emoji",
+          "attrs": {
+            "shortName": "wave",
+            "id": "wave",
+            "text": ":wave:"
+          }
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Our sprint review is scheduled for "
+        },
+        {
+          "type": "date",
+          "attrs": {
+            "timestamp": "2024-01-20"
+          }
+        },
+        {
+          "type": "text",
+          "text": ". Current status: "
+        },
+        {
+          "type": "status",
+          "attrs": {
+            "text": "on-schedule",
+            "color": "neutral",
+            "style": "default"
+          }
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Please check the "
+        },
+        {
+          "type": "inlineCard",
+          "attrs": {
+            "url": "https://company.atlassian.net/sprint"
+          }
+        },
+        {
+          "type": "text",
+          "text": " and review the updated mockups:"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "mediaSingle",
+          "attrs": {
+            "layout": "center"
+          },
+          "content": [
+            {
+              "type": "media",
+              "attrs": {
+                "id": "mockups-v3",
+                "type": "file",
+                "alt": "Updated Mockups",
+                "collection": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Thanks! "
+        },
+        {
+          "type": "emoji",
+          "attrs": {
+            "shortName": "rocket",
+            "id": "rocket",
+            "text": ":rocket:"
+          }
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "level": 2
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Advanced Panel Combinations"
+        }
+      ]
+    },
+    {
+      "type": "panel",
+      "attrs": {
+        "panelType": "info",
+        "title": "Multi-element panel testing"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Team lead "
+            },
+            {
+              "type": "mention",
+              "attrs": {
+                "id": "panel.lead",
+                "text": "@panel.lead",
+                "userType": "DEFAULT"
+              }
+            },
+            {
+              "type": "text",
+              "text": " scheduled review for "
+            },
+            {
+              "type": "date",
+              "attrs": {
+                "timestamp": "2024-01-25"
+              }
+            },
+            {
+              "type": "text",
+              "text": ".\nCurrent progress: "
+            },
+            {
+              "type": "status",
+              "attrs": {
+                "text": "on-track",
+                "color": "neutral",
+                "style": "default"
+              }
+            },
+            {
+              "type": "emoji",
+              "attrs": {
+                "shortName": "thumbsup",
+                "id": "thumbsup",
+                "text": ":thumbsup:"
+              }
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "mediaSingle",
+              "attrs": {
+                "layout": "center"
+              },
+              "content": [
+                {
+                  "type": "media",
+                  "attrs": {
+                    "id": "panel-progress-chart",
+                    "type": "file",
+                    "alt": "Panel Progress",
+                    "collection": ""
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "panel",
+      "attrs": {
+        "panelType": "warning",
+        "title": "System maintenance window"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Maintenance scheduled: "
+            },
+            {
+              "type": "date",
+              "attrs": {
+                "timestamp": "2024-02-01"
+              }
+            },
+            {
+              "type": "text",
+              "text": " by "
+            },
+            {
+              "type": "mention",
+              "attrs": {
+                "id": "maintenance.team",
+                "text": "@maintenance.team",
+                "userType": "DEFAULT"
+              }
+            },
+            {
+              "type": "text",
+              "text": "\nExpected duration: 4 hours "
+            },
+            {
+              "type": "emoji",
+              "attrs": {
+                "shortName": "hourglass_flowing_sand",
+                "id": "hourglass_flowing_sand",
+                "text": ":hourglass_flowing_sand:"
+              }
+            },
+            {
+              "type": "text",
+              "text": "\nBackup contact: "
+            },
+            {
+              "type": "mention",
+              "attrs": {
+                "id": "emergency.contact",
+                "text": "@emergency.contact",
+                "userType": "DEFAULT"
+              }
+            },
+            {
+              "type": "text",
+              "text": "\nStatus during maintenance: "
+            },
+            {
+              "type": "status",
+              "attrs": {
+                "text": "unavailable",
+                "color": "neutral",
+                "style": "default"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "level": 2
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Expand Sections with Rich Content"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "[HTML: <details>\n<summary>🎯 **Project Metrics** - Updated {date:2024-01-20}</summary>]"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Performance indicators by "
+        },
+        {
+          "type": "mention",
+          "attrs": {
+            "id": "metrics.analyst",
+            "text": "@metrics.analyst",
+            "userType": "DEFAULT"
+          }
+        },
+        {
+          "type": "text",
+          "text": ":"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "level": 3
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Current Status"
+        }
+      ]
+    },
+    {
+      "type": "bulletList",
+      "content": [
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Overall: "
+                },
+                {
+                  "type": "status",
+                  "attrs": {
+                    "text": "excellent",
+                    "color": "neutral",
+                    "style": "default"
+                  }
+                },
+                {
+                  "type": "emoji",
+                  "attrs": {
+                    "shortName": "star",
+                    "id": "star",
+                    "text": ":star:"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Performance: "
+                },
+                {
+                  "type": "status",
+                  "attrs": {
+                    "text": "optimal",
+                    "color": "neutral",
+                    "style": "default"
+                  }
+                },
+                {
+                  "type": "emoji",
+                  "attrs": {
+                    "shortName": "zap",
+                    "id": "zap",
+                    "text": ":zap:"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "User Satisfaction: "
+                },
+                {
+                  "type": "status",
+                  "attrs": {
+                    "text": "high",
+                    "color": "neutral",
+                    "style": "default"
+                  }
+                },
+                {
+                  "type": "emoji",
+                  "attrs": {
+                    "shortName": "heart",
+                    "id": "heart",
+                    "text": ":heart:"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "level": 3
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Visual Metrics"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "mediaSingle",
+          "attrs": {
+            "layout": "center"
+          },
+          "content": [
+            {
+              "type": "media",
+              "attrs": {
+                "id": "performance-overview",
+                "type": "file",
+                "alt": "Performance Dashboard",
+                "collection": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "mediaSingle",
+          "attrs": {
+            "layout": "center"
+          },
+          "content": [
+            {
+              "type": "media",
+              "attrs": {
+                "id": "user-engagement-stats",
+                "type": "file",
+                "alt": "User Engagement",
+                "collection": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "level": 3
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Team Performance"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "content": [
+        {
+          "type": "tableRow",
+          "content": [
+            {
+              "type": "tableHeader",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Team"
+                }
+              ]
+            },
+            {
+              "type": "tableHeader",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Lead"
+                }
+              ]
+            },
+            {
+              "type": "tableHeader",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Status"
+                }
+              ]
+            },
+            {
+              "type": "tableHeader",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Trend"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "tableRow",
+          "content": [
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Frontend"
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "mention",
+                  "attrs": {
+                    "id": "fe.lead",
+                    "text": "@fe.lead",
+                    "userType": "DEFAULT"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "status",
+                  "attrs": {
+                    "text": "excellent",
+                    "color": "neutral",
+                    "style": "default"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "emoji",
+                  "attrs": {
+                    "shortName": "chart_with_upwards_trend",
+                    "id": "chart_with_upwards_trend",
+                    "text": ":chart_with_upwards_trend:"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "tableRow",
+          "content": [
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Backend"
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "mention",
+                  "attrs": {
+                    "id": "be.lead",
+                    "text": "@be.lead",
+                    "userType": "DEFAULT"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "status",
+                  "attrs": {
+                    "text": "good",
+                    "color": "neutral",
+                    "style": "default"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "emoji",
+                  "attrs": {
+                    "shortName": "arrow_up",
+                    "id": "arrow_up",
+                    "text": ":arrow_up:"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "tableRow",
+          "content": [
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "DevOps"
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "mention",
+                  "attrs": {
+                    "id": "ops.lead",
+                    "text": "@ops.lead",
+                    "userType": "DEFAULT"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "status",
+                  "attrs": {
+                    "text": "optimal",
+                    "color": "neutral",
+                    "style": "default"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "emoji",
+                  "attrs": {
+                    "shortName": "rocket",
+                    "id": "rocket",
+                    "text": ":rocket:"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Next review: "
+        },
+        {
+          "type": "date",
+          "attrs": {
+            "timestamp": "2024-02-15"
+          }
+        },
+        {
+          "type": "text",
+          "text": " with "
+        },
+        {
+          "type": "mention",
+          "attrs": {
+            "id": "executive.reviewer",
+            "text": "@executive.reviewer",
+            "userType": "DEFAULT"
+          }
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "[HTML: </details>]"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "[HTML: <details>\n<summary>📋 **Resource Library** - Curated by {user:resource.manager}</summary>]"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Essential links updated "
+        },
+        {
+          "type": "date",
+          "attrs": {
+            "timestamp": "2024-01-18"
+          }
+        },
+        {
+          "type": "text",
+          "text": ":"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Documentation:",
+          "marks": [
+            {
+              "type": "strong"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "bulletList",
+      "content": [
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "inlineCard",
+                  "attrs": {
+                    "url": "https://api-docs.company.com/v3"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": " - Status: "
+                },
+                {
+                  "type": "status",
+                  "attrs": {
+                    "text": "current",
+                    "color": "neutral",
+                    "style": "default"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "inlineCard",
+                  "attrs": {
+                    "url": "https://help.company.com/manual"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": " - Review: "
+                },
+                {
+                  "type": "status",
+                  "attrs": {
+                    "text": "complete",
+                    "color": "neutral",
+                    "style": "default"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Development:",
+          "marks": [
+            {
+              "type": "strong"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "bulletList",
+      "content": [
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "inlineCard",
+                  "attrs": {
+                    "url": "https://standards.company.com"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": " - Owner: "
+                },
+                {
+                  "type": "mention",
+                  "attrs": {
+                    "id": "standards.keeper",
+                    "text": "@standards.keeper",
+                    "userType": "DEFAULT"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "inlineCard",
+                  "attrs": {
+                    "url": "https://cicd.company.com"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": " - Status: "
+                },
+                {
+                  "type": "status",
+                  "attrs": {
+                    "text": "active",
+                    "color": "neutral",
+                    "style": "default"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "mediaSingle",
+          "attrs": {
+            "layout": "center"
+          },
+          "content": [
+            {
+              "type": "media",
+              "attrs": {
+                "id": "resource-architecture",
+                "type": "file",
+                "alt": "Resource Map",
+                "collection": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Contact "
+        },
+        {
+          "type": "mention",
+          "attrs": {
+            "id": "resource.support",
+            "text": "@resource.support",
+            "userType": "DEFAULT"
+          }
+        },
+        {
+          "type": "text",
+          "text": " for access issues."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "[HTML: </details>]"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "level": 2
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Complex Table with All Elements"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "level": 3
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Project Dashboard - "
+        },
+        {
+          "type": "date",
+          "attrs": {
+            "timestamp": "2024-01-31"
+          }
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "content": [
+        {
+          "type": "tableRow",
+          "content": [
+            {
+              "type": "tableHeader",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Feature"
+                }
+              ]
+            },
+            {
+              "type": "tableHeader",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Owner"
+                }
+              ]
+            },
+            {
+              "type": "tableHeader",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Preview"
+                }
+              ]
+            },
+            {
+              "type": "tableHeader",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Status"
+                }
+              ]
+            },
+            {
+              "type": "tableHeader",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Deadline"
+                }
+              ]
+            },
+            {
+              "type": "tableHeader",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Notes"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "tableRow",
+          "content": [
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "User Auth"
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "mention",
+                  "attrs": {
+                    "id": "auth.dev",
+                    "text": "@auth.dev",
+                    "userType": "DEFAULT"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "mediaSingle",
+                  "attrs": {
+                    "layout": "center"
+                  },
+                  "content": [
+                    {
+                      "type": "media",
+                      "attrs": {
+                        "id": "auth-preview",
+                        "type": "file",
+                        "alt": "Auth UI",
+                        "collection": ""
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "status",
+                  "attrs": {
+                    "text": "completed",
+                    "color": "neutral",
+                    "style": "default"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "date",
+                  "attrs": {
+                    "timestamp": "2024-01-15"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "emoji",
+                  "attrs": {
+                    "shortName": "white_check_mark",
+                    "id": "white_check_mark",
+                    "text": ":white_check_mark:"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": " Done"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "tableRow",
+          "content": [
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Dashboard"
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "mention",
+                  "attrs": {
+                    "id": "ui.specialist",
+                    "text": "@ui.specialist",
+                    "userType": "DEFAULT"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "mediaSingle",
+                  "attrs": {
+                    "layout": "center"
+                  },
+                  "content": [
+                    {
+                      "type": "media",
+                      "attrs": {
+                        "id": "dash-preview",
+                        "type": "file",
+                        "alt": "Main Dashboard",
+                        "collection": ""
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "status",
+                  "attrs": {
+                    "text": "in-progress",
+                    "color": "neutral",
+                    "style": "default"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "date",
+                  "attrs": {
+                    "timestamp": "2024-02-01"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "emoji",
+                  "attrs": {
+                    "shortName": "construction",
+                    "id": "construction",
+                    "text": ":construction:"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": " 80% complete"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "tableRow",
+          "content": [
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Reports"
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "mention",
+                  "attrs": {
+                    "id": "data.analyst",
+                    "text": "@data.analyst",
+                    "userType": "DEFAULT"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "mediaSingle",
+                  "attrs": {
+                    "layout": "center"
+                  },
+                  "content": [
+                    {
+                      "type": "media",
+                      "attrs": {
+                        "id": "reports-preview",
+                        "type": "file",
+                        "alt": "Reports View",
+                        "collection": ""
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "status",
+                  "attrs": {
+                    "text": "review",
+                    "color": "neutral",
+                    "style": "default"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "date",
+                  "attrs": {
+                    "timestamp": "2024-02-10"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "emoji",
+                  "attrs": {
+                    "shortName": "eyes",
+                    "id": "eyes",
+                    "text": ":eyes:"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": " Pending review"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "tableRow",
+          "content": [
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Mobile App"
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "mention",
+                  "attrs": {
+                    "id": "mobile.dev",
+                    "text": "@mobile.dev",
+                    "userType": "DEFAULT"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "mediaSingle",
+                  "attrs": {
+                    "layout": "center"
+                  },
+                  "content": [
+                    {
+                      "type": "media",
+                      "attrs": {
+                        "id": "mobile-preview",
+                        "type": "file",
+                        "alt": "Mobile Screenshots",
+                        "collection": ""
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "status",
+                  "attrs": {
+                    "text": "planning",
+                    "color": "neutral",
+                    "style": "default"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "date",
+                  "attrs": {
+                    "timestamp": "2024-03-01"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "content": [
+                {
+                  "type": "emoji",
+                  "attrs": {
+                    "shortName": "calendar",
+                    "id": "calendar",
+                    "text": ":calendar:"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": " Next sprint"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Dashboard managed by ",
+          "marks": [
+            {
+              "type": "strong"
+            }
+          ]
+        },
+        {
+          "type": "mention",
+          "attrs": {
+            "id": "project.coordinator",
+            "text": "@project.coordinator",
+            "userType": "DEFAULT"
+          }
+        },
+        {
+          "type": "emoji",
+          "attrs": {
+            "shortName": "gear",
+            "id": "gear",
+            "text": ":gear:"
+          }
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "level": 2
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Mixed Media Gallery"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Team celebration from our recent milestone "
+        },
+        {
+          "type": "date",
+          "attrs": {
+            "timestamp": "2024-01-20"
+          }
+        },
+        {
+          "type": "text",
+          "text": "! "
+        },
+        {
+          "type": "emoji",
+          "attrs": {
+            "shortName": "tada",
+            "id": "tada",
+            "text": ":tada:"
+          }
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "mediaSingle",
+          "attrs": {
+            "layout": "center"
+          },
+          "content": [
+            {
+              "type": "media",
+              "attrs": {
+                "id": "team-celebration",
+                "type": "file",
+                "alt": "Team Photo",
+                "collection": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Individual achievements:"
+        }
+      ]
+    },
+    {
+      "type": "bulletList",
+      "content": [
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Top contributor: "
+                },
+                {
+                  "type": "mention",
+                  "attrs": {
+                    "id": "star.performer",
+                    "text": "@star.performer",
+                    "userType": "DEFAULT"
+                  }
+                },
+                {
+                  "type": "emoji",
+                  "attrs": {
+                    "shortName": "trophy",
+                    "id": "trophy",
+                    "text": ":trophy:"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Innovation award: "
+                },
+                {
+                  "type": "mention",
+                  "attrs": {
+                    "id": "creative.genius",
+                    "text": "@creative.genius",
+                    "userType": "DEFAULT"
+                  }
+                },
+                {
+                  "type": "emoji",
+                  "attrs": {
+                    "shortName": "bulb",
+                    "id": "bulb",
+                    "text": ":bulb:"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Collaboration champion: "
+                },
+                {
+                  "type": "mention",
+                  "attrs": {
+                    "id": "team.builder",
+                    "text": "@team.builder",
+                    "userType": "DEFAULT"
+                  }
+                },
+                {
+                  "type": "emoji",
+                  "attrs": {
+                    "shortName": "handshake",
+                    "id": "handshake",
+                    "text": ":handshake:"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "mediaSingle",
+          "attrs": {
+            "layout": "center"
+          },
+          "content": [
+            {
+              "type": "media",
+              "attrs": {
+                "id": "awards-ceremony",
+                "type": "file",
+                "alt": "Achievement Ceremony",
+                "collection": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Status update: "
+        },
+        {
+          "type": "status",
+          "attrs": {
+            "text": "celebrating",
+            "color": "neutral",
+            "style": "default"
+          }
+        },
+        {
+          "type": "emoji",
+          "attrs": {
+            "shortName": "confetti_ball",
+            "id": "confetti_ball",
+            "text": ":confetti_ball:"
+          }
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "level": 2
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Final Test Summary"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Comprehensive testing completed by "
+        },
+        {
+          "type": "mention",
+          "attrs": {
+            "id": "test.lead",
+            "text": "@test.lead",
+            "userType": "DEFAULT"
+          }
+        },
+        {
+          "type": "text",
+          "text": " on "
+        },
+        {
+          "type": "date",
+          "attrs": {
+            "timestamp": "2024-01-31"
+          }
+        },
+        {
+          "type": "text",
+          "text": ":"
+        }
+      ]
+    },
+    {
+      "type": "panel",
+      "attrs": {
+        "panelType": "success",
+        "title": "All rich media elements tested"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "mediaSingle",
+              "attrs": {
+                "layout": "center"
+              },
+              "content": [
+                {
+                  "type": "media",
+                  "attrs": {
+                    "id": "comprehensive-test-results",
+                    "type": "file",
+                    "alt": "Test Results",
+                    "collection": ""
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Coverage:",
+              "marks": [
+                {
+                  "type": "strong"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Social Elements: "
+                    },
+                    {
+                      "type": "emoji",
+                      "attrs": {
+                        "shortName": "white_check_mark",
+                        "id": "white_check_mark",
+                        "text": ":white_check_mark:"
+                      }
+                    },
+                    {
+                      "type": "status",
+                      "attrs": {
+                        "text": "complete",
+                        "color": "neutral",
+                        "style": "default"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Media Integration: "
+                    },
+                    {
+                      "type": "emoji",
+                      "attrs": {
+                        "shortName": "white_check_mark",
+                        "id": "white_check_mark",
+                        "text": ":white_check_mark:"
+                      }
+                    },
+                    {
+                      "type": "status",
+                      "attrs": {
+                        "text": "verified",
+                        "color": "neutral",
+                        "style": "default"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Panel Combinations: "
+                    },
+                    {
+                      "type": "emoji",
+                      "attrs": {
+                        "shortName": "white_check_mark",
+                        "id": "white_check_mark",
+                        "text": ":white_check_mark:"
+                      }
+                    },
+                    {
+                      "type": "status",
+                      "attrs": {
+                        "text": "tested",
+                        "color": "neutral",
+                        "style": "default"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Table Complexity: "
+                    },
+                    {
+                      "type": "emoji",
+                      "attrs": {
+                        "shortName": "white_check_mark",
+                        "id": "white_check_mark",
+                        "text": ":white_check_mark:"
+                      }
+                    },
+                    {
+                      "type": "status",
+                      "attrs": {
+                        "text": "validated",
+                        "color": "neutral",
+                        "style": "default"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Next validation: "
+            },
+            {
+              "type": "date",
+              "attrs": {
+                "timestamp": "2024-02-15"
+              }
+            },
+            {
+              "type": "text",
+              "text": " by "
+            },
+            {
+              "type": "mention",
+              "attrs": {
+                "id": "final.validator",
+                "text": "@final.validator",
+                "userType": "DEFAULT"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "inlineCard",
+          "attrs": {
+            "url": "https://testing.company.com/rich-media-report"
+          }
+        },
+        {
+          "type": "emoji",
+          "attrs": {
+            "shortName": "clipboard",
+            "id": "clipboard",
+            "text": ":clipboard:"
+          }
+        }
+      ]
+    }
+  ]
+}
