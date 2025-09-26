@@ -1,14 +1,47 @@
 import { ADFDocument, ADFNode } from "../types/index.js";
 import * as yaml from 'yaml';
 
+// Import the ADF parser with proper types
+let Parser: any = null;
+
+// Initialize parser lazily
+async function initializeParser() {
+  if (Parser) return;
+  
+  try {
+    const adfParserModule = await import('extended-markdown-adf-parser');
+    Parser = adfParserModule.Parser;
+  } catch (error) {
+    console.error('Warning: extended-markdown-adf-parser not available:', error);
+    throw new Error('ADF parser not available. Please install extended-markdown-adf-parser.');
+  }
+}
+
 export class ADFConverter {
-  static adfToMarkdown(adf: ADFDocument, metadata?: Record<string, any>): string {
+  static async adfToMarkdown(adf: ADFDocument, metadata?: Record<string, any>): Promise<string> {
     let markdown = '';
     
+    // Add frontmatter if metadata exists
     if (metadata) {
       markdown += '---\n' + yaml.stringify(metadata) + '---\n\n';
     }
     
+    try {
+      // Try to use the proper ADF parser for reverse conversion
+      await initializeParser();
+      
+      if (Parser) {
+        const parser = new Parser({ enableAdfExtensions: true });
+        const adfMarkdown = parser.adfToMarkdown(adf);
+        
+        // Combine frontmatter with ADF markdown
+        return metadata ? markdown + adfMarkdown : adfMarkdown;
+      }
+    } catch (error) {
+      console.error('Error using ADF parser for reverse conversion, falling back to basic converter:', error);
+    }
+    
+    // Fall back to basic conversion
     for (const node of adf.content) {
       markdown += this.nodeToMarkdown(node, 0);
     }
@@ -16,10 +49,11 @@ export class ADFConverter {
     return markdown.trim();
   }
   
-  static markdownToADF(markdown: string): { adf: ADFDocument; metadata?: Record<string, any> } {
+  static async markdownToADF(markdown: string): Promise<{ adf: ADFDocument; metadata?: Record<string, any> }> {
     let content = markdown;
     let metadata: Record<string, any> | undefined;
     
+    // Extract frontmatter if present
     if (markdown.startsWith('---\n')) {
       const endIndex = markdown.indexOf('\n---\n', 4);
       if (endIndex !== -1) {
@@ -29,6 +63,24 @@ export class ADFConverter {
       }
     }
     
+    // Always treat .md files as ADF markdown and use the extended parser
+    await initializeParser();
+    
+    if (!Parser) {
+      throw new Error('ADF parser not available. Please install extended-markdown-adf-parser.');
+    }
+    
+    const parser = new Parser({ enableAdfExtensions: true });
+    const adfDocument = await parser.markdownToAdf(content);
+    
+    return {
+      adf: adfDocument,
+      ...(metadata && { metadata })
+    };
+  }
+  
+  // Keep the original implementation as a fallback
+  private static basicMarkdownToADF(content: string, metadata?: Record<string, any>): { adf: ADFDocument; metadata?: Record<string, any> } {
     const lines = content.split('\n');
     const nodes: ADFNode[] = [];
     let i = 0;
@@ -291,7 +343,7 @@ export class ADFConverter {
       }
       
       const quoteContent = quoteLines.join('\n');
-      const { adf } = this.markdownToADF(quoteContent);
+      const { adf } = this.basicMarkdownToADF(quoteContent);
       
       return {
         node: {

@@ -34,7 +34,7 @@ export async function validateADFContent(markdownContent: string): Promise<Valid
     }
 
     // Create parser instance  
-    const parser = new Parser();
+    const parser = new Parser({ enableAdfExtensions: true });
     
     // Validate the markdown content using the parser's validation method
     const isValidMarkdown = parser.validateMarkdown(markdownContent);
