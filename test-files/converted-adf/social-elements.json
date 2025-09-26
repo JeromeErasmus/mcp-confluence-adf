@@ -936,187 +936,398 @@
       ]
     },
     {
-      "type": "paragraph",
-      "content": [
-        {
-          "type": "text",
-          "text": "[HTML: <details>\n<summary>🎯 **Project Metrics** - Updated {date:2024-01-20}</summary>]"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "content": [
-        {
-          "type": "text",
-          "text": "Performance indicators by "
-        },
-        {
-          "type": "mention",
-          "attrs": {
-            "id": "metrics.analyst",
-            "text": "@metrics.analyst",
-            "userType": "DEFAULT"
-          }
-        },
-        {
-          "type": "text",
-          "text": ":"
-        }
-      ]
-    },
-    {
-      "type": "heading",
+      "type": "expand",
       "attrs": {
-        "level": 3
+        "title": "🎯 Project Metrics - Updated {date:2024-01-20}"
       },
       "content": [
         {
-          "type": "text",
-          "text": "Current Status"
-        }
-      ]
-    },
-    {
-      "type": "bulletList",
-      "content": [
-        {
-          "type": "listItem",
+          "type": "paragraph",
           "content": [
             {
-              "type": "paragraph",
-              "content": [
-                {
-                  "type": "text",
-                  "text": "Overall: "
-                },
-                {
-                  "type": "status",
-                  "attrs": {
-                    "text": "excellent",
-                    "color": "neutral",
-                    "style": "default"
-                  }
-                },
-                {
-                  "type": "emoji",
-                  "attrs": {
-                    "shortName": "star",
-                    "id": "star",
-                    "text": ":star:"
-                  }
-                }
-              ]
+              "type": "text",
+              "text": "Performance indicators by "
+            },
+            {
+              "type": "mention",
+              "attrs": {
+                "id": "metrics.analyst",
+                "text": "@metrics.analyst",
+                "userType": "DEFAULT"
+              }
+            },
+            {
+              "type": "text",
+              "text": ":"
             }
           ]
         },
         {
-          "type": "listItem",
-          "content": [
-            {
-              "type": "paragraph",
-              "content": [
-                {
-                  "type": "text",
-                  "text": "Performance: "
-                },
-                {
-                  "type": "status",
-                  "attrs": {
-                    "text": "optimal",
-                    "color": "neutral",
-                    "style": "default"
-                  }
-                },
-                {
-                  "type": "emoji",
-                  "attrs": {
-                    "shortName": "zap",
-                    "id": "zap",
-                    "text": ":zap:"
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "listItem",
-          "content": [
-            {
-              "type": "paragraph",
-              "content": [
-                {
-                  "type": "text",
-                  "text": "User Satisfaction: "
-                },
-                {
-                  "type": "status",
-                  "attrs": {
-                    "text": "high",
-                    "color": "neutral",
-                    "style": "default"
-                  }
-                },
-                {
-                  "type": "emoji",
-                  "attrs": {
-                    "shortName": "heart",
-                    "id": "heart",
-                    "text": ":heart:"
-                  }
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "attrs": {
-        "level": 3
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "Visual Metrics"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "content": [
-        {
-          "type": "mediaSingle",
+          "type": "heading",
           "attrs": {
-            "layout": "center"
+            "level": 3
           },
           "content": [
             {
-              "type": "media",
+              "type": "text",
+              "text": "Current Status"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Overall: "
+                    },
+                    {
+                      "type": "status",
+                      "attrs": {
+                        "text": "excellent",
+                        "color": "neutral",
+                        "style": "default"
+                      }
+                    },
+                    {
+                      "type": "emoji",
+                      "attrs": {
+                        "shortName": "star",
+                        "id": "star",
+                        "text": ":star:"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Performance: "
+                    },
+                    {
+                      "type": "status",
+                      "attrs": {
+                        "text": "optimal",
+                        "color": "neutral",
+                        "style": "default"
+                      }
+                    },
+                    {
+                      "type": "emoji",
+                      "attrs": {
+                        "shortName": "zap",
+                        "id": "zap",
+                        "text": ":zap:"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "User Satisfaction: "
+                    },
+                    {
+                      "type": "status",
+                      "attrs": {
+                        "text": "high",
+                        "color": "neutral",
+                        "style": "default"
+                      }
+                    },
+                    {
+                      "type": "emoji",
+                      "attrs": {
+                        "shortName": "heart",
+                        "id": "heart",
+                        "text": ":heart:"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "### Visual Metrics\n"
+            },
+            {
+              "type": "mediaReference",
               "attrs": {
                 "id": "performance-overview",
-                "type": "file",
                 "alt": "Performance Dashboard",
+                "mediaType": "file",
+                "collection": ""
+              }
+            },
+            {
+              "type": "mediaReference",
+              "attrs": {
+                "id": "user-engagement-stats",
+                "alt": "User Engagement",
+                "mediaType": "file",
                 "collection": ""
               }
             }
           ]
         },
         {
-          "type": "mediaSingle",
+          "type": "table",
           "attrs": {
-            "layout": "center"
+            "isNumberColumnEnabled": false,
+            "layout": "default"
           },
           "content": [
             {
-              "type": "media",
+              "type": "tableRow",
+              "content": [
+                {
+                  "type": "tableHeader",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Team"
+                    }
+                  ]
+                },
+                {
+                  "type": "tableHeader",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Lead"
+                    }
+                  ]
+                },
+                {
+                  "type": "tableHeader",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Status"
+                    }
+                  ]
+                },
+                {
+                  "type": "tableHeader",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Trend"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "tableRow",
+              "content": [
+                {
+                  "type": "tableCell",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Frontend"
+                    }
+                  ]
+                },
+                {
+                  "type": "tableCell",
+                  "content": [
+                    {
+                      "type": "mention",
+                      "attrs": {
+                        "id": "fe.lead",
+                        "text": "@fe.lead",
+                        "userType": "DEFAULT"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "tableCell",
+                  "content": [
+                    {
+                      "type": "status",
+                      "attrs": {
+                        "text": "excellent",
+                        "color": "neutral",
+                        "style": "default"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "tableCell",
+                  "content": [
+                    {
+                      "type": "emoji",
+                      "attrs": {
+                        "shortName": "chart_with_upwards_trend",
+                        "id": "chart_with_upwards_trend",
+                        "text": ":chart_with_upwards_trend:"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "tableRow",
+              "content": [
+                {
+                  "type": "tableCell",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Backend"
+                    }
+                  ]
+                },
+                {
+                  "type": "tableCell",
+                  "content": [
+                    {
+                      "type": "mention",
+                      "attrs": {
+                        "id": "be.lead",
+                        "text": "@be.lead",
+                        "userType": "DEFAULT"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "tableCell",
+                  "content": [
+                    {
+                      "type": "status",
+                      "attrs": {
+                        "text": "good",
+                        "color": "neutral",
+                        "style": "default"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "tableCell",
+                  "content": [
+                    {
+                      "type": "emoji",
+                      "attrs": {
+                        "shortName": "arrow_up",
+                        "id": "arrow_up",
+                        "text": ":arrow_up:"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "tableRow",
+              "content": [
+                {
+                  "type": "tableCell",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "DevOps"
+                    }
+                  ]
+                },
+                {
+                  "type": "tableCell",
+                  "content": [
+                    {
+                      "type": "mention",
+                      "attrs": {
+                        "id": "ops.lead",
+                        "text": "@ops.lead",
+                        "userType": "DEFAULT"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "tableCell",
+                  "content": [
+                    {
+                      "type": "status",
+                      "attrs": {
+                        "text": "optimal",
+                        "color": "neutral",
+                        "style": "default"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "tableCell",
+                  "content": [
+                    {
+                      "type": "emoji",
+                      "attrs": {
+                        "shortName": "rocket",
+                        "id": "rocket",
+                        "text": ":rocket:"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Next review: "
+            },
+            {
+              "type": "date",
               "attrs": {
-                "id": "user-engagement-stats",
-                "type": "file",
-                "alt": "User Engagement",
-                "collection": ""
+                "timestamp": "2024-02-15"
+              }
+            },
+            {
+              "type": "text",
+              "text": " with "
+            },
+            {
+              "type": "mention",
+              "attrs": {
+                "id": "executive.reviewer",
+                "text": "@executive.reviewer",
+                "userType": "DEFAULT"
               }
             }
           ]
@@ -1124,485 +1335,214 @@
       ]
     },
     {
-      "type": "heading",
+      "type": "expand",
       "attrs": {
-        "level": 3
+        "title": "📋 Resource Library - Curated by {user:resource.manager}"
       },
       "content": [
         {
-          "type": "text",
-          "text": "Team Performance"
-        }
-      ]
-    },
-    {
-      "type": "table",
-      "content": [
-        {
-          "type": "tableRow",
+          "type": "paragraph",
           "content": [
             {
-              "type": "tableHeader",
-              "content": [
-                {
-                  "type": "text",
-                  "text": "Team"
-                }
-              ]
+              "type": "text",
+              "text": "Essential links updated "
             },
             {
-              "type": "tableHeader",
-              "content": [
-                {
-                  "type": "text",
-                  "text": "Lead"
-                }
-              ]
+              "type": "date",
+              "attrs": {
+                "timestamp": "2024-01-18"
+              }
             },
             {
-              "type": "tableHeader",
-              "content": [
-                {
-                  "type": "text",
-                  "text": "Status"
-                }
-              ]
-            },
-            {
-              "type": "tableHeader",
-              "content": [
-                {
-                  "type": "text",
-                  "text": "Trend"
-                }
-              ]
+              "type": "text",
+              "text": ":"
             }
           ]
         },
         {
-          "type": "tableRow",
+          "type": "paragraph",
           "content": [
             {
-              "type": "tableCell",
-              "content": [
+              "type": "text",
+              "text": "Documentation:",
+              "marks": [
                 {
-                  "type": "text",
-                  "text": "Frontend"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "content": [
-                {
-                  "type": "mention",
-                  "attrs": {
-                    "id": "fe.lead",
-                    "text": "@fe.lead",
-                    "userType": "DEFAULT"
-                  }
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "content": [
-                {
-                  "type": "status",
-                  "attrs": {
-                    "text": "excellent",
-                    "color": "neutral",
-                    "style": "default"
-                  }
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "content": [
-                {
-                  "type": "emoji",
-                  "attrs": {
-                    "shortName": "chart_with_upwards_trend",
-                    "id": "chart_with_upwards_trend",
-                    "text": ":chart_with_upwards_trend:"
-                  }
+                  "type": "strong"
                 }
               ]
             }
           ]
         },
         {
-          "type": "tableRow",
+          "type": "bulletList",
           "content": [
             {
-              "type": "tableCell",
+              "type": "listItem",
               "content": [
                 {
-                  "type": "text",
-                  "text": "Backend"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "inlineCard",
+                      "attrs": {
+                        "url": "https://api-docs.company.com/v3"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "text": " - Status: "
+                    },
+                    {
+                      "type": "status",
+                      "attrs": {
+                        "text": "current",
+                        "color": "neutral",
+                        "style": "default"
+                      }
+                    }
+                  ]
                 }
               ]
             },
             {
-              "type": "tableCell",
+              "type": "listItem",
               "content": [
                 {
-                  "type": "mention",
-                  "attrs": {
-                    "id": "be.lead",
-                    "text": "@be.lead",
-                    "userType": "DEFAULT"
-                  }
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "inlineCard",
+                      "attrs": {
+                        "url": "https://help.company.com/manual"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "text": " - Review: "
+                    },
+                    {
+                      "type": "status",
+                      "attrs": {
+                        "text": "complete",
+                        "color": "neutral",
+                        "style": "default"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Development:",
+              "marks": [
+                {
+                  "type": "strong"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "inlineCard",
+                      "attrs": {
+                        "url": "https://standards.company.com"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "text": " - Owner: "
+                    },
+                    {
+                      "type": "mention",
+                      "attrs": {
+                        "id": "standards.keeper",
+                        "text": "@standards.keeper",
+                        "userType": "DEFAULT"
+                      }
+                    }
+                  ]
                 }
               ]
             },
             {
-              "type": "tableCell",
+              "type": "listItem",
               "content": [
                 {
-                  "type": "status",
-                  "attrs": {
-                    "text": "good",
-                    "color": "neutral",
-                    "style": "default"
-                  }
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "content": [
-                {
-                  "type": "emoji",
-                  "attrs": {
-                    "shortName": "arrow_up",
-                    "id": "arrow_up",
-                    "text": ":arrow_up:"
-                  }
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "inlineCard",
+                      "attrs": {
+                        "url": "https://cicd.company.com"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "text": " - Status: "
+                    },
+                    {
+                      "type": "status",
+                      "attrs": {
+                        "text": "active",
+                        "color": "neutral",
+                        "style": "default"
+                      }
+                    }
+                  ]
                 }
               ]
             }
           ]
         },
         {
-          "type": "tableRow",
+          "type": "paragraph",
           "content": [
             {
-              "type": "tableCell",
-              "content": [
-                {
-                  "type": "text",
-                  "text": "DevOps"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "content": [
-                {
-                  "type": "mention",
-                  "attrs": {
-                    "id": "ops.lead",
-                    "text": "@ops.lead",
-                    "userType": "DEFAULT"
-                  }
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "content": [
-                {
-                  "type": "status",
-                  "attrs": {
-                    "text": "optimal",
-                    "color": "neutral",
-                    "style": "default"
-                  }
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "content": [
-                {
-                  "type": "emoji",
-                  "attrs": {
-                    "shortName": "rocket",
-                    "id": "rocket",
-                    "text": ":rocket:"
-                  }
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "content": [
-        {
-          "type": "text",
-          "text": "Next review: "
-        },
-        {
-          "type": "date",
-          "attrs": {
-            "timestamp": "2024-02-15"
-          }
-        },
-        {
-          "type": "text",
-          "text": " with "
-        },
-        {
-          "type": "mention",
-          "attrs": {
-            "id": "executive.reviewer",
-            "text": "@executive.reviewer",
-            "userType": "DEFAULT"
-          }
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "content": [
-        {
-          "type": "text",
-          "text": "[HTML: </details>]"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "content": [
-        {
-          "type": "text",
-          "text": "[HTML: <details>\n<summary>📋 **Resource Library** - Curated by {user:resource.manager}</summary>]"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "content": [
-        {
-          "type": "text",
-          "text": "Essential links updated "
-        },
-        {
-          "type": "date",
-          "attrs": {
-            "timestamp": "2024-01-18"
-          }
-        },
-        {
-          "type": "text",
-          "text": ":"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "content": [
-        {
-          "type": "text",
-          "text": "Documentation:",
-          "marks": [
-            {
-              "type": "strong"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "bulletList",
-      "content": [
-        {
-          "type": "listItem",
-          "content": [
-            {
-              "type": "paragraph",
-              "content": [
-                {
-                  "type": "inlineCard",
-                  "attrs": {
-                    "url": "https://api-docs.company.com/v3"
-                  }
-                },
-                {
-                  "type": "text",
-                  "text": " - Status: "
-                },
-                {
-                  "type": "status",
-                  "attrs": {
-                    "text": "current",
-                    "color": "neutral",
-                    "style": "default"
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "listItem",
-          "content": [
-            {
-              "type": "paragraph",
-              "content": [
-                {
-                  "type": "inlineCard",
-                  "attrs": {
-                    "url": "https://help.company.com/manual"
-                  }
-                },
-                {
-                  "type": "text",
-                  "text": " - Review: "
-                },
-                {
-                  "type": "status",
-                  "attrs": {
-                    "text": "complete",
-                    "color": "neutral",
-                    "style": "default"
-                  }
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "content": [
-        {
-          "type": "text",
-          "text": "Development:",
-          "marks": [
-            {
-              "type": "strong"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "bulletList",
-      "content": [
-        {
-          "type": "listItem",
-          "content": [
-            {
-              "type": "paragraph",
-              "content": [
-                {
-                  "type": "inlineCard",
-                  "attrs": {
-                    "url": "https://standards.company.com"
-                  }
-                },
-                {
-                  "type": "text",
-                  "text": " - Owner: "
-                },
-                {
-                  "type": "mention",
-                  "attrs": {
-                    "id": "standards.keeper",
-                    "text": "@standards.keeper",
-                    "userType": "DEFAULT"
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "listItem",
-          "content": [
-            {
-              "type": "paragraph",
-              "content": [
-                {
-                  "type": "inlineCard",
-                  "attrs": {
-                    "url": "https://cicd.company.com"
-                  }
-                },
-                {
-                  "type": "text",
-                  "text": " - Status: "
-                },
-                {
-                  "type": "status",
-                  "attrs": {
-                    "text": "active",
-                    "color": "neutral",
-                    "style": "default"
-                  }
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "content": [
-        {
-          "type": "mediaSingle",
-          "attrs": {
-            "layout": "center"
-          },
-          "content": [
-            {
-              "type": "media",
+              "type": "mediaReference",
               "attrs": {
                 "id": "resource-architecture",
-                "type": "file",
                 "alt": "Resource Map",
+                "mediaType": "file",
                 "collection": ""
               }
             }
           ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "content": [
-        {
-          "type": "text",
-          "text": "Contact "
         },
         {
-          "type": "mention",
-          "attrs": {
-            "id": "resource.support",
-            "text": "@resource.support",
-            "userType": "DEFAULT"
-          }
-        },
-        {
-          "type": "text",
-          "text": " for access issues."
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "content": [
-        {
-          "type": "text",
-          "text": "[HTML: </details>]"
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Contact "
+            },
+            {
+              "type": "mention",
+              "attrs": {
+                "id": "resource.support",
+                "text": "@resource.support",
+                "userType": "DEFAULT"
+              }
+            },
+            {
+              "type": "text",
+              "text": " for access issues."
+            }
+          ]
         }
       ]
     },

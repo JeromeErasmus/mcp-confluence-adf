@@ -33,9 +33,7 @@ Assigned to: {user:tech.reviewer}
 
 ## Expand Sections
 
-<details>
-<summary>🔧 **System Configuration Details**</summary>
-
+~~~expand title="🔧 System Configuration Details"
 ### Database Settings
 - Primary: PostgreSQL {status:active}
 - Backup: MySQL {status:standby}
@@ -53,12 +51,9 @@ Assigned to: {user:tech.reviewer}
 
 ### Performance Metrics
 ![Performance Dashboard](media:performance-dashboard)
+~~~
 
-</details>
-
-<details>
-<summary>📊 **Analytics & Reports**</summary>
-
+~~~expand title="📊 Analytics & Reports"
 Current metrics as of {date:2024-01-25}:
 
 - User Growth: :chart_with_upwards_trend: 150% increase
@@ -74,8 +69,7 @@ Current metrics as of {date:2024-01-25}:
 - Best Performance: {user:optimization.team}
 - Most Reliable: {user:infrastructure.team}
 - User Experience: {user:ux.team}
-
-</details>
+~~~
 
 ## Complex Media Layouts
 
@@ -168,9 +162,7 @@ Status board: [Q2 Planning](card:https://planning.company.com/q2-2024)
 
 ### Technical Deep Dive
 
-<details>
-<summary>🏗️ **Architecture Evolution**</summary>
-
+~~~expand title="🏗️ Architecture Evolution"
 Our system has evolved significantly since {date:2023-01-01}:
 
 ~~~panel type=note title="Migration Timeline"
@@ -194,8 +186,7 @@ Status: {status:completed}
 - Performance: 300% faster :zap:
 - Scalability: 10x capacity :chart_with_upwards_trend:
 - Reliability: 99.99% uptime :white_check_mark:
-
-</details>
+~~~
 
 ## Final Summary
 

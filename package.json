@@ -18,7 +18,7 @@
     "cors": "^2.8.5",
     "crypto": "^1.0.1",
     "express": "^5.1.0",
-    "extended-markdown-adf-parser": "file:../extended-adf-markdown-parser",
+    "extended-markdown-adf-parser": "2.1.6",
     "fs-extra": "^11.2.0",
     "keytar": "^7.9.0",
     "node-fetch": "^3.3.0",

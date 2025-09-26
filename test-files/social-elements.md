@@ -86,9 +86,7 @@ Status during maintenance: {status:unavailable}
 
 ## Expand Sections with Rich Content
 
-<details>
-<summary>🎯 **Project Metrics** - Updated {date:2024-01-20}</summary>
-
+~~~expand title="🎯 Project Metrics - Updated {date:2024-01-20}"
 Performance indicators by {user:metrics.analyst}:
 
 ### Current Status
@@ -108,12 +106,9 @@ Performance indicators by {user:metrics.analyst}:
 | DevOps | {user:ops.lead} | {status:optimal} | :rocket: |
 
 Next review: {date:2024-02-15} with {user:executive.reviewer}
+~~~
 
-</details>
-
-<details>
-<summary>📋 **Resource Library** - Curated by {user:resource.manager}</summary>
-
+~~~expand title="📋 Resource Library - Curated by {user:resource.manager}"
 Essential links updated {date:2024-01-18}:
 
 **Documentation:**
@@ -127,8 +122,7 @@ Essential links updated {date:2024-01-18}:
 ![Resource Map](media:resource-architecture)
 
 Contact {user:resource.support} for access issues.
-
-</details>
+~~~
 
 ## Complex Table with All Elements
 

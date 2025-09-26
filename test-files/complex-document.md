@@ -154,9 +154,7 @@ Our microservices architecture designed by {user:system.architect} on {date:2024
 
 ### Deployment Pipeline
 
-<details>
-<summary>🚀 **CI/CD Pipeline Configuration** - Managed by {user:devops.lead}</summary>
-
+~~~expand title="🚀 CI/CD Pipeline Configuration - Managed by {user:devops.lead}"
 **Pipeline Stages:**
 
 | Stage | Duration | Owner | Status | Last Run |
@@ -176,8 +174,7 @@ Current system health monitored by {user:monitoring.specialist}:
 - Success Rate: {status:excellent} 98.5% :chart_with_upwards_trend:
 - Performance: {status:optimal} :zap:
 - Last Incident: {date:2024-01-15} (resolved) :white_check_mark:
-
-</details>
+~~~
 
 ### Team Performance Analytics
 
@@ -214,9 +211,7 @@ Security review scheduled for {date:2024-02-10} with {user:security.auditor}
 #### User Experience Enhancements  
 Lead: {user:ux.designer} | Timeline: {date:2024-01-15} - {date:2024-03-01}
 
-<details>
-<summary>🎨 **UX Design Evolution** - Click to expand</summary>
-
+~~~expand title="🎨 UX Design Evolution - Click to expand"
 **Design Journey:**
 
 **Phase 1: Research** ({date:2024-01-15} - {date:2024-01-25})
@@ -233,8 +228,7 @@ Development by {user:prototype.developer}
 
 **Current Status:** {status:design-review} :eyes:
 Next milestone: {date:2024-02-25}
-
-</details>
+~~~
 
 ### Resource Management Dashboard
 

@@ -2243,568 +2243,546 @@
       ]
     },
     {
-      "type": "paragraph",
+      "type": "expand",
+      "attrs": {
+        "title": "🚀 CI/CD Pipeline Configuration - Managed by {user:devops.lead}"
+      },
       "content": [
         {
-          "type": "text",
-          "text": "[HTML: <details>\n<summary>🚀 **CI/CD Pipeline Configuration** - Managed by {user:devops.lead}</summary>]"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "content": [
-        {
-          "type": "text",
-          "text": "Pipeline Stages:",
-          "marks": [
-            {
-              "type": "strong"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "table",
-      "content": [
-        {
-          "type": "tableRow",
+          "type": "paragraph",
           "content": [
             {
-              "type": "tableHeader",
-              "content": [
+              "type": "text",
+              "text": "Pipeline Stages:",
+              "marks": [
                 {
-                  "type": "text",
-                  "text": "Stage"
-                }
-              ]
-            },
-            {
-              "type": "tableHeader",
-              "content": [
-                {
-                  "type": "text",
-                  "text": "Duration"
-                }
-              ]
-            },
-            {
-              "type": "tableHeader",
-              "content": [
-                {
-                  "type": "text",
-                  "text": "Owner"
-                }
-              ]
-            },
-            {
-              "type": "tableHeader",
-              "content": [
-                {
-                  "type": "text",
-                  "text": "Status"
-                }
-              ]
-            },
-            {
-              "type": "tableHeader",
-              "content": [
-                {
-                  "type": "text",
-                  "text": "Last Run"
+                  "type": "strong"
                 }
               ]
             }
           ]
         },
         {
-          "type": "tableRow",
-          "content": [
-            {
-              "type": "tableCell",
-              "content": [
-                {
-                  "type": "text",
-                  "text": "Build"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "content": [
-                {
-                  "type": "text",
-                  "text": "3 min"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "content": [
-                {
-                  "type": "mention",
-                  "attrs": {
-                    "id": "build.engineer",
-                    "text": "@build.engineer",
-                    "userType": "DEFAULT"
-                  }
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "content": [
-                {
-                  "type": "status",
-                  "attrs": {
-                    "text": "active",
-                    "color": "neutral",
-                    "style": "default"
-                  }
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "content": [
-                {
-                  "type": "date",
-                  "attrs": {
-                    "timestamp": "2024-01-30"
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "tableRow",
-          "content": [
-            {
-              "type": "tableCell",
-              "content": [
-                {
-                  "type": "text",
-                  "text": "Test"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "content": [
-                {
-                  "type": "text",
-                  "text": "8 min"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "content": [
-                {
-                  "type": "mention",
-                  "attrs": {
-                    "id": "test.automation",
-                    "text": "@test.automation",
-                    "userType": "DEFAULT"
-                  }
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "content": [
-                {
-                  "type": "status",
-                  "attrs": {
-                    "text": "active",
-                    "color": "neutral",
-                    "style": "default"
-                  }
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "content": [
-                {
-                  "type": "date",
-                  "attrs": {
-                    "timestamp": "2024-01-30"
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "tableRow",
-          "content": [
-            {
-              "type": "tableCell",
-              "content": [
-                {
-                  "type": "text",
-                  "text": "Security Scan"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "content": [
-                {
-                  "type": "text",
-                  "text": "5 min"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "content": [
-                {
-                  "type": "mention",
-                  "attrs": {
-                    "id": "security.officer",
-                    "text": "@security.officer",
-                    "userType": "DEFAULT"
-                  }
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "content": [
-                {
-                  "type": "status",
-                  "attrs": {
-                    "text": "active",
-                    "color": "neutral",
-                    "style": "default"
-                  }
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "content": [
-                {
-                  "type": "date",
-                  "attrs": {
-                    "timestamp": "2024-01-30"
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "tableRow",
-          "content": [
-            {
-              "type": "tableCell",
-              "content": [
-                {
-                  "type": "text",
-                  "text": "Deploy Staging"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "content": [
-                {
-                  "type": "text",
-                  "text": "2 min"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "content": [
-                {
-                  "type": "mention",
-                  "attrs": {
-                    "id": "deploy.manager",
-                    "text": "@deploy.manager",
-                    "userType": "DEFAULT"
-                  }
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "content": [
-                {
-                  "type": "status",
-                  "attrs": {
-                    "text": "active",
-                    "color": "neutral",
-                    "style": "default"
-                  }
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "content": [
-                {
-                  "type": "date",
-                  "attrs": {
-                    "timestamp": "2024-01-30"
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "tableRow",
-          "content": [
-            {
-              "type": "tableCell",
-              "content": [
-                {
-                  "type": "text",
-                  "text": "Deploy Production"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "content": [
-                {
-                  "type": "text",
-                  "text": "2 min"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "content": [
-                {
-                  "type": "mention",
-                  "attrs": {
-                    "id": "release.engineer",
-                    "text": "@release.engineer",
-                    "userType": "DEFAULT"
-                  }
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "content": [
-                {
-                  "type": "status",
-                  "attrs": {
-                    "text": "manual",
-                    "color": "neutral",
-                    "style": "default"
-                  }
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "content": [
-                {
-                  "type": "date",
-                  "attrs": {
-                    "timestamp": "2024-01-29"
-                  }
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "content": [
-        {
-          "type": "text",
-          "text": "Pipeline Visualizations:",
-          "marks": [
-            {
-              "type": "strong"
-            }
-          ]
-        },
-        {
-          "type": "mediaSingle",
+          "type": "table",
           "attrs": {
-            "layout": "center"
+            "isNumberColumnEnabled": false,
+            "layout": "default"
           },
           "content": [
             {
-              "type": "media",
+              "type": "tableRow",
+              "content": [
+                {
+                  "type": "tableHeader",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Stage"
+                    }
+                  ]
+                },
+                {
+                  "type": "tableHeader",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Duration"
+                    }
+                  ]
+                },
+                {
+                  "type": "tableHeader",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Owner"
+                    }
+                  ]
+                },
+                {
+                  "type": "tableHeader",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Status"
+                    }
+                  ]
+                },
+                {
+                  "type": "tableHeader",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Last Run"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "tableRow",
+              "content": [
+                {
+                  "type": "tableCell",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Build"
+                    }
+                  ]
+                },
+                {
+                  "type": "tableCell",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "3 min"
+                    }
+                  ]
+                },
+                {
+                  "type": "tableCell",
+                  "content": [
+                    {
+                      "type": "mention",
+                      "attrs": {
+                        "id": "build.engineer",
+                        "text": "@build.engineer",
+                        "userType": "DEFAULT"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "tableCell",
+                  "content": [
+                    {
+                      "type": "status",
+                      "attrs": {
+                        "text": "active",
+                        "color": "neutral",
+                        "style": "default"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "tableCell",
+                  "content": [
+                    {
+                      "type": "date",
+                      "attrs": {
+                        "timestamp": "2024-01-30"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "tableRow",
+              "content": [
+                {
+                  "type": "tableCell",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Test"
+                    }
+                  ]
+                },
+                {
+                  "type": "tableCell",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "8 min"
+                    }
+                  ]
+                },
+                {
+                  "type": "tableCell",
+                  "content": [
+                    {
+                      "type": "mention",
+                      "attrs": {
+                        "id": "test.automation",
+                        "text": "@test.automation",
+                        "userType": "DEFAULT"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "tableCell",
+                  "content": [
+                    {
+                      "type": "status",
+                      "attrs": {
+                        "text": "active",
+                        "color": "neutral",
+                        "style": "default"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "tableCell",
+                  "content": [
+                    {
+                      "type": "date",
+                      "attrs": {
+                        "timestamp": "2024-01-30"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "tableRow",
+              "content": [
+                {
+                  "type": "tableCell",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Security Scan"
+                    }
+                  ]
+                },
+                {
+                  "type": "tableCell",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "5 min"
+                    }
+                  ]
+                },
+                {
+                  "type": "tableCell",
+                  "content": [
+                    {
+                      "type": "mention",
+                      "attrs": {
+                        "id": "security.officer",
+                        "text": "@security.officer",
+                        "userType": "DEFAULT"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "tableCell",
+                  "content": [
+                    {
+                      "type": "status",
+                      "attrs": {
+                        "text": "active",
+                        "color": "neutral",
+                        "style": "default"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "tableCell",
+                  "content": [
+                    {
+                      "type": "date",
+                      "attrs": {
+                        "timestamp": "2024-01-30"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "tableRow",
+              "content": [
+                {
+                  "type": "tableCell",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Deploy Staging"
+                    }
+                  ]
+                },
+                {
+                  "type": "tableCell",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "2 min"
+                    }
+                  ]
+                },
+                {
+                  "type": "tableCell",
+                  "content": [
+                    {
+                      "type": "mention",
+                      "attrs": {
+                        "id": "deploy.manager",
+                        "text": "@deploy.manager",
+                        "userType": "DEFAULT"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "tableCell",
+                  "content": [
+                    {
+                      "type": "status",
+                      "attrs": {
+                        "text": "active",
+                        "color": "neutral",
+                        "style": "default"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "tableCell",
+                  "content": [
+                    {
+                      "type": "date",
+                      "attrs": {
+                        "timestamp": "2024-01-30"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "tableRow",
+              "content": [
+                {
+                  "type": "tableCell",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Deploy Production"
+                    }
+                  ]
+                },
+                {
+                  "type": "tableCell",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "2 min"
+                    }
+                  ]
+                },
+                {
+                  "type": "tableCell",
+                  "content": [
+                    {
+                      "type": "mention",
+                      "attrs": {
+                        "id": "release.engineer",
+                        "text": "@release.engineer",
+                        "userType": "DEFAULT"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "tableCell",
+                  "content": [
+                    {
+                      "type": "status",
+                      "attrs": {
+                        "text": "manual",
+                        "color": "neutral",
+                        "style": "default"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "tableCell",
+                  "content": [
+                    {
+                      "type": "date",
+                      "attrs": {
+                        "timestamp": "2024-01-29"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Pipeline Visualizations:",
+              "marks": [
+                {
+                  "type": "strong"
+                }
+              ]
+            },
+            {
+              "type": "mediaReference",
               "attrs": {
                 "id": "build-pipeline-flow",
-                "type": "file",
                 "alt": "Build Pipeline",
+                "mediaType": "file",
                 "collection": ""
               }
-            }
-          ]
-        },
-        {
-          "type": "mediaSingle",
-          "attrs": {
-            "layout": "center"
-          },
-          "content": [
+            },
             {
-              "type": "media",
+              "type": "mediaReference",
               "attrs": {
                 "id": "deployment-success-rates",
-                "type": "file",
                 "alt": "Deployment Metrics",
+                "mediaType": "file",
                 "collection": ""
               }
             }
           ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "content": [
+        },
         {
-          "type": "text",
-          "text": "Monitoring Dashboard:",
-          "marks": [
+          "type": "paragraph",
+          "content": [
             {
-              "type": "strong"
+              "type": "text",
+              "text": "Monitoring Dashboard:",
+              "marks": [
+                {
+                  "type": "strong"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "\nCurrent system health monitored by "
+            },
+            {
+              "type": "mention",
+              "attrs": {
+                "id": "monitoring.specialist",
+                "text": "@monitoring.specialist",
+                "userType": "DEFAULT"
+              }
+            },
+            {
+              "type": "text",
+              "text": ":"
             }
           ]
         },
         {
-          "type": "text",
-          "text": "\nCurrent system health monitored by "
-        },
-        {
-          "type": "mention",
-          "attrs": {
-            "id": "monitoring.specialist",
-            "text": "@monitoring.specialist",
-            "userType": "DEFAULT"
-          }
-        },
-        {
-          "type": "text",
-          "text": ":"
-        }
-      ]
-    },
-    {
-      "type": "bulletList",
-      "content": [
-        {
-          "type": "listItem",
+          "type": "bulletList",
           "content": [
             {
-              "type": "paragraph",
+              "type": "listItem",
               "content": [
                 {
-                  "type": "text",
-                  "text": "Success Rate: "
-                },
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Success Rate: "
+                    },
+                    {
+                      "type": "status",
+                      "attrs": {
+                        "text": "excellent",
+                        "color": "neutral",
+                        "style": "default"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "text": " 98.5% "
+                    },
+                    {
+                      "type": "emoji",
+                      "attrs": {
+                        "shortName": "chart_with_upwards_trend",
+                        "id": "chart_with_upwards_trend",
+                        "text": ":chart_with_upwards_trend:"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
                 {
-                  "type": "status",
-                  "attrs": {
-                    "text": "excellent",
-                    "color": "neutral",
-                    "style": "default"
-                  }
-                },
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Performance: "
+                    },
+                    {
+                      "type": "status",
+                      "attrs": {
+                        "text": "optimal",
+                        "color": "neutral",
+                        "style": "default"
+                      }
+                    },
+                    {
+                      "type": "emoji",
+                      "attrs": {
+                        "shortName": "zap",
+                        "id": "zap",
+                        "text": ":zap:"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
                 {
-                  "type": "text",
-                  "text": " 98.5% "
-                },
-                {
-                  "type": "emoji",
-                  "attrs": {
-                    "shortName": "chart_with_upwards_trend",
-                    "id": "chart_with_upwards_trend",
-                    "text": ":chart_with_upwards_trend:"
-                  }
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Last Incident: "
+                    },
+                    {
+                      "type": "date",
+                      "attrs": {
+                        "timestamp": "2024-01-15"
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "text": " (resolved) "
+                    },
+                    {
+                      "type": "emoji",
+                      "attrs": {
+                        "shortName": "white_check_mark",
+                        "id": "white_check_mark",
+                        "text": ":white_check_mark:"
+                      }
+                    }
+                  ]
                 }
               ]
             }
           ]
-        },
-        {
-          "type": "listItem",
-          "content": [
-            {
-              "type": "paragraph",
-              "content": [
-                {
-                  "type": "text",
-                  "text": "Performance: "
-                },
-                {
-                  "type": "status",
-                  "attrs": {
-                    "text": "optimal",
-                    "color": "neutral",
-                    "style": "default"
-                  }
-                },
-                {
-                  "type": "emoji",
-                  "attrs": {
-                    "shortName": "zap",
-                    "id": "zap",
-                    "text": ":zap:"
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "listItem",
-          "content": [
-            {
-              "type": "paragraph",
-              "content": [
-                {
-                  "type": "text",
-                  "text": "Last Incident: "
-                },
-                {
-                  "type": "date",
-                  "attrs": {
-                    "timestamp": "2024-01-15"
-                  }
-                },
-                {
-                  "type": "text",
-                  "text": " (resolved) "
-                },
-                {
-                  "type": "emoji",
-                  "attrs": {
-                    "shortName": "white_check_mark",
-                    "id": "white_check_mark",
-                    "text": ":white_check_mark:"
-                  }
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "content": [
-        {
-          "type": "text",
-          "text": "[HTML: </details>]"
         }
       ]
     },
@@ -3178,76 +3156,97 @@
       },
       "content": [
         {
-          "type": "paragraph",
+          "type": "orderedList",
           "content": [
             {
-              "type": "text",
-              "text": "Implementation phases:",
-              "marks": [
+              "type": "listItem",
+              "content": [
                 {
-                  "type": "strong"
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Backend API: "
+                    },
+                    {
+                      "type": "status",
+                      "attrs": {
+                        "text": "completed",
+                        "color": "neutral",
+                        "style": "default"
+                      }
+                    },
+                    {
+                      "type": "emoji",
+                      "attrs": {
+                        "shortName": "white_check_mark",
+                        "id": "white_check_mark",
+                        "text": ":white_check_mark:"
+                      }
+                    }
+                  ]
                 }
               ]
             },
             {
-              "type": "text",
-              "text": "\n1. Backend API: "
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Frontend Integration: "
+                    },
+                    {
+                      "type": "status",
+                      "attrs": {
+                        "text": "in-progress",
+                        "color": "neutral",
+                        "style": "default"
+                      }
+                    },
+                    {
+                      "type": "emoji",
+                      "attrs": {
+                        "shortName": "construction",
+                        "id": "construction",
+                        "text": ":construction:"
+                      }
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "status",
-              "attrs": {
-                "text": "completed",
-                "color": "neutral",
-                "style": "default"
-              }
-            },
-            {
-              "type": "emoji",
-              "attrs": {
-                "shortName": "white_check_mark",
-                "id": "white_check_mark",
-                "text": ":white_check_mark:"
-              }
-            },
-            {
-              "type": "text",
-              "text": "\n2. Frontend Integration: "
-            },
-            {
-              "type": "status",
-              "attrs": {
-                "text": "in-progress",
-                "color": "neutral",
-                "style": "default"
-              }
-            },
-            {
-              "type": "emoji",
-              "attrs": {
-                "shortName": "construction",
-                "id": "construction",
-                "text": ":construction:"
-              }
-            },
-            {
-              "type": "text",
-              "text": "\n3. Mobile App: "
-            },
-            {
-              "type": "status",
-              "attrs": {
-                "text": "pending",
-                "color": "neutral",
-                "style": "default"
-              }
-            },
-            {
-              "type": "emoji",
-              "attrs": {
-                "shortName": "calendar",
-                "id": "calendar",
-                "text": ":calendar:"
-              }
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Mobile App: "
+                    },
+                    {
+                      "type": "status",
+                      "attrs": {
+                        "text": "pending",
+                        "color": "neutral",
+                        "style": "default"
+                      }
+                    },
+                    {
+                      "type": "emoji",
+                      "attrs": {
+                        "shortName": "calendar",
+                        "id": "calendar",
+                        "text": ":calendar:"
+                      }
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -3330,275 +3329,241 @@
       ]
     },
     {
-      "type": "paragraph",
+      "type": "expand",
+      "attrs": {
+        "title": "🎨 UX Design Evolution - Click to expand"
+      },
       "content": [
         {
-          "type": "text",
-          "text": "[HTML: <details>\n<summary>🎨 **UX Design Evolution** - Click to expand</summary>]"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "content": [
-        {
-          "type": "text",
-          "text": "Design Journey:",
-          "marks": [
-            {
-              "type": "strong"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "content": [
-        {
-          "type": "text",
-          "text": "Phase 1: Research",
-          "marks": [
-            {
-              "type": "strong"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "text": " ("
-        },
-        {
-          "type": "date",
-          "attrs": {
-            "timestamp": "2024-01-15"
-          }
-        },
-        {
-          "type": "text",
-          "text": " - "
-        },
-        {
-          "type": "date",
-          "attrs": {
-            "timestamp": "2024-01-25"
-          }
-        },
-        {
-          "type": "text",
-          "text": ")\n"
-        },
-        {
-          "type": "mediaSingle",
-          "attrs": {
-            "layout": "center"
-          },
+          "type": "paragraph",
           "content": [
             {
-              "type": "media",
+              "type": "text",
+              "text": "Design Journey:",
+              "marks": [
+                {
+                  "type": "strong"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Phase 1: Research",
+              "marks": [
+                {
+                  "type": "strong"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " ("
+            },
+            {
+              "type": "date",
+              "attrs": {
+                "timestamp": "2024-01-15"
+              }
+            },
+            {
+              "type": "text",
+              "text": " - "
+            },
+            {
+              "type": "date",
+              "attrs": {
+                "timestamp": "2024-01-25"
+              }
+            },
+            {
+              "type": "text",
+              "text": ")\n"
+            },
+            {
+              "type": "mediaReference",
               "attrs": {
                 "id": "ux-research-findings",
-                "type": "file",
                 "alt": "User Research",
+                "mediaType": "file",
                 "collection": ""
+              }
+            },
+            {
+              "type": "text",
+              "text": "\nResearch conducted by "
+            },
+            {
+              "type": "mention",
+              "attrs": {
+                "id": "user.researcher",
+                "text": "@user.researcher",
+                "userType": "DEFAULT"
               }
             }
           ]
         },
         {
-          "type": "text",
-          "text": "\nResearch conducted by "
-        },
-        {
-          "type": "mention",
-          "attrs": {
-            "id": "user.researcher",
-            "text": "@user.researcher",
-            "userType": "DEFAULT"
-          }
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "content": [
-        {
-          "type": "text",
-          "text": "Phase 2: Wireframes",
-          "marks": [
-            {
-              "type": "strong"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "text": " ("
-        },
-        {
-          "type": "date",
-          "attrs": {
-            "timestamp": "2024-01-25"
-          }
-        },
-        {
-          "type": "text",
-          "text": " - "
-        },
-        {
-          "type": "date",
-          "attrs": {
-            "timestamp": "2024-02-05"
-          }
-        },
-        {
-          "type": "text",
-          "text": ")\n"
-        },
-        {
-          "type": "mediaSingle",
-          "attrs": {
-            "layout": "center"
-          },
+          "type": "paragraph",
           "content": [
             {
-              "type": "media",
+              "type": "text",
+              "text": "Phase 2: Wireframes",
+              "marks": [
+                {
+                  "type": "strong"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " ("
+            },
+            {
+              "type": "date",
+              "attrs": {
+                "timestamp": "2024-01-25"
+              }
+            },
+            {
+              "type": "text",
+              "text": " - "
+            },
+            {
+              "type": "date",
+              "attrs": {
+                "timestamp": "2024-02-05"
+              }
+            },
+            {
+              "type": "text",
+              "text": ")\n"
+            },
+            {
+              "type": "mediaReference",
               "attrs": {
                 "id": "wireframe-evolution",
-                "type": "file",
                 "alt": "Wireframe Iterations",
+                "mediaType": "file",
                 "collection": ""
+              }
+            },
+            {
+              "type": "text",
+              "text": "\nDesigns by "
+            },
+            {
+              "type": "mention",
+              "attrs": {
+                "id": "wireframe.specialist",
+                "text": "@wireframe.specialist",
+                "userType": "DEFAULT"
               }
             }
           ]
         },
         {
-          "type": "text",
-          "text": "\nDesigns by "
-        },
-        {
-          "type": "mention",
-          "attrs": {
-            "id": "wireframe.specialist",
-            "text": "@wireframe.specialist",
-            "userType": "DEFAULT"
-          }
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "content": [
-        {
-          "type": "text",
-          "text": "Phase 3: Prototypes",
-          "marks": [
-            {
-              "type": "strong"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "text": " ("
-        },
-        {
-          "type": "date",
-          "attrs": {
-            "timestamp": "2024-02-05"
-          }
-        },
-        {
-          "type": "text",
-          "text": " - "
-        },
-        {
-          "type": "date",
-          "attrs": {
-            "timestamp": "2024-02-20"
-          }
-        },
-        {
-          "type": "text",
-          "text": ")\n"
-        },
-        {
-          "type": "mediaSingle",
-          "attrs": {
-            "layout": "center"
-          },
+          "type": "paragraph",
           "content": [
             {
-              "type": "media",
+              "type": "text",
+              "text": "Phase 3: Prototypes",
+              "marks": [
+                {
+                  "type": "strong"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": " ("
+            },
+            {
+              "type": "date",
+              "attrs": {
+                "timestamp": "2024-02-05"
+              }
+            },
+            {
+              "type": "text",
+              "text": " - "
+            },
+            {
+              "type": "date",
+              "attrs": {
+                "timestamp": "2024-02-20"
+              }
+            },
+            {
+              "type": "text",
+              "text": ")\n"
+            },
+            {
+              "type": "mediaReference",
               "attrs": {
                 "id": "prototype-demos",
-                "type": "file",
                 "alt": "Interactive Prototypes",
+                "mediaType": "file",
                 "collection": ""
+              }
+            },
+            {
+              "type": "text",
+              "text": "\nDevelopment by "
+            },
+            {
+              "type": "mention",
+              "attrs": {
+                "id": "prototype.developer",
+                "text": "@prototype.developer",
+                "userType": "DEFAULT"
               }
             }
           ]
         },
         {
-          "type": "text",
-          "text": "\nDevelopment by "
-        },
-        {
-          "type": "mention",
-          "attrs": {
-            "id": "prototype.developer",
-            "text": "@prototype.developer",
-            "userType": "DEFAULT"
-          }
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "content": [
-        {
-          "type": "text",
-          "text": "Current Status:",
-          "marks": [
+          "type": "paragraph",
+          "content": [
             {
-              "type": "strong"
+              "type": "text",
+              "text": "Current Status:",
+              "marks": [
+                {
+                  "type": "strong"
+                }
+              ]
+            },
+            {
+              "type": "status",
+              "attrs": {
+                "text": "design-review",
+                "color": "neutral",
+                "style": "default"
+              }
+            },
+            {
+              "type": "emoji",
+              "attrs": {
+                "shortName": "eyes",
+                "id": "eyes",
+                "text": ":eyes:"
+              }
+            },
+            {
+              "type": "text",
+              "text": "\nNext milestone: "
+            },
+            {
+              "type": "date",
+              "attrs": {
+                "timestamp": "2024-02-25"
+              }
             }
           ]
-        },
-        {
-          "type": "status",
-          "attrs": {
-            "text": "design-review",
-            "color": "neutral",
-            "style": "default"
-          }
-        },
-        {
-          "type": "emoji",
-          "attrs": {
-            "shortName": "eyes",
-            "id": "eyes",
-            "text": ":eyes:"
-          }
-        },
-        {
-          "type": "text",
-          "text": "\nNext milestone: "
-        },
-        {
-          "type": "date",
-          "attrs": {
-            "timestamp": "2024-02-25"
-          }
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "content": [
-        {
-          "type": "text",
-          "text": "[HTML: </details>]"
         }
       ]
     },
