@@ -5,8 +5,6 @@
 
 A Model Context Protocol (MCP) server for Confluence content management using Atlassian Document Format (ADF) with bidirectional Markdown conversion for easy editing.
 
-**=� Available on npm:** `mcp-confluence-adf`
-
 ## Features
 
 - **OAuth 2.0 authentication** with secure token management and automatic refresh
@@ -53,7 +51,7 @@ claude mcp add --scope user mcp-confluence-adf npx mcp-confluence-adf
 code ~/.config/claude/settings.json
 ```
 
-**3. (Manual option only) Add the server configuration to the `"mcp"` � `"servers"` section:**
+**3. (Manual option only) Add the server configuration to the `"mcp"` → `"servers"` section:**
 ```json
 {
   "mcp": {
@@ -82,7 +80,7 @@ yarn build
 
 **Add to Claude Code MCP configuration (`~/.config/claude/settings.json`):**
 
-Add this to the `"mcp"` � `"servers"` section:
+Add this to the `"mcp"` → `"servers"` section:
 ```json
 {
   "mcp": {
@@ -350,25 +348,25 @@ Add or remove labels on Confluence pages.
 Rich Confluence content is converted to Markdown equivalents:
 
 ```markdown
-# ADF Panels � Markdown Blockquotes
-> 9 **Info:** Information panels
-> � **Warning:** Warning panels  
->  **Success:** Success panels
-> =� **Note:** Note panels
+# ADF Panels → Markdown Blockquotes
+> ℹ️ **Info:** Information panels
+> ⚠️ **Warning:** Warning panels
+> ✅ **Success:** Success panels
+> 📝 **Note:** Note panels
 
-# Tables � Standard Markdown Tables
+# Tables → Standard Markdown Tables
 | Column 1 | Column 2 |
 |----------|----------|
 | Data 1   | Data 2   |
 
-# Code Blocks � Fenced Code Blocks
+# Code Blocks → Fenced Code Blocks
 ```javascript
 function example() {
   return "preserved formatting";
 }
 ```
 
-# Rich Text � Markdown Formatting
+# Rich Text → Markdown Formatting
 **Bold text**, *italic text*, `inline code`
 [Link text](https://example.com)
 @mentions and :emoji: support
