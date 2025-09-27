@@ -349,10 +349,10 @@ Rich Confluence content is converted to Markdown equivalents:
 
 ```markdown
 # ADF Panels → Markdown Blockquotes
-> ℹ️ **Info:** Information panels
-> ⚠️ **Warning:** Warning panels
-> ✅ **Success:** Success panels
-> 📝 **Note:** Note panels
+> **Info:** Information panels
+> **Warning:** Warning panels
+> **Success:** Success panels
+> **Note:** Note panels
 
 # Tables → Standard Markdown Tables
 | Column 1 | Column 2 |
@@ -649,7 +649,7 @@ variables:
 
 # Getting Started with Node.js API Server
 
-> ℹ️ **Welcome:** This guide will help you get up and running with Node.js API Server, a powerful and flexible API solution built with Node.js and Express. You'll be building and deploying APIs in minutes!
+> **Welcome:** This guide will help you get up and running with Node.js API Server, a powerful and flexible API solution built with Node.js and Express. You'll be building and deploying APIs in minutes!
 
 ## Prerequisites
 
@@ -686,7 +686,7 @@ api.get('/hello', (req, res) => {
 api.listen(3000);
 ```
 
-> ✅ **You're All Set!:** Congratulations! Your Node.js API Server is now running. Visit the full documentation to learn about advanced features like authentication, middleware, and database integration.
+> **You're All Set!:** Congratulations! Your Node.js API Server is now running. Visit the full documentation to learn about advanced features like authentication, middleware, and database integration.
 ```
 
 #### 5. ADF Conversion

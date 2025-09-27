@@ -228,7 +228,7 @@ graph TD
 
 **Input (Intermediate):**
 ```markdown
-> ℹ️ **Authentication Overview**
+> **Authentication Overview**
 <!-- CLAUDE INSTRUCTION: REPLACE THIS COMMENT WITH CONTENT -->
 <!-- TASK: Explain API key authentication for Payment API -->
 <!-- PURPOSE: Help developers understand security requirements -->
@@ -236,7 +236,7 @@ graph TD
 
 **Output (Processed):**
 ```markdown
-> ℹ️ **Authentication Overview**
+> **Authentication Overview**
 The Payment API uses API key authentication for secure access. Every request must include a valid API key in the Authorization header. API keys are unique to each application and provide access control and request tracking capabilities.
 ```
 
@@ -250,7 +250,7 @@ Claude applies intelligent ADF formatting based on content context:
 <!-- TASK: Document security considerations -->
 
 <!-- Output -->  
-> ⚠️ **Security Notice**
+> **Security Notice**
 Never expose API keys in client-side code. Store keys securely in environment variables and rotate them regularly.
 ```
 
@@ -316,10 +316,10 @@ sequenceDiagram
 
 ```typescript
 const markdownToADFMapping = {
-  '> ℹ️ **Title**': 'panel[info]',
-  '> ⚠️ **Title**': 'panel[warning]', 
-  '> ✅ **Title**': 'panel[success]',
-  '> 📝 **Title**': 'panel[note]',
+  '> **Title**': 'panel[info]',
+  '> **Title**': 'panel[warning]', 
+  '> **Title**': 'panel[success]',
+  '> **Title**': 'panel[note]',
   '```language': 'codeBlock',
   '<details>': 'expand',
   '# Header': 'heading[1]',

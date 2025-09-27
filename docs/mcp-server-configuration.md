@@ -64,8 +64,8 @@ The MCP server is configured through Claude Code's MCP configuration file:
 
 | Variable | Description | Example | Required |
 |----------|-------------|---------|----------|
-| `CONFLUENCE_BASE_URL` | Your Confluence base URL | `https://company.atlassian.net` | ✅ |
-| `CONFLUENCE_EMAIL` | Your Atlassian account email | `user@company.com` | ✅ |
+| `CONFLUENCE_BASE_URL` | Your Confluence base URL | `https://company.atlassian.net` | |
+| `CONFLUENCE_EMAIL` | Your Atlassian account email | `user@company.com` | |
 
 ### Optional Variables
 
@@ -188,10 +188,10 @@ claude-code --check-mcp-config
 The server validates configuration on startup and will log any issues:
 
 ```
-✅ Configuration valid
+Configuration valid
 ❌ Missing required environment variable: CONFLUENCE_BASE_URL
 ❌ Invalid base URL format
-⚠️  Template path not found, using default
+ Template path not found, using default
 ```
 
 ## Next Steps

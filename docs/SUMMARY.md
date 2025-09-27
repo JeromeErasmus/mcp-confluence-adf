@@ -3,7 +3,7 @@
 ## Getting Started
 * [Introduction](../README.md)
 * [Installation Guide](./installation-guide.md)
-* [Quick Start Guide](./quick-start.md)
+* [Quick Start Guide](./quick-start-guide.md)
 
 ## Installation Help
 * [Installation Verification](./installation-verification.md)
@@ -22,6 +22,7 @@
 * [Error Handling](./error-handling.md)
 
 ## API Reference
+* [MCP Tool Discovery](./mcp-tool-discovery.md)
 * [MCP Tools Reference](./mcp-tools-reference.md)
 * [Template Engine API](./template-engine-api.md)
 * [Configuration Schema](./configuration-schema.md)
@@ -30,7 +31,6 @@
 * [Custom Templates](./custom-templates.md)
 * [Batch Operations](./batch-operations.md)
 * [Content Validation](./content-validation.md)
-* [Debugging & Troubleshooting](./debugging-troubleshooting.md)
 
 ## Integration Examples
 * [Claude Code Workflows](./claude-code-workflows.md)

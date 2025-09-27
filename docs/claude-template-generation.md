@@ -62,7 +62,7 @@ structure:
 
 # {{project_name}} Documentation
 
-> ℹ️ **Overview**
+> **Overview**
 <!-- CLAUDE INSTRUCTION: REPLACE THIS COMMENT WITH CONTENT -->
 <!-- TASK: Describe the project's purpose -->
 <!-- ADF FORMATTING OPTIONS: -->
@@ -85,7 +85,7 @@ Show me all available templates
 
 **Claude Response:**
 ```
-📋 Available Templates
+Available Templates
 
 ## User Guide
 - simple-getting-started: Basic getting started template
@@ -107,16 +107,16 @@ Generate documentation using the "simple-getting-started" template for my React 
 
 **Claude Response:**
 ```
-✅ Intermediate Template Generated Successfully
+Intermediate Template Generated Successfully
 
-📄 YAML Template: simple-getting-started
+YAML Template: simple-getting-started
 📁 Output Path: templates/generated/simple-getting-started-20241201-123456.md
-🔍 Validation: Valid
+Validation: Valid
 
 🔄 Next Step: This intermediate template contains Claude instruction comments that need to be processed.
 
 Workflow:
-1. ✅ YAML template → Intermediate template (COMPLETED)
+1. YAML template → Intermediate template (COMPLETED)
 2. 🔄 Claude processes instructions → Final ADF markdown (NEXT)  
 3. 📤 Upload to Confluence (FINAL)
 ```
@@ -134,7 +134,7 @@ Claude automatically processes the generated intermediate template by:
 
 **Before (Intermediate):**
 ```markdown
-> ℹ️ **Welcome**
+> **Welcome**
 <!-- CLAUDE INSTRUCTION: REPLACE THIS COMMENT WITH CONTENT -->
 <!-- TASK: Create a welcoming introduction for UIKit Pro -->
 <!-- PURPOSE: Set positive tone and provide overview -->
@@ -142,7 +142,7 @@ Claude automatically processes the generated intermediate template by:
 
 **After (Claude Processing):**
 ```markdown
-> ℹ️ **Welcome**
+> **Welcome**
 Welcome to UIKit Pro! This comprehensive React component library provides 50+ professionally designed components to accelerate your development workflow. Built with TypeScript and fully customizable, UIKit Pro helps you create beautiful, accessible user interfaces in minutes instead of hours.
 ```
 
@@ -189,7 +189,7 @@ structure:
 
 **Generates:**
 ```markdown
-> ℹ️ **Information Title**
+> **Information Title**
 <!-- CLAUDE INSTRUCTION: REPLACE THIS COMMENT WITH CONTENT -->
 <!-- TASK: What content should go here -->
 <!-- PURPOSE: Why this panel is needed -->
@@ -204,7 +204,7 @@ structure:
 
 **Generates:**
 ```markdown
-> ⚠️ **Security Notice**  
+> **Security Notice**  
 <!-- CLAUDE INSTRUCTION: REPLACE THIS COMMENT WITH CONTENT -->
 <!-- TASK: Document security considerations -->
 ```
