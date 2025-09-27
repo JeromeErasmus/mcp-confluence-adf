@@ -54,7 +54,7 @@ export function createDownloadPageTool(): ToolHandler<z.infer<typeof downloadSch
           originalADF: page.body.atlas_doc_format.value
         };
         
-        const markdown = ADFConverter.adfToMarkdown(adfDocument, metadata);
+        const markdown = await ADFConverter.adfToMarkdown(adfDocument, metadata);
         
         // Write files
         await fs.outputFile(managedFile.filePath, markdown, 'utf-8');

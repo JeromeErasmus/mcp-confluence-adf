@@ -10,6 +10,7 @@ import { createDownloadPageTool } from "./tools/download-page.js";
 import { createUploadPageTool } from "./tools/upload-page.js";
 import { createCrudTools } from "./tools/crud.js";
 import { createSearchTools } from "./tools/search.js";
+import { createTemplateTools } from "./tools/templates.js";
 
 // Create MCP server
 const server = new McpServer({
@@ -72,6 +73,20 @@ for (const tool of crudTools) {
 // Register search tools
 const searchTools = createSearchTools();
 for (const tool of searchTools) {
+  server.registerTool(
+    tool.name,
+    {
+      title: tool.title,
+      description: tool.description,
+      inputSchema: tool.inputSchema
+    },
+    tool.handler
+  );
+}
+
+// Register template tools
+const templateTools = createTemplateTools();
+for (const tool of templateTools) {
   server.registerTool(
     tool.name,
     {

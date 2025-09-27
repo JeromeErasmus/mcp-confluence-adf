@@ -22,9 +22,9 @@ A Model Context Protocol (MCP) server for Confluence content management using At
 
 ### NPM Package Install (Recommended)
 
-**1. Install the package from npm:**
+**1. Install the package globally:**
 ```bash
-npm install -g mcp-confluence-adf
+yarn global add mcp-confluence-adf
 ```
 
 **2. Add the server configuration:**
@@ -86,7 +86,7 @@ Add this to the `"mcp"` � `"servers"` section:
 
 **Global install:**
 ```bash
-npm install -g mcp-confluence-adf
+yarn global add mcp-confluence-adf
 ```
 
 **Quick test without install:**
@@ -103,9 +103,9 @@ To completely remove the MCP server:
 claude mcp remove mcp-confluence-adf
 ```
 
-**2. Uninstall the npm package:**
+**2. Uninstall the package:**
 ```bash
-npm uninstall -g mcp-confluence-adf
+yarn global remove mcp-confluence-adf
 ```
 
 ## How It Works
@@ -537,6 +537,224 @@ confluence_oauth_clear()
 **This is a one-time setup!** Once completed, your OAuth authentication persists across all future Claude Code sessions automatically with secure token refresh.
 
 
+## Templates System
+
+### Overview
+
+The MCP Confluence ADF server includes a powerful templates system that allows users and Claude to generate structured Confluence pages from YAML template definitions. Templates provide a standardized way to create consistent, high-quality documentation.
+
+### Template Structure
+
+Templates are defined in YAML format and consist of:
+
+1. **Metadata** - Template name, description, version, category
+2. **User Context Requirements** - Variables that need to be provided
+3. **Structure Definition** - The actual content structure and instructions
+
+#### Example Template Structure
+```yaml
+---
+name: Simple Getting Started Guide
+description: A basic getting started template for any project or service
+version: 1.0.0
+category: user-guide
+output_type: structured_template
+sections:
+  - introduction
+  - installation
+  - basic_usage
+  - troubleshooting
+user_context_required:
+  project_name: "What is the name of your project or service?"
+  main_technology: "What is the main technology stack (e.g., Node.js, Python, React)?"
+---
+
+structure:
+  - "# Getting Started with {{project_name}}"
+  
+  - type: info_panel
+    title: "Welcome"
+    content_instruction: "Create a welcoming introduction that explains what {{project_name}} does and why users should be excited to use it"
+    purpose: "Set a positive tone and provide project overview"
+  
+  - "## Installation"
+  - type: code_block
+    title: "Quick Install"
+    language: "bash"
+    content_instruction: "Provide the simplest installation command for {{project_name}} using yarn or the most common package manager for {{main_technology}}"
+    purpose: "Get users up and running quickly"
+```
+
+### Available Template Types
+
+#### Content Block Types
+- **Plain Text**: Direct markdown content (headings, paragraphs)
+- **Panels**: `info_panel`, `warning_panel`, `success_panel`, `error_panel`
+- **Code Blocks**: With language specification and syntax highlighting
+- **Expandable Sections**: Collapsible content blocks
+- **Tables**: Structured data presentation
+- **Sections**: Reusable content blocks with descriptions
+
+#### Template Variables
+- Use `{{variable_name}}` syntax for substitution
+- Variables defined in `user_context_required` section
+- Automatically replaced during generation
+
+### Process Flow: Templates → Confluence Pages
+
+#### 1. Template Selection
+**User Request**: "Create a getting started guide for my Node.js API"
+
+**Claude Code**: 
+- Analyzes available templates in `/templates/yaml/`
+- Selects appropriate template (e.g., `simple-getting-started.yml`)
+- Identifies required user context variables
+
+#### 2. Context Gathering  
+**Claude Code**: 
+- Prompts user for required variables:
+  - `project_name`: "Node.js API Server"
+  - `main_technology`: "Node.js with Express"
+- Collects additional context through conversation
+
+#### 3. Content Generation
+**Claude Code**:
+- Processes template structure section by section
+- Substitutes variables: `{{project_name}}` → "Node.js API Server"
+- Generates content based on `content_instruction` fields
+- Follows `purpose` guidelines for each section
+
+#### 4. Markdown Creation
+**Generated Output** (saved to `test-files/`):
+```markdown
+---
+template: simple-getting-started
+generated: 2024-01-15T10:30:00Z
+variables:
+  project_name: Node.js API Server
+  main_technology: Node.js with Express
+---
+
+# Getting Started with Node.js API Server
+
+> ℹ️ **Welcome:** This guide will help you get up and running with Node.js API Server, a powerful and flexible API solution built with Node.js and Express. You'll be building and deploying APIs in minutes!
+
+## Prerequisites
+
+### Requirements
+Before installing Node.js API Server, ensure you have:
+- Node.js v18.0.0 or higher
+- yarn v1.22.0 or higher
+- Git for version control
+
+## Installation
+
+```bash
+yarn global add nodejs-api-server
+```
+
+### Verification
+Verify your installation by running:
+```bash
+nodejs-api-server --version
+```
+
+## Basic Usage
+
+### First Steps
+Create your first API endpoint with this simple example:
+
+```javascript
+const api = require('nodejs-api-server');
+
+api.get('/hello', (req, res) => {
+  res.json({ message: 'Hello, World!' });
+});
+
+api.listen(3000);
+```
+
+> ✅ **You're All Set!:** Congratulations! Your Node.js API Server is now running. Visit the full documentation to learn about advanced features like authentication, middleware, and database integration.
+```
+
+#### 5. ADF Conversion
+**Automatic Process**:
+- Markdown content is automatically converted to ADF JSON format
+- Rich content elements (panels, code blocks, tables) are preserved
+- Saved to `test-files/converted-adf/` directory
+- Ready for upload to Confluence
+
+#### 6. Confluence Upload
+**Claude Code**: Uses `confluence_upload_page` or `create_confluence_content`:
+```json
+{
+  "filePath": "test-files/generated-getting-started.md",
+  "mode": "create",
+  "spaceKey": "DOCS",
+  "title": "Getting Started with Node.js API Server"
+}
+```
+
+### Using Templates with Claude
+
+#### For Users
+**Simple Request**: "Create documentation for my Python web scraper using a template"
+
+**Claude Response**:
+1. Reviews available templates
+2. Asks for required context (project name, technology stack, etc.)
+3. Generates structured content following template guidelines
+4. Creates both Markdown and ADF versions
+5. Optionally uploads directly to Confluence
+
+#### For Claude Code
+**Template Processing**:
+1. **Parse YAML**: Load template structure and metadata
+2. **Validate Context**: Ensure all required variables are available
+3. **Process Structure**: Iterate through structure array
+4. **Generate Content**: Create content based on instructions and context
+5. **Apply Variables**: Substitute all `{{variable}}` placeholders
+6. **Output Format**: Generate both Markdown and ADF versions
+
+### Template Development
+
+#### Adding New Templates
+1. Create YAML file in `/templates/yaml/`
+2. Define metadata and user context requirements
+3. Structure content with clear instructions
+4. Test with various user contexts
+5. Generate examples in `/test-files/`
+
+#### Template Best Practices
+- **Clear Instructions**: Provide specific `content_instruction` for each section
+- **Flexible Variables**: Use meaningful variable names with helpful descriptions
+- **Rich Content**: Leverage panels, code blocks, and expandables appropriately
+- **User-Focused**: Design structure around user needs and workflows
+
+### Content Update Flow
+
+#### Template → Markdown → ADF → Confluence
+```
+YAML Template
+    ↓ (Claude processes structure)
+Markdown File (test-files/)
+    ↓ (Automatic ADF conversion)
+ADF JSON (test-files/converted-adf/)
+    ↓ (Upload via MCP tools)
+Confluence Page
+```
+
+#### Iterative Updates
+1. **Modify Template**: Update YAML structure or instructions
+2. **Regenerate Content**: Claude processes updated template
+3. **Review Changes**: Compare new Markdown output
+4. **Update Confluence**: Upload revised content to existing pages
+
+This templates system enables rapid, consistent documentation creation while maintaining quality and structure across all generated content.
+
 ## License
 
 MIT
+
+## Important References
+https://developer.atlassian.com/cloud/jira/platform/jira-entity-properties/

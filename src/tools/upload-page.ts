@@ -38,8 +38,8 @@ export function createUploadPageTool(): ToolHandler<z.infer<typeof uploadSchema>
         // Read markdown content
         const markdownContent = await readFile(filePath, 'utf-8');
         
-        // Convert markdown to ADF
-        const { adf, metadata } = ADFConverter.markdownToADF(markdownContent);
+        // Convert markdown to ADF using the enhanced converter
+        const { adf, metadata } = await ADFConverter.markdownToADF(markdownContent);
         
         // Extract page ID from filename or metadata
         const pageIdFromFilename = FileManager.extractPageIdFromFilename(filePath);

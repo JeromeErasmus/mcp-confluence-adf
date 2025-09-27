@@ -1,0 +1,60 @@
+---
+name: Simple Getting Started Guide
+description: A basic getting started template for any project or service
+version: 1.0.0
+category: user-guide
+output_type: structured_template
+sections:
+  - introduction
+  - installation
+  - basic_usage
+  - troubleshooting
+user_context_required:
+  project_name: "What is the name of your project or service?"
+  main_technology: "What is the main technology stack (e.g., Node.js, Python, React)?"
+---
+
+structure:
+  - "# Getting Started with {{project_name}}"
+  
+  - type: info_panel
+    title: "Welcome"
+    content_instruction: "Create a welcoming introduction that explains what {{project_name}} does and why users should be excited to use it"
+    purpose: "Set a positive tone and provide project overview"
+  
+  - "## Prerequisites"
+  - section: "Requirements"
+    description: "List the system requirements and dependencies needed before installation"
+    content_instruction: "Include specific versions for {{main_technology}} and any other key dependencies"
+  
+  - "## Installation"
+  - type: code_block
+    title: "Quick Install"
+    language: "bash"
+    content_instruction: "Provide the simplest installation command for {{project_name}} using the most common package manager for {{main_technology}}"
+    purpose: "Get users up and running quickly"
+  
+  - section: "Verification"
+    description: "How to verify the installation was successful"
+    content_instruction: "Show a simple command users can run to confirm {{project_name}} is installed correctly"
+  
+  - "## Basic Usage"
+  - section: "First Steps"
+    description: "The most basic example of using the project"
+    content_instruction: "Provide a 'Hello World' equivalent example that demonstrates core functionality of {{project_name}}"
+  
+  - type: success_panel
+    title: "You're All Set!"
+    content_instruction: "Congratulate the user and point them to next steps or additional resources"
+    purpose: "Provide positive reinforcement and guidance for next steps"
+  
+  - "## Troubleshooting"
+  - type: expandable
+    title: "Common Issues"
+    content_instruction: "List 2-3 most common problems users encounter with {{project_name}} and their solutions"
+    purpose: "Proactively address typical user problems"
+  
+  - "## Next Steps"
+  - section: "Learn More"
+    description: "Additional resources and documentation links"
+    content_instruction: "Provide links to full documentation, tutorials, and community resources for {{project_name}}"

@@ -9,11 +9,12 @@ export default {
       useESM: true,
       tsconfig: {
         target: 'ES2022',
-        module: 'ESNext'
+        module: 'ESNext',
+        moduleResolution: 'node'
       }
     }],
   },
   testEnvironment: 'node',
-  roots: ['<rootDir>/src'],
-  testMatch: ['**/__tests__/**/*.test.ts'],
+  roots: ['<rootDir>'],
+  testMatch: ['<rootDir>/tests/**/*.test.ts'],
 };
