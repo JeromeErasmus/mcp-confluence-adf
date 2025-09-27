@@ -59,19 +59,7 @@
             },
             {
               "type": "text",
-              "text": " and "
-            },
-            {
-              "type": "emoji",
-              "attrs": {
-                "shortName": "information_source",
-                "id": "information_source",
-                "text": ":information_source:"
-              }
-            },
-            {
-              "type": "text",
-              "text": " emoji."
+              "text": " and ℹ️ emoji."
             }
           ]
         },
@@ -85,7 +73,7 @@
             {
               "type": "date",
               "attrs": {
-                "timestamp": "2024-01-01"
+                "timestamp": "1704067200000"
               }
             },
             {
@@ -96,8 +84,7 @@
               "type": "status",
               "attrs": {
                 "text": "active",
-                "color": "neutral",
-                "style": "default"
+                "color": "neutral"
               }
             }
           ]
@@ -121,7 +108,7 @@
             {
               "type": "date",
               "attrs": {
-                "timestamp": "2024-02-15"
+                "timestamp": "1707955200000"
               }
             },
             {
@@ -153,8 +140,7 @@
               "type": "status",
               "attrs": {
                 "text": "maintenance-mode",
-                "color": "neutral",
-                "style": "default"
+                "color": "neutral"
               }
             }
           ]
@@ -173,15 +159,7 @@
           "content": [
             {
               "type": "text",
-              "text": "Deployment completed successfully! "
-            },
-            {
-              "type": "emoji",
-              "attrs": {
-                "shortName": "tada",
-                "id": "tada",
-                "text": ":tada:"
-              }
+              "text": "Deployment completed successfully! 🎉"
             }
           ]
         },
@@ -220,8 +198,7 @@
               "type": "status",
               "attrs": {
                 "text": "deployed",
-                "color": "neutral",
-                "style": "default"
+                "color": "neutral"
               }
             }
           ]
@@ -254,7 +231,7 @@
             {
               "type": "date",
               "attrs": {
-                "timestamp": "2024-01-20"
+                "timestamp": "1705708800000"
               }
             },
             {
@@ -320,8 +297,7 @@
                       "type": "status",
                       "attrs": {
                         "text": "active",
-                        "color": "neutral",
-                        "style": "default"
+                        "color": "neutral"
                       }
                     }
                   ]
@@ -342,8 +318,7 @@
                       "type": "status",
                       "attrs": {
                         "text": "standby",
-                        "color": "neutral",
-                        "style": "default"
+                        "color": "neutral"
                       }
                     }
                   ]
@@ -364,8 +339,7 @@
                       "type": "status",
                       "attrs": {
                         "text": "active",
-                        "color": "neutral",
-                        "style": "default"
+                        "color": "neutral"
                       }
                     }
                   ]
@@ -375,11 +349,19 @@
           ]
         },
         {
-          "type": "table",
+          "type": "heading",
           "attrs": {
-            "isNumberColumnEnabled": false,
-            "layout": "default"
+            "level": 3
           },
+          "content": [
+            {
+              "type": "text",
+              "text": "Team Assignments"
+            }
+          ]
+        },
+        {
+          "type": "table",
           "content": [
             {
               "type": "tableRow",
@@ -454,8 +436,7 @@
                       "type": "status",
                       "attrs": {
                         "text": "in-progress",
-                        "color": "neutral",
-                        "style": "default"
+                        "color": "neutral"
                       }
                     }
                   ]
@@ -466,7 +447,7 @@
                     {
                       "type": "date",
                       "attrs": {
-                        "timestamp": "2024-02-01"
+                        "timestamp": "1706745600000"
                       }
                     }
                   ]
@@ -505,8 +486,7 @@
                       "type": "status",
                       "attrs": {
                         "text": "completed",
-                        "color": "neutral",
-                        "style": "default"
+                        "color": "neutral"
                       }
                     }
                   ]
@@ -517,7 +497,7 @@
                     {
                       "type": "date",
                       "attrs": {
-                        "timestamp": "2024-01-15"
+                        "timestamp": "1705276800000"
                       }
                     }
                   ]
@@ -556,8 +536,7 @@
                       "type": "status",
                       "attrs": {
                         "text": "pending",
-                        "color": "neutral",
-                        "style": "default"
+                        "color": "neutral"
                       }
                     }
                   ]
@@ -568,7 +547,7 @@
                     {
                       "type": "date",
                       "attrs": {
-                        "timestamp": "2024-02-10"
+                        "timestamp": "1707523200000"
                       }
                     }
                   ]
@@ -578,36 +557,58 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
           "content": [
             {
               "type": "text",
-              "text": "### Architecture Diagram\n"
-            },
+              "text": "Architecture Diagram"
+            }
+          ]
+        },
+        {
+          "type": "mediaSingle",
+          "attrs": {
+            "layout": "center"
+          },
+          "content": [
             {
-              "type": "mediaReference",
+              "type": "media",
               "attrs": {
                 "id": "system-architecture-v2",
+                "type": "file",
                 "alt": "System Architecture",
-                "mediaType": "file",
                 "collection": ""
               }
             }
           ]
         },
         {
-          "type": "paragraph",
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
           "content": [
             {
               "type": "text",
-              "text": "### Performance Metrics\n"
-            },
+              "text": "Performance Metrics"
+            }
+          ]
+        },
+        {
+          "type": "mediaSingle",
+          "attrs": {
+            "layout": "center"
+          },
+          "content": [
             {
-              "type": "mediaReference",
+              "type": "media",
               "attrs": {
                 "id": "performance-dashboard",
+                "type": "file",
                 "alt": "Performance Dashboard",
-                "mediaType": "file",
                 "collection": ""
               }
             }
@@ -631,7 +632,7 @@
             {
               "type": "date",
               "attrs": {
-                "timestamp": "2024-01-25"
+                "timestamp": "1706140800000"
               }
             },
             {
@@ -651,19 +652,7 @@
                   "content": [
                     {
                       "type": "text",
-                      "text": "User Growth: "
-                    },
-                    {
-                      "type": "emoji",
-                      "attrs": {
-                        "shortName": "chart_with_upwards_trend",
-                        "id": "chart_with_upwards_trend",
-                        "text": ":chart_with_upwards_trend:"
-                      }
-                    },
-                    {
-                      "type": "text",
-                      "text": " 150% increase"
+                      "text": "User Growth: 📈 150% increase"
                     }
                   ]
                 }
@@ -677,19 +666,7 @@
                   "content": [
                     {
                       "type": "text",
-                      "text": "Performance: "
-                    },
-                    {
-                      "type": "emoji",
-                      "attrs": {
-                        "shortName": "zap",
-                        "id": "zap",
-                        "text": ":zap:"
-                      }
-                    },
-                    {
-                      "type": "text",
-                      "text": " 40% faster response times  "
+                      "text": "Performance: ⚡ 40% faster response times"
                     }
                   ]
                 }
@@ -703,19 +680,7 @@
                   "content": [
                     {
                       "type": "text",
-                      "text": "Reliability: "
-                    },
-                    {
-                      "type": "emoji",
-                      "attrs": {
-                        "shortName": "white_check_mark",
-                        "id": "white_check_mark",
-                        "text": ":white_check_mark:"
-                      }
-                    },
-                    {
-                      "type": "text",
-                      "text": " 99.9% uptime"
+                      "text": "Reliability: ✅ 99.9% uptime"
                     }
                   ]
                 }
@@ -736,31 +701,67 @@
               ]
             },
             {
-              "type": "mediaReference",
-              "attrs": {
-                "id": "analytics-main",
-                "alt": "Analytics Dashboard",
-                "mediaType": "file",
-                "collection": ""
-              }
+              "type": "text",
+              "text": "\n"
             },
             {
-              "type": "mediaReference",
+              "type": "mediaSingle",
               "attrs": {
-                "id": "user-growth-chart",
-                "alt": "User Growth Chart",
-                "mediaType": "file",
-                "collection": ""
-              }
+                "layout": "center"
+              },
+              "content": [
+                {
+                  "type": "media",
+                  "attrs": {
+                    "id": "analytics-main",
+                    "type": "file",
+                    "alt": "Analytics Dashboard",
+                    "collection": ""
+                  }
+                }
+              ]
             },
             {
-              "type": "mediaReference",
+              "type": "text",
+              "text": "\n"
+            },
+            {
+              "type": "mediaSingle",
               "attrs": {
-                "id": "performance-trends",
-                "alt": "Performance Trends",
-                "mediaType": "file",
-                "collection": ""
-              }
+                "layout": "center"
+              },
+              "content": [
+                {
+                  "type": "media",
+                  "attrs": {
+                    "id": "user-growth-chart",
+                    "type": "file",
+                    "alt": "User Growth Chart",
+                    "collection": ""
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "\n"
+            },
+            {
+              "type": "mediaSingle",
+              "attrs": {
+                "layout": "center"
+              },
+              "content": [
+                {
+                  "type": "media",
+                  "attrs": {
+                    "id": "performance-trends",
+                    "type": "file",
+                    "alt": "Performance Trends",
+                    "collection": ""
+                  }
+                }
+              ]
             }
           ]
         },
@@ -777,12 +778,8 @@
               ]
             },
             {
-              "type": "emoji",
-              "attrs": {
-                "shortName": "trophy",
-                "id": "trophy",
-                "text": ":trophy:"
-              }
+              "type": "text",
+              "text": " 🏆"
             }
           ]
         },
@@ -893,24 +890,19 @@
       ]
     },
     {
-      "type": "paragraph",
+      "type": "mediaSingle",
+      "attrs": {
+        "layout": "center"
+      },
       "content": [
         {
-          "type": "mediaSingle",
+          "type": "media",
           "attrs": {
-            "layout": "center"
-          },
-          "content": [
-            {
-              "type": "media",
-              "attrs": {
-                "id": "mockups-initial",
-                "type": "file",
-                "alt": "Initial Mockups",
-                "collection": ""
-              }
-            }
-          ]
+            "id": "mockups-initial",
+            "type": "file",
+            "alt": "Initial Mockups",
+            "collection": ""
+          }
         }
       ]
     },
@@ -936,24 +928,19 @@
       ]
     },
     {
-      "type": "paragraph",
+      "type": "mediaSingle",
+      "attrs": {
+        "layout": "center"
+      },
       "content": [
         {
-          "type": "mediaSingle",
+          "type": "media",
           "attrs": {
-            "layout": "center"
-          },
-          "content": [
-            {
-              "type": "media",
-              "attrs": {
-                "id": "mockups-revised",
-                "type": "file",
-                "alt": "Revised Mockups",
-                "collection": ""
-              }
-            }
-          ]
+            "id": "mockups-revised",
+            "type": "file",
+            "alt": "Revised Mockups",
+            "collection": ""
+          }
         }
       ]
     },
@@ -967,24 +954,19 @@
       ]
     },
     {
-      "type": "paragraph",
+      "type": "mediaSingle",
+      "attrs": {
+        "layout": "center"
+      },
       "content": [
         {
-          "type": "mediaSingle",
+          "type": "media",
           "attrs": {
-            "layout": "center"
-          },
-          "content": [
-            {
-              "type": "media",
-              "attrs": {
-                "id": "implementation-final",
-                "type": "file",
-                "alt": "Final Implementation",
-                "collection": ""
-              }
-            }
-          ]
+            "id": "implementation-final",
+            "type": "file",
+            "alt": "Final Implementation",
+            "collection": ""
+          }
         }
       ]
     },
@@ -1022,7 +1004,7 @@
         {
           "type": "date",
           "attrs": {
-            "timestamp": "2024-01-20"
+            "timestamp": "1705708800000"
           }
         },
         {
@@ -1039,14 +1021,17 @@
       },
       "content": [
         {
-          "type": "paragraph",
+          "type": "mediaSingle",
+          "attrs": {
+            "layout": "center"
+          },
           "content": [
             {
-              "type": "mediaReference",
+              "type": "media",
               "attrs": {
                 "id": "sprint-progress",
+                "type": "file",
                 "alt": "Sprint Progress",
-                "mediaType": "file",
                 "collection": ""
               }
             }
@@ -1078,17 +1063,12 @@
                       "type": "status",
                       "attrs": {
                         "text": "completed",
-                        "color": "neutral",
-                        "style": "default"
+                        "color": "neutral"
                       }
                     },
                     {
-                      "type": "emoji",
-                      "attrs": {
-                        "shortName": "white_check_mark",
-                        "id": "white_check_mark",
-                        "text": ":white_check_mark:"
-                      }
+                      "type": "text",
+                      "text": " ✅"
                     }
                   ]
                 }
@@ -1108,17 +1088,12 @@
                       "type": "status",
                       "attrs": {
                         "text": "in-progress",
-                        "color": "neutral",
-                        "style": "default"
+                        "color": "neutral"
                       }
                     },
                     {
-                      "type": "emoji",
-                      "attrs": {
-                        "shortName": "construction",
-                        "id": "construction",
-                        "text": ":construction:"
-                      }
+                      "type": "text",
+                      "text": " 🚧"
                     }
                   ]
                 }
@@ -1138,17 +1113,12 @@
                       "type": "status",
                       "attrs": {
                         "text": "completed",
-                        "color": "neutral",
-                        "style": "default"
+                        "color": "neutral"
                       }
                     },
                     {
-                      "type": "emoji",
-                      "attrs": {
-                        "shortName": "white_check_mark",
-                        "id": "white_check_mark",
-                        "text": ":white_check_mark:"
-                      }
+                      "type": "text",
+                      "text": " ✅"
                     }
                   ]
                 }
@@ -1310,8 +1280,7 @@
                   "type": "status",
                   "attrs": {
                     "text": "completed",
-                    "color": "neutral",
-                    "style": "default"
+                    "color": "neutral"
                   }
                 }
               ]
@@ -1322,7 +1291,7 @@
                 {
                   "type": "date",
                   "attrs": {
-                    "timestamp": "2024-01-10"
+                    "timestamp": "1704844800000"
                   }
                 }
               ]
@@ -1383,8 +1352,7 @@
                   "type": "status",
                   "attrs": {
                     "text": "in-progress",
-                    "color": "neutral",
-                    "style": "default"
+                    "color": "neutral"
                   }
                 }
               ]
@@ -1395,7 +1363,7 @@
                 {
                   "type": "date",
                   "attrs": {
-                    "timestamp": "2024-02-15"
+                    "timestamp": "1707955200000"
                   }
                 }
               ]
@@ -1456,8 +1424,7 @@
                   "type": "status",
                   "attrs": {
                     "text": "pending",
-                    "color": "neutral",
-                    "style": "default"
+                    "color": "neutral"
                   }
                 }
               ]
@@ -1468,7 +1435,7 @@
                 {
                   "type": "date",
                   "attrs": {
-                    "timestamp": "2024-03-01"
+                    "timestamp": "1709251200000"
                   }
                 }
               ]
@@ -1529,8 +1496,7 @@
                   "type": "status",
                   "attrs": {
                     "text": "not-started",
-                    "color": "neutral",
-                    "style": "default"
+                    "color": "neutral"
                   }
                 }
               ]
@@ -1541,7 +1507,7 @@
                 {
                   "type": "date",
                   "attrs": {
-                    "timestamp": "2024-03-15"
+                    "timestamp": "1710460800000"
                   }
                 }
               ]
@@ -1691,8 +1657,7 @@
                   "type": "status",
                   "attrs": {
                     "text": "high",
-                    "color": "neutral",
-                    "style": "default"
+                    "color": "neutral"
                   }
                 }
               ]
@@ -1775,8 +1740,7 @@
                   "type": "status",
                   "attrs": {
                     "text": "medium",
-                    "color": "neutral",
-                    "style": "default"
+                    "color": "neutral"
                   }
                 }
               ]
@@ -1859,8 +1823,7 @@
                   "type": "status",
                   "attrs": {
                     "text": "low",
-                    "color": "neutral",
-                    "style": "default"
+                    "color": "neutral"
                   }
                 }
               ]
@@ -1924,7 +1887,7 @@
                 {
                   "type": "date",
                   "attrs": {
-                    "timestamp": "2024-01-15"
+                    "timestamp": "1705276800000"
                   }
                 }
               ]
@@ -1979,8 +1942,7 @@
                   "type": "status",
                   "attrs": {
                     "text": "current",
-                    "color": "neutral",
-                    "style": "default"
+                    "color": "neutral"
                   }
                 }
               ]
@@ -2052,8 +2014,7 @@
                   "type": "status",
                   "attrs": {
                     "text": "active",
-                    "color": "neutral",
-                    "style": "default"
+                    "color": "neutral"
                   }
                 }
               ]
@@ -2080,8 +2041,7 @@
                   "type": "status",
                   "attrs": {
                     "text": "green",
-                    "color": "neutral",
-                    "style": "default"
+                    "color": "neutral"
                   }
                 }
               ]
@@ -2153,8 +2113,7 @@
                   "type": "status",
                   "attrs": {
                     "text": "stable",
-                    "color": "neutral",
-                    "style": "default"
+                    "color": "neutral"
                   }
                 }
               ]
@@ -2180,7 +2139,7 @@
                 {
                   "type": "date",
                   "attrs": {
-                    "timestamp": "2024-01-01"
+                    "timestamp": "1704067200000"
                   }
                 }
               ]
@@ -2221,14 +2180,17 @@
       },
       "content": [
         {
-          "type": "paragraph",
+          "type": "mediaSingle",
+          "attrs": {
+            "layout": "center"
+          },
           "content": [
             {
-              "type": "mediaReference",
+              "type": "media",
               "attrs": {
                 "id": "q1-milestone",
+                "type": "file",
                 "alt": "Milestone Celebration",
-                "mediaType": "file",
                 "collection": ""
               }
             }
@@ -2270,12 +2232,8 @@
                       }
                     },
                     {
-                      "type": "emoji",
-                      "attrs": {
-                        "shortName": "star",
-                        "id": "star",
-                        "text": ":star:"
-                      }
+                      "type": "text",
+                      "text": " ⭐"
                     }
                   ]
                 }
@@ -2300,12 +2258,8 @@
                       }
                     },
                     {
-                      "type": "emoji",
-                      "attrs": {
-                        "shortName": "handshake",
-                        "id": "handshake",
-                        "text": ":handshake:"
-                      }
+                      "type": "text",
+                      "text": " 🤝"
                     }
                   ]
                 }
@@ -2330,12 +2284,8 @@
                       }
                     },
                     {
-                      "type": "emoji",
-                      "attrs": {
-                        "shortName": "bulb",
-                        "id": "bulb",
-                        "text": ":bulb:"
-                      }
+                      "type": "text",
+                      "text": " 💡"
                     }
                   ]
                 }
@@ -2373,7 +2323,7 @@
                     {
                       "type": "date",
                       "attrs": {
-                        "timestamp": "2024-04-01"
+                        "timestamp": "1711929600000"
                       }
                     }
                   ]
@@ -2393,7 +2343,7 @@
                     {
                       "type": "date",
                       "attrs": {
-                        "timestamp": "2024-05-15"
+                        "timestamp": "1715731200000"
                       }
                     }
                   ]
@@ -2413,7 +2363,7 @@
                     {
                       "type": "date",
                       "attrs": {
-                        "timestamp": "2024-06-30"
+                        "timestamp": "1719705600000"
                       }
                     }
                   ]
@@ -2467,7 +2417,7 @@
             {
               "type": "date",
               "attrs": {
-                "timestamp": "2023-01-01"
+                "timestamp": "1672531200000"
               }
             },
             {
@@ -2477,219 +2427,248 @@
           ]
         },
         {
-          "type": "paragraph",
+          "type": "panel",
+          "attrs": {
+            "panelType": "note",
+            "title": "Migration Timeline"
+          },
           "content": [
             {
-              "type": "text",
-              "text": "~~~panel type=note title=\"Migration Timeline\"\n"
-            },
-            {
-              "type": "text",
-              "text": "Phase 1: Assessment",
-              "marks": [
+              "type": "paragraph",
+              "content": [
                 {
-                  "type": "strong"
+                  "type": "text",
+                  "text": "Phase 1: Assessment",
+                  "marks": [
+                    {
+                      "type": "strong"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ("
+                },
+                {
+                  "type": "date",
+                  "attrs": {
+                    "timestamp": "1685577600000"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": " - "
+                },
+                {
+                  "type": "date",
+                  "attrs": {
+                    "timestamp": "1690848000000"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": ")\n"
+                },
+                {
+                  "type": "mediaSingle",
+                  "attrs": {
+                    "layout": "center"
+                  },
+                  "content": [
+                    {
+                      "type": "media",
+                      "attrs": {
+                        "id": "migration-assessment",
+                        "type": "file",
+                        "alt": "Assessment Results",
+                        "collection": ""
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "\nLead: "
+                },
+                {
+                  "type": "mention",
+                  "attrs": {
+                    "id": "architecture.lead",
+                    "text": "@architecture.lead",
+                    "userType": "DEFAULT"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "\nStatus: "
+                },
+                {
+                  "type": "status",
+                  "attrs": {
+                    "text": "completed",
+                    "color": "neutral"
+                  }
                 }
               ]
             },
             {
-              "type": "text",
-              "text": " ("
-            },
-            {
-              "type": "date",
-              "attrs": {
-                "timestamp": "2023-06-01"
-              }
-            },
-            {
-              "type": "text",
-              "text": " - "
-            },
-            {
-              "type": "date",
-              "attrs": {
-                "timestamp": "2023-08-01"
-              }
-            },
-            {
-              "type": "text",
-              "text": ")\n"
-            },
-            {
-              "type": "mediaReference",
-              "attrs": {
-                "id": "migration-assessment",
-                "alt": "Assessment Results",
-                "mediaType": "file",
-                "collection": ""
-              }
-            },
-            {
-              "type": "text",
-              "text": "\nLead: "
-            },
-            {
-              "type": "mention",
-              "attrs": {
-                "id": "architecture.lead",
-                "text": "@architecture.lead",
-                "userType": "DEFAULT"
-              }
-            },
-            {
-              "type": "text",
-              "text": "\nStatus: "
-            },
-            {
-              "type": "status",
-              "attrs": {
-                "text": "completed",
-                "color": "neutral",
-                "style": "default"
-              }
-            }
-          ]
-        },
-        {
-          "type": "paragraph",
-          "content": [
-            {
-              "type": "text",
-              "text": "Phase 2: Design",
-              "marks": [
+              "type": "paragraph",
+              "content": [
                 {
-                  "type": "strong"
+                  "type": "text",
+                  "text": "Phase 2: Design",
+                  "marks": [
+                    {
+                      "type": "strong"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ("
+                },
+                {
+                  "type": "date",
+                  "attrs": {
+                    "timestamp": "1690848000000"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": " - "
+                },
+                {
+                  "type": "date",
+                  "attrs": {
+                    "timestamp": "1696118400000"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": ")"
+                },
+                {
+                  "type": "hardBreak"
+                },
+                {
+                  "type": "mediaSingle",
+                  "attrs": {
+                    "layout": "center"
+                  },
+                  "content": [
+                    {
+                      "type": "media",
+                      "attrs": {
+                        "id": "architecture-new",
+                        "type": "file",
+                        "alt": "New Architecture",
+                        "collection": ""
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "\nLead: "
+                },
+                {
+                  "type": "mention",
+                  "attrs": {
+                    "id": "system.designer",
+                    "text": "@system.designer",
+                    "userType": "DEFAULT"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "\nStatus: "
+                },
+                {
+                  "type": "status",
+                  "attrs": {
+                    "text": "completed",
+                    "color": "neutral"
+                  }
                 }
               ]
             },
             {
-              "type": "text",
-              "text": " ("
-            },
-            {
-              "type": "date",
-              "attrs": {
-                "timestamp": "2023-08-01"
-              }
-            },
-            {
-              "type": "text",
-              "text": " - "
-            },
-            {
-              "type": "date",
-              "attrs": {
-                "timestamp": "2023-10-01"
-              }
-            },
-            {
-              "type": "text",
-              "text": ")  \n"
-            },
-            {
-              "type": "mediaReference",
-              "attrs": {
-                "id": "architecture-new",
-                "alt": "New Architecture",
-                "mediaType": "file",
-                "collection": ""
-              }
-            },
-            {
-              "type": "text",
-              "text": "\nLead: "
-            },
-            {
-              "type": "mention",
-              "attrs": {
-                "id": "system.designer",
-                "text": "@system.designer",
-                "userType": "DEFAULT"
-              }
-            },
-            {
-              "type": "text",
-              "text": "\nStatus: "
-            },
-            {
-              "type": "status",
-              "attrs": {
-                "text": "completed",
-                "color": "neutral",
-                "style": "default"
-              }
-            }
-          ]
-        },
-        {
-          "type": "paragraph",
-          "content": [
-            {
-              "type": "text",
-              "text": "Phase 3: Implementation",
-              "marks": [
+              "type": "paragraph",
+              "content": [
                 {
-                  "type": "strong"
+                  "type": "text",
+                  "text": "Phase 3: Implementation",
+                  "marks": [
+                    {
+                      "type": "strong"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " ("
+                },
+                {
+                  "type": "date",
+                  "attrs": {
+                    "timestamp": "1696118400000"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": " - "
+                },
+                {
+                  "type": "date",
+                  "attrs": {
+                    "timestamp": "1704067200000"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": ")\n"
+                },
+                {
+                  "type": "mediaSingle",
+                  "attrs": {
+                    "layout": "center"
+                  },
+                  "content": [
+                    {
+                      "type": "media",
+                      "attrs": {
+                        "id": "implementation-tracking",
+                        "type": "file",
+                        "alt": "Implementation Progress",
+                        "collection": ""
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "\nLead: "
+                },
+                {
+                  "type": "mention",
+                  "attrs": {
+                    "id": "migration.manager",
+                    "text": "@migration.manager",
+                    "userType": "DEFAULT"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "\nStatus: "
+                },
+                {
+                  "type": "status",
+                  "attrs": {
+                    "text": "completed",
+                    "color": "neutral"
+                  }
                 }
               ]
-            },
-            {
-              "type": "text",
-              "text": " ("
-            },
-            {
-              "type": "date",
-              "attrs": {
-                "timestamp": "2023-10-01"
-              }
-            },
-            {
-              "type": "text",
-              "text": " - "
-            },
-            {
-              "type": "date",
-              "attrs": {
-                "timestamp": "2024-01-01"
-              }
-            },
-            {
-              "type": "text",
-              "text": ")\n"
-            },
-            {
-              "type": "mediaReference",
-              "attrs": {
-                "id": "implementation-tracking",
-                "alt": "Implementation Progress",
-                "mediaType": "file",
-                "collection": ""
-              }
-            },
-            {
-              "type": "text",
-              "text": "\nLead: "
-            },
-            {
-              "type": "mention",
-              "attrs": {
-                "id": "migration.manager",
-                "text": "@migration.manager",
-                "userType": "DEFAULT"
-              }
-            },
-            {
-              "type": "text",
-              "text": "\nStatus: "
-            },
-            {
-              "type": "status",
-              "attrs": {
-                "text": "completed",
-                "color": "neutral",
-                "style": "default"
-              }
             }
           ]
         }
@@ -2708,12 +2687,8 @@
           ]
         },
         {
-          "type": "emoji",
-          "attrs": {
-            "shortName": "rocket",
-            "id": "rocket",
-            "text": ":rocket:"
-          }
+          "type": "text",
+          "text": " 🚀"
         }
       ]
     },
@@ -2728,15 +2703,7 @@
               "content": [
                 {
                   "type": "text",
-                  "text": "Performance: 300% faster "
-                },
-                {
-                  "type": "emoji",
-                  "attrs": {
-                    "shortName": "zap",
-                    "id": "zap",
-                    "text": ":zap:"
-                  }
+                  "text": "Performance: 300% faster ⚡"
                 }
               ]
             }
@@ -2750,15 +2717,7 @@
               "content": [
                 {
                   "type": "text",
-                  "text": "Scalability: 10x capacity "
-                },
-                {
-                  "type": "emoji",
-                  "attrs": {
-                    "shortName": "chart_with_upwards_trend",
-                    "id": "chart_with_upwards_trend",
-                    "text": ":chart_with_upwards_trend:"
-                  }
+                  "text": "Scalability: 10x capacity 📈"
                 }
               ]
             }
@@ -2772,15 +2731,7 @@
               "content": [
                 {
                   "type": "text",
-                  "text": "Reliability: 99.99% uptime "
-                },
-                {
-                  "type": "emoji",
-                  "attrs": {
-                    "shortName": "white_check_mark",
-                    "id": "white_check_mark",
-                    "text": ":white_check_mark:"
-                  }
+                  "text": "Reliability: 99.99% uptime ✅"
                 }
               ]
             }
@@ -2794,7 +2745,7 @@
       "content": [
         {
           "type": "text",
-          "text": "\n## Final Summary\n\nThis comprehensive test covers:\n- **Info/Warning/Success/Note panels** with social elements\n- **Expand sections** with nested content\n- **Complex media layouts** with multiple images\n- **Advanced tables** combining media, users, dates, status\n- **Resource links** with context cards\n- **Nested combinations** of multiple rich content types\n\nAll elements include social features: {user:test.coordinator}, dates like {date:2024-01-31}, status indicators {status:comprehensive}, and emoji :checkered_flag:\n\n![Final Test Image](media:comprehensive-test-complete)\n\n**Test completed by {user:qa.comprehensive} on {date:2024-01-31}** :white_check_mark:"
+          "text": "\n## Final Summary\n\nThis comprehensive test covers:\n- **Info/Warning/Success/Note panels** with social elements\n- **Expand sections** with nested content\n- **Complex media layouts** with multiple images\n- **Advanced tables** combining media, users, dates, status\n- **Resource links** with context cards\n- **Nested combinations** of multiple rich content types\n\nAll elements include social features: {user:test.coordinator}, dates like {date:2024-01-31}, status indicators {status:comprehensive}, and emoji 🏁\n\n![Final Test Image](media:comprehensive-test-complete)\n\n**Test completed by {user:qa.comprehensive} on {date:2024-01-31}** ✅"
         }
       ]
     }

@@ -5,7 +5,7 @@ This document tests advanced rich media capabilities including panels, expands, 
 ## Info Panels
 
 ~~~panel type=info title="Info"
-This is an info panel with rich content including {user:info.user} and :information_source: emoji. 
+This is an info panel with rich content including {user:info.user} and ℹ️ emoji. 
 
 Important date: {date:2024-01-01}
 Status: {status:active}
@@ -18,7 +18,7 @@ Contact {user:system.admin} for questions. Current status: {status:maintenance-m
 ~~~
 
 ~~~panel type=success title="Success"
-Deployment completed successfully! :tada:
+Deployment completed successfully! 🎉
 
 Team members: {user:dev.lead}, {user:qa.manager}
 Final status: {status:deployed}
@@ -56,16 +56,16 @@ Assigned to: {user:tech.reviewer}
 ~~~expand title="📊 Analytics & Reports"
 Current metrics as of {date:2024-01-25}:
 
-- User Growth: :chart_with_upwards_trend: 150% increase
-- Performance: :zap: 40% faster response times  
-- Reliability: :white_check_mark: 99.9% uptime
+- User Growth: 📈 150% increase
+- Performance: ⚡ 40% faster response times  
+- Reliability: ✅ 99.9% uptime
 
 **Key Screenshots:**
 ![Analytics Dashboard](media:analytics-main)
 ![User Growth Chart](media:user-growth-chart)
 ![Performance Trends](media:performance-trends)
 
-**Team Achievements:** :trophy:
+**Team Achievements:** 🏆
 - Best Performance: {user:optimization.team}
 - Most Reliable: {user:infrastructure.team}
 - User Experience: {user:ux.team}
@@ -95,9 +95,9 @@ Development update by {user:project.manager} on {date:2024-01-20}:
 ![Sprint Progress](media:sprint-progress)
 
 Key accomplishments:
-- Authentication: {status:completed} :white_check_mark:
-- Database: {status:in-progress} :construction:
-- UI Components: {status:completed} :white_check_mark:
+- Authentication: {status:completed} ✅
+- Database: {status:in-progress} 🚧
+- UI Components: {status:completed} ✅
 
 Next sprint goals assigned to {user:scrum.master}.
 ~~~
@@ -148,9 +148,9 @@ Essential project resources with preview cards:
 ![Milestone Celebration](media:q1-milestone)
 
 **Team Recognition:**
-- MVP Developer: {user:star.developer} :star:
-- Best Collaboration: {user:team.player} :handshake:
-- Innovation Award: {user:creative.thinker} :bulb:
+- MVP Developer: {user:star.developer} ⭐
+- Best Collaboration: {user:team.player} 🤝
+- Innovation Award: {user:creative.thinker} 💡
 
 **Next Quarter Planning:**
 - Planning session: {date:2024-04-01}
@@ -182,10 +182,10 @@ Lead: {user:migration.manager}
 Status: {status:completed}
 ~~~
 
-**Key Improvements:** :rocket:
-- Performance: 300% faster :zap:
-- Scalability: 10x capacity :chart_with_upwards_trend:
-- Reliability: 99.99% uptime :white_check_mark:
+**Key Improvements:** 🚀
+- Performance: 300% faster ⚡
+- Scalability: 10x capacity 📈
+- Reliability: 99.99% uptime ✅
 ~~~
 
 ## Final Summary
@@ -198,8 +198,8 @@ This comprehensive test covers:
 - **Resource links** with context cards
 - **Nested combinations** of multiple rich content types
 
-All elements include social features: {user:test.coordinator}, dates like {date:2024-01-31}, status indicators {status:comprehensive}, and emoji :checkered_flag:
+All elements include social features: {user:test.coordinator}, dates like {date:2024-01-31}, status indicators {status:comprehensive}, and emoji 🏁
 
 ![Final Test Image](media:comprehensive-test-complete)
 
-**Test completed by {user:qa.comprehensive} on {date:2024-01-31}** :white_check_mark:
+**Test completed by {user:qa.comprehensive} on {date:2024-01-31}** ✅
