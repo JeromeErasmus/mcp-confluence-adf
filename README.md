@@ -1,6 +1,7 @@
 # MCP Confluence ADF Server
 
 [![npm version](https://badge.fury.io/js/mcp-confluence-adf.svg)](https://www.npmjs.com/package/mcp-confluence-adf)
+[![Documentation](https://img.shields.io/badge/docs-GitBook-blue.svg)](https://jeromeerasmus.gitbook.io/mcp-confluence-adf)
 
 A Model Context Protocol (MCP) server for Confluence content management using Atlassian Document Format (ADF) with bidirectional Markdown conversion for easy editing.
 
@@ -17,6 +18,19 @@ A Model Context Protocol (MCP) server for Confluence content management using At
 - **Rich content preservation** (panels, tables, code blocks, mentions, emojis)
 - **Version management** with metadata tracking
 - **Offline editing** support with local Markdown files
+- **Template system** with YAML-driven documentation generation
+- **Claude AI integration** for intelligent content creation
+
+## 📖 Complete Documentation
+
+**[📚 View Full Documentation on GitBook](https://jeromeerasmus.gitbook.io/mcp-confluence-adf)**
+
+Comprehensive guides covering:
+- **[Quick Start Guide](https://jeromeerasmus.gitbook.io/mcp-confluence-adf/quick-start)** - Get up and running in minutes
+- **[Claude Template Generation](https://jeromeerasmus.gitbook.io/mcp-confluence-adf/claude-template-generation)** - AI-powered documentation workflows  
+- **[Template Process Flow](https://jeromeerasmus.gitbook.io/mcp-confluence-adf/template-process-flow)** - Technical deep dive
+- **[MCP Server Configuration](https://jeromeerasmus.gitbook.io/mcp-confluence-adf/mcp-server-configuration)** - Advanced setup options
+- **[Confluence Content Tools](https://jeromeerasmus.gitbook.io/mcp-confluence-adf/confluence-content-tools)** - Complete tool reference
 
 ## Installation
 
